@@ -1,0 +1,58 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.5 SP3 11.5.3.10
+
+# Design Name:  
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA , Speed grade: -1 
+
+# Date generated: Thu Sep 10 11:58:15 2015 
+
+
+#
+# IO banks setting
+#
+
+set_iobank Bank1 -vcci 2.50 -fixed no
+set_iobank Bank2 -vcci 2.50 -fixed no
+set_iobank Bank4 -vcci 2.50 -fixed no
+set_iobank Bank6 -vcci 2.50 -fixed no
+set_iobank Bank7 -vcci 2.50 -fixed no
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# I/O constraints
+#
+
+set_io GPIO_IN\[0\] -DIRECTION INPUT -pinname H6 -fixed yes
+set_io GPIO_IN\[1\] -DIRECTION INPUT -pinname J6 -fixed yes
+set_io GPIO_IN\[2\] -DIRECTION INPUT -pinname K6 -fixed yes
+set_io GPIO_IN\[3\] -DIRECTION INPUT -pinname H7 -fixed yes
+set_io GPIO_IN\[4\] -DIRECTION INPUT -pinname K7 -fixed yes
+set_io GPIO_IN\[5\] -DIRECTION INPUT -pinname G7 -fixed yes
+set_io GPIO_IN\[6\] -DIRECTION INPUT -pinname K15 -fixed yes
+set_io GPIO_OUT\[0\] -DIRECTION OUTPUT -pinname F6 -fixed yes
+set_io GPIO_OUT\[1\] -DIRECTION OUTPUT -pinname L16 -fixed yes
+set_io GPIO_OUT\[2\] -DIRECTION OUTPUT -pinname G6 -fixed yes
+set_io GPIO_OUT\[3\] -DIRECTION OUTPUT -pinname P16 -fixed yes
+set_io GPIO_OUT\[4\] -DIRECTION OUTPUT -pinname F5 -fixed yes
+set_io GPIO_OUT\[5\] -DIRECTION OUTPUT -pinname AB18 -fixed yes
+set_io GPIO_OUT\[6\] -DIRECTION OUTPUT -pinname P1 -fixed yes
+set_io MMUART_0_RXD -DIRECTION INPUT -pinname C22 -fixed yes
+set_io MMUART_0_TXD -DIRECTION OUTPUT -pinname D21 -fixed yes
+
+#
+# Core cell constraints
+#
+

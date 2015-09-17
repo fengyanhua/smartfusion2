@@ -1,0 +1,40 @@
+Resource Usage Report for hello_regs 
+
+Mapping to part: m2s010fbga484-1
+Cell usage:
+CCC             1 use
+CLKINT          2 uses
+MSS_010         1 use
+RCOSC_25_50MHZ  1 use
+CFG1           128 uses
+CFG2           35 uses
+CFG3           393 uses
+CFG4           190 uses
+
+
+Sequential Cells: 
+SLE            465 uses
+
+DSP Blocks:    0
+
+I/O ports: 19
+I/O primitives: 11
+INBUF          1 use
+OUTBUF         9 uses
+TRIBUFF        1 use
+
+
+Global Clock Buffers: 2
+
+
+Total LUTs:    746
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K18  Interface Logic : SLEs = 36; LUTs = 36;
+MACC     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  465 + 0 + 36 + 0 = 501;
+Total number of LUTs after P&R:  746 + 0 + 36 + 0 = 782;
+

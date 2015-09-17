@@ -1,0 +1,14 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1KX18, RAM64X18, GLOBAL, IO
+. hello_regs, 465, 746, 0, 0, 0, 1, 0, 2, 11
+.	. CoreAPB3_Z1, 32, 106, 0, 0, 0, 0, 0, 0, 0
+.	.	. COREAPB3_MUXPTOB3, 0, 105, 0, 0, 0, 0, 0, 0, 0
+.	.	. coreapb3_iaddr_reg_0s_32_28, 32, 1, 0, 0, 0, 0, 0, 0, 0
+.	. CoreGPIO_Z3, 8, 1, 0, 0, 0, 0, 0, 0, 0
+.	. hello_regs_COREAPBLSRAM_0_COREAPBLSRAM_Z2, 33, 5, 0, 0, 0, 1, 0, 0, 0
+.	.	. hello_regs_COREAPBLSRAM_0_lsram_512to35328x32_512s_32s, 0, 0, 0, 0, 0, 1, 0, 0, 0
+.	. hello_regs_FCCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 1, 0
+.	. hello_regs_MSS, 0, 0, 0, 0, 0, 0, 0, 1, 2
+.	. hello_regs_OSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	. reg_apb_wrp, 392, 634, 0, 0, 0, 0, 0, 0, 0
+.	.	. reg16x8, 392, 633, 0, 0, 0, 0, 0, 0, 0

@@ -1,0 +1,37 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.5 SP3 (Version 11.5.3.10)
+
+Date      :  Tue Sep 15 18:39:37 2015
+Project   :  E:\Practice\hello_regs
+Component :  hello_regs
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+    E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+    E:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/CoreAPBLSRAM.v
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_1024to70656x16.v
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_2048to141312x8.v
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to35328x32.v
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to46kx24.v
+    E:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v
+    E:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v
+    E:/Practice/hello_regs/component/work/hello_regs/hello_regs.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    E:/Practice/hello_regs/component/Actel/SgCore/OSC/1.0.103/osc_comps.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    E:/Practice/hello_regs/component/Actel/SgCore/OSC/1.0.103/osc_comps_pre.v
+
+Stimulus files for all Simulation tools:
+    E:/Practice/hello_regs/component/work/hello_regs/subsystem.bfm
+
+    E:/Practice/hello_regs/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/coreparameters.v
+    E:/Practice/hello_regs/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/compileList.do
+    E:/Practice/hello_regs/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/run.do
+    E:/Practice/hello_regs/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/wave.do
+    E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/test/user/tb.v
+

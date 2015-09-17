@@ -1,0 +1,1300 @@
+#Build: Synplify Pro I-2014.03M-SP1, Build 097R, Oct  9 2014
+#install: D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1
+#OS: Windows 7 6.1
+#Hostname: 111-PC
+
+#Implementation: synthesis
+
+Synopsys Verilog Compiler, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v"
+@I::"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\umr_capim.v"
+@I::"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_objects.v"
+@I::"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_pipes.svh"
+@I::"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\hypermods.v"
+@I::"D:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v"
+@I::"D:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v"
+@I::"D:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v"
+@I::"D:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v"
+@I::"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v"
+@I::"D:\Practice\hello_regs\hdl\reg32x8.v"
+@I::"D:\Practice\hello_regs\hdl\reg_apb_wrp.v"
+@I::"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v"
+@I::"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v"
+@I::"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v"
+@I::"D:\Practice\hello_regs\component\work\hello_regs\hello_regs.v"
+@W: CG775 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+Verilog syntax check successful!
+Selecting top level module hello_regs
+@W: CG775 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@W: CG775 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@N: CG364 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3
+
+@N: CG364 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3
+
+	APB_DWIDTH=6'b100000
+	IADDR_OPTION=32'b00000000000000000000000000000000
+	APBSLOT0ENABLE=1'b1
+	APBSLOT1ENABLE=1'b0
+	APBSLOT2ENABLE=1'b0
+	APBSLOT3ENABLE=1'b0
+	APBSLOT4ENABLE=1'b0
+	APBSLOT5ENABLE=1'b0
+	APBSLOT6ENABLE=1'b0
+	APBSLOT7ENABLE=1'b0
+	APBSLOT8ENABLE=1'b0
+	APBSLOT9ENABLE=1'b0
+	APBSLOT10ENABLE=1'b0
+	APBSLOT11ENABLE=1'b0
+	APBSLOT12ENABLE=1'b0
+	APBSLOT13ENABLE=1'b0
+	APBSLOT14ENABLE=1'b0
+	APBSLOT15ENABLE=1'b0
+	SC_0=1'b0
+	SC_1=1'b0
+	SC_2=1'b0
+	SC_3=1'b0
+	SC_4=1'b0
+	SC_5=1'b0
+	SC_6=1'b0
+	SC_7=1'b0
+	SC_8=1'b0
+	SC_9=1'b0
+	SC_10=1'b0
+	SC_11=1'b0
+	SC_12=1'b0
+	SC_13=1'b0
+	SC_14=1'b0
+	SC_15=1'b0
+	MADDR_BITS=6'b100000
+	UPR_NIBBLE_POSN=4'b0111
+	FAMILY=32'b00000000000000000000000000010011
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IADDR_NOTINUSE=32'b00000000000000000000000000000000
+	IADDR_EXTERNAL=32'b00000000000000000000000000000001
+	IADDR_SLOT0=32'b00000000000000000000000000000010
+	IADDR_SLOT1=32'b00000000000000000000000000000011
+	IADDR_SLOT2=32'b00000000000000000000000000000100
+	IADDR_SLOT3=32'b00000000000000000000000000000101
+	IADDR_SLOT4=32'b00000000000000000000000000000110
+	IADDR_SLOT5=32'b00000000000000000000000000000111
+	IADDR_SLOT6=32'b00000000000000000000000000001000
+	IADDR_SLOT7=32'b00000000000000000000000000001001
+	IADDR_SLOT8=32'b00000000000000000000000000001010
+	IADDR_SLOT9=32'b00000000000000000000000000001011
+	IADDR_SLOT10=32'b00000000000000000000000000001100
+	IADDR_SLOT11=32'b00000000000000000000000000001101
+	IADDR_SLOT12=32'b00000000000000000000000000001110
+	IADDR_SLOT13=32'b00000000000000000000000000001111
+	IADDR_SLOT14=32'b00000000000000000000000000010000
+	IADDR_SLOT15=32'b00000000000000000000000000010001
+	SL0=16'b0000000000000001
+	SL1=16'b0000000000000000
+	SL2=16'b0000000000000000
+	SL3=16'b0000000000000000
+	SL4=16'b0000000000000000
+	SL5=16'b0000000000000000
+	SL6=16'b0000000000000000
+	SL7=16'b0000000000000000
+	SL8=16'b0000000000000000
+	SL9=16'b0000000000000000
+	SL10=16'b0000000000000000
+	SL11=16'b0000000000000000
+	SL12=16'b0000000000000000
+	SL13=16'b0000000000000000
+	SL14=16'b0000000000000000
+	SL15=16'b0000000000000000
+	SC=16'b0000000000000000
+	SC_qual=16'b0000000000000000
+   Generated name = CoreAPB3_Z1
+
+@W: CG360 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":244:12:244:20|No assignment to wire IA_PRDATA
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":371:7:371:9|Synthesizing module VCC
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":367:7:367:9|Synthesizing module GND
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":722:7:722:9|Synthesizing module CCC
+
+@N: CG364 :"D:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v":5:7:5:28|Synthesizing module hello_regs_FCCC_0_FCCC
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":268:7:268:11|Synthesizing module INBUF
+
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":280:7:280:13|Synthesizing module TRIBUFF
+
+@N: CG364 :"D:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v":5:7:5:13|Synthesizing module MSS_010
+
+@N: CG364 :"D:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v":9:7:9:20|Synthesizing module hello_regs_MSS
+
+@N: CG364 :"D:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v":51:7:51:24|Synthesizing module RCOSC_25_50MHZ_FAB
+
+@N: CG364 :"D:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ
+
+@N: CG364 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":5:7:5:26|Synthesizing module hello_regs_OSC_0_OSC
+
+@N: CG364 :"D:\Practice\hello_regs\hdl\reg32x8.v":4:7:4:13|Synthesizing module reg16x8
+
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_0_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_1_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_2_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_3_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_4_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_5_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_6_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_7_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_8_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_9_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_10_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_11_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_12_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_13_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_14_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Practice\hello_regs\hdl\reg32x8.v":35:0:35:5|Register mem_15_ with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@N: CG364 :"D:\Practice\hello_regs\hdl\reg_apb_wrp.v":21:7:21:17|Synthesizing module reg_apb_wrp
+
+@N: CG364 :"D:\Practice\hello_regs\component\work\hello_regs\hello_regs.v":9:7:9:16|Synthesizing module hello_regs
+
+@W: CL246 :"D:\Practice\hello_regs\hdl\reg_apb_wrp.v":35:21:35:25|Input port bits 7 to 6 of PADDR[7:0] are unused
+
+@W: CL246 :"D:\Practice\hello_regs\hdl\reg_apb_wrp.v":35:21:35:25|Input port bits 1 to 0 of PADDR[7:0] are unused
+
+@W: CL157 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
+@W: CL157 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
+@W: CL157 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.
+@W: CL157 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits -- simulation mismatch possible.
+@W: CL159 :"D:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":14:7:14:9|Input XTL is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":73:13:73:19|Input PRESETN is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":74:13:74:16|Input PCLK is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":105:18:105:25|Input PRDATAS1 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":106:18:106:25|Input PRDATAS2 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":107:18:107:25|Input PRDATAS3 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":108:18:108:25|Input PRDATAS4 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":109:18:109:25|Input PRDATAS5 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":110:18:110:25|Input PRDATAS6 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":111:18:111:25|Input PRDATAS7 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":112:18:112:25|Input PRDATAS8 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":113:18:113:25|Input PRDATAS9 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":114:18:114:26|Input PRDATAS10 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":115:18:115:26|Input PRDATAS11 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":116:18:116:26|Input PRDATAS12 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":117:18:117:26|Input PRDATAS13 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":118:18:118:26|Input PRDATAS14 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":119:18:119:26|Input PRDATAS15 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":122:13:122:20|Input PREADYS1 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":123:13:123:20|Input PREADYS2 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":124:13:124:20|Input PREADYS3 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":125:13:125:20|Input PREADYS4 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":126:13:126:20|Input PREADYS5 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":127:13:127:20|Input PREADYS6 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":128:13:128:20|Input PREADYS7 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":129:13:129:20|Input PREADYS8 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":130:13:130:20|Input PREADYS9 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":131:13:131:21|Input PREADYS10 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":132:13:132:21|Input PREADYS11 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":133:13:133:21|Input PREADYS12 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":134:13:134:21|Input PREADYS13 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":135:13:135:21|Input PREADYS14 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":136:13:136:21|Input PREADYS15 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":139:13:139:21|Input PSLVERRS1 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":140:13:140:21|Input PSLVERRS2 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":141:13:141:21|Input PSLVERRS3 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":142:13:142:21|Input PSLVERRS4 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":143:13:143:21|Input PSLVERRS5 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":144:13:144:21|Input PSLVERRS6 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":145:13:145:21|Input PSLVERRS7 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":146:13:146:21|Input PSLVERRS8 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":147:13:147:21|Input PSLVERRS9 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":148:13:148:22|Input PSLVERRS10 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":149:13:149:22|Input PSLVERRS11 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":150:13:150:22|Input PSLVERRS12 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused
+@W: CL159 :"D:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 75MB peak: 76MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Jul 14 10:43:36 2015
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Jul 14 10:43:38 2015
+
+###########################################################]
+Pre-mapping Report
+
+Synopsys Generic Technology Pre-mapping, Version mapact, Build 1350R, Built Oct 16 2014 10:02:37
+Copyright (C) 1994-2014, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version I-2014.03M-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: D:\Practice\hello_regs\synthesis\hello_regs_scck.rpt 
+Printing clock  summary report in "D:\Practice\hello_regs\synthesis\hello_regs_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 107MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 107MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 108MB)
+
+syn_allowed_resources : blockrams=21  set on top level netlist hello_regs
+
+
+@S |Clock Summary
+****************
+
+Start                                                           Requested     Requested     Clock        Clock              
+Clock                                                           Frequency     Period        Type         Group              
+----------------------------------------------------------------------------------------------------------------------------
+System                                                          1.0 MHz       1000.000      system       system_clkgroup    
+hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                   100.0 MHz     10.000        inferred     Inferred_clkgroup_1
+hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0
+============================================================================================================================
+
+@W: MT530 :"d:\practice\hello_regs\hdl\reg32x8.v":23:0:23:5|Found inferred clock hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock which controls 136 sequential elements including reg_apb_wrp_0.reg16x8_0.data_out[7:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"d:\practice\hello_regs\component\work\hello_regs_mss\hello_regs_mss.v":192:0:192:13|Found inferred clock hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock which controls 0 sequential elements including hello_regs_MSS_0.MSS_ADLIB_INST. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file D:\Practice\hello_regs\synthesis\hello_regs.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 70MB peak: 136MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Tue Jul 14 10:43:41 2015
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Generic Technology Mapper, Version mapact, Build 1350R, Built Oct 16 2014 10:02:37
+Copyright (C) 1994-2014, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version I-2014.03M-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+
+@W: MO111 :"d:\practice\hello_regs\component\work\hello_regs\osc_0\hello_regs_osc_0_osc.v":20:7:20:16|Tristate driver XTLOSC_O2F on net XTLOSC_O2F has its enable tied to GND (module hello_regs_OSC_0_OSC) 
+@W: MO111 :"d:\practice\hello_regs\component\work\hello_regs\osc_0\hello_regs_osc_0_osc.v":19:7:19:16|Tristate driver XTLOSC_CCC on net XTLOSC_CCC has its enable tied to GND (module hello_regs_OSC_0_OSC) 
+@W: MO111 :"d:\practice\hello_regs\component\work\hello_regs\osc_0\hello_regs_osc_0_osc.v":18:7:18:20|Tristate driver RCOSC_1MHZ_O2F on net RCOSC_1MHZ_O2F has its enable tied to GND (module hello_regs_OSC_0_OSC) 
+@W: MO111 :"d:\practice\hello_regs\component\work\hello_regs\osc_0\hello_regs_osc_0_osc.v":17:7:17:20|Tristate driver RCOSC_1MHZ_CCC on net RCOSC_1MHZ_CCC has its enable tied to GND (module hello_regs_OSC_0_OSC) 
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 135MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 138MB peak: 139MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 135MB peak: 139MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 135MB peak: 139MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 139MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 139MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 135MB peak: 139MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 136MB peak: 139MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 151MB peak: 154MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 139MB peak: 154MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 139MB peak: 154MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+2 non-gated/non-generated clock tree(s) driving 265 clock pin(s) of sequential element(s)
+128 gated/generated clock tree(s) driving 128 clock pin(s) of sequential element(s)
+0 instances converted, 128 sequential instances remain driven by gated/generated clocks
+
+=================================================== Non-Gated/Non-Generated Clocks ====================================================
+Clock Tree ID     Driving Element                       Drive Element Type     Fanout     Sample Instance                              
+---------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0129       OSC_0.I_RCOSC_25_50MHZ_FAB_CLKINT     CLKINT                 264        reg_apb_wrp_0.reg16x8_0.un1_data_out8_121_set
+@K:CKID0130       FCCC_0.GL0_INST                       CLKINT                 1          hello_regs_MSS_0.MSS_ADLIB_INST              
+=======================================================================================================================================
+========================================================================================= Gated/Generated Clocks =========================================================================================
+Clock Tree ID     Driving Element                               Drive Element Type     Fanout     Sample Instance                                  Explanation                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       reg_apb_wrp_0.reg16x8_0.un1_data_out8_23      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_247_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0002       reg_apb_wrp_0.reg16x8_0.un1_data_out8_111     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_215_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0003       reg_apb_wrp_0.reg16x8_0.un1_data_out8_119     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_223_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0004       reg_apb_wrp_0.reg16x8_0.un1_data_out8_60      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_254_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0005       reg_apb_wrp_0.reg16x8_0.un1_data_out8_110     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_214_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0006       reg_apb_wrp_0.reg16x8_0.un1_data_out8_118     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_222_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0007       reg_apb_wrp_0.reg16x8_0.un1_data_out8_63      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_253_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0008       reg_apb_wrp_0.reg16x8_0.un1_data_out8_87      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_151_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0009       reg_apb_wrp_0.reg16x8_0.un1_data_out8_46      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_159_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0010       reg_apb_wrp_0.reg16x8_0.un1_data_out8_39      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_167_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0011       reg_apb_wrp_0.reg16x8_0.un1_data_out8_55      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_135_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0012       reg_apb_wrp_0.reg16x8_0.un1_data_out8_10      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_185_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0013       reg_apb_wrp_0.reg16x8_0.un1_data_out8_26      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_201_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0014       reg_apb_wrp_0.reg16x8_0.un1_data_out8_122     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_177_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0015       reg_apb_wrp_0.reg16x8_0.un1_data_out8_1       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_233_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0016       reg_apb_wrp_0.reg16x8_0.un1_data_out8_71      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_188_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0017       reg_apb_wrp_0.reg16x8_0.un1_data_out8_79      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_204_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0018       reg_apb_wrp_0.reg16x8_0.un1_data_out8_100     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_180_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0019       reg_apb_wrp_0.reg16x8_0.un1_data_out8_95      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_236_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0020       reg_apb_wrp_0.reg16x8_0.un1_data_out8_117     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_221_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0021       reg_apb_wrp_0.reg16x8_0.un1_data_out8_62      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_252_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0022       reg_apb_wrp_0.reg16x8_0.un1_data_out8_86      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_150_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0023       reg_apb_wrp_0.reg16x8_0.un1_data_out8_44      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_158_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0024       reg_apb_wrp_0.reg16x8_0.un1_data_out8_37      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_166_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0025       reg_apb_wrp_0.reg16x8_0.un1_data_out8_53      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_134_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0026       reg_apb_wrp_0.reg16x8_0.un1_data_out8_8       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_143_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0027       reg_apb_wrp_0.reg16x8_0.un1_data_out8_24      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_199_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0028       reg_apb_wrp_0.reg16x8_0.un1_data_out8_120     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_175_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0029       reg_apb_wrp_0.reg16x8_0.un1_data_out8_3       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_231_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0030       reg_apb_wrp_0.reg16x8_0.un1_data_out8_70      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_186_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0031       reg_apb_wrp_0.reg16x8_0.un1_data_out8_78      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_202_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0032       reg_apb_wrp_0.reg16x8_0.un1_data_out8_103     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_178_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0033       reg_apb_wrp_0.reg16x8_0.un1_data_out8_94      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_234_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0034       reg_apb_wrp_0.reg16x8_0.un1_data_out8_22      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_246_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0035       reg_apb_wrp_0.reg16x8_0.un1_data_out8_61      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_255_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0036       reg_apb_wrp_0.reg16x8_0.un1_data_out8_85      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_149_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0037       reg_apb_wrp_0.reg16x8_0.un1_data_out8_42      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_157_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0038       reg_apb_wrp_0.reg16x8_0.un1_data_out8_35      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_165_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0039       reg_apb_wrp_0.reg16x8_0.un1_data_out8_51      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_133_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0040       reg_apb_wrp_0.reg16x8_0.un1_data_out8_67      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_141_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0041       reg_apb_wrp_0.reg16x8_0.un1_data_out8_45      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_197_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0042       reg_apb_wrp_0.reg16x8_0.un1_data_out8_38      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_173_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0043       reg_apb_wrp_0.reg16x8_0.un1_data_out8_54      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_229_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0044       reg_apb_wrp_0.reg16x8_0.un1_data_out8_69      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_184_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0045       reg_apb_wrp_0.reg16x8_0.un1_data_out8_77      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_200_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0046       reg_apb_wrp_0.reg16x8_0.un1_data_out8_102     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_176_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0047       reg_apb_wrp_0.reg16x8_0.un1_data_out8_93      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_232_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0048       reg_apb_wrp_0.reg16x8_0.un1_data_out8_21      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_245_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0049       reg_apb_wrp_0.reg16x8_0.un1_data_out8_109     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_213_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0050       reg_apb_wrp_0.reg16x8_0.un1_data_out8_84      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_148_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0051       reg_apb_wrp_0.reg16x8_0.un1_data_out8_40      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_156_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0052       reg_apb_wrp_0.reg16x8_0.un1_data_out8_33      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_164_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0053       reg_apb_wrp_0.reg16x8_0.un1_data_out8_49      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_132_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0054       reg_apb_wrp_0.reg16x8_0.un1_data_out8_65      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_140_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0055       reg_apb_wrp_0.reg16x8_0.un1_data_out8_47      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_195_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0056       reg_apb_wrp_0.reg16x8_0.un1_data_out8_36      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_171_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0057       reg_apb_wrp_0.reg16x8_0.un1_data_out8_52      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_227_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0058       reg_apb_wrp_0.reg16x8_0.un1_data_out8_68      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_142_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0059       reg_apb_wrp_0.reg16x8_0.un1_data_out8_76      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_198_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0060       reg_apb_wrp_0.reg16x8_0.un1_data_out8_101     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_174_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0061       reg_apb_wrp_0.reg16x8_0.un1_data_out8_92      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_230_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0062       reg_apb_wrp_0.reg16x8_0.un1_data_out8_20      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_244_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0063       reg_apb_wrp_0.reg16x8_0.un1_data_out8_108     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_212_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0064       reg_apb_wrp_0.reg16x8_0.un1_data_out8_116     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_220_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0065       reg_apb_wrp_0.reg16x8_0.un1_data_out8_15      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_155_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0066       reg_apb_wrp_0.reg16x8_0.un1_data_out8_31      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_163_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0067       reg_apb_wrp_0.reg16x8_0.un1_data_out8_127     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_131_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0068       reg_apb_wrp_0.reg16x8_0.un1_data_out8_6       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_139_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0069       reg_apb_wrp_0.reg16x8_0.un1_data_out8_41      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_193_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0070       reg_apb_wrp_0.reg16x8_0.un1_data_out8_34      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_169_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0071       reg_apb_wrp_0.reg16x8_0.un1_data_out8_50      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_225_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0072       reg_apb_wrp_0.reg16x8_0.un1_data_out8_66      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_241_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0073       reg_apb_wrp_0.reg16x8_0.un1_data_out8_75      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_196_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0074       reg_apb_wrp_0.reg16x8_0.un1_data_out8_96      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_172_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0075       reg_apb_wrp_0.reg16x8_0.un1_data_out8_91      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_228_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0076       reg_apb_wrp_0.reg16x8_0.un1_data_out8_19      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_243_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0077       reg_apb_wrp_0.reg16x8_0.un1_data_out8_107     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_211_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0078       reg_apb_wrp_0.reg16x8_0.un1_data_out8_115     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_219_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0079       reg_apb_wrp_0.reg16x8_0.un1_data_out8_56      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_250_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0080       reg_apb_wrp_0.reg16x8_0.un1_data_out8_29      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_162_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0081       reg_apb_wrp_0.reg16x8_0.un1_data_out8_125     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_130_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0082       reg_apb_wrp_0.reg16x8_0.un1_data_out8_4       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_138_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0083       reg_apb_wrp_0.reg16x8_0.un1_data_out8_43      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_191_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0084       reg_apb_wrp_0.reg16x8_0.un1_data_out8_32      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_207_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0085       reg_apb_wrp_0.reg16x8_0.un1_data_out8_48      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_183_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0086       reg_apb_wrp_0.reg16x8_0.un1_data_out8_64      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_239_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0087       reg_apb_wrp_0.reg16x8_0.un1_data_out8_74      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_194_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0088       reg_apb_wrp_0.reg16x8_0.un1_data_out8_99      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_170_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0089       reg_apb_wrp_0.reg16x8_0.un1_data_out8_90      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_226_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0090       reg_apb_wrp_0.reg16x8_0.un1_data_out8_18      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_242_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0091       reg_apb_wrp_0.reg16x8_0.un1_data_out8_106     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_210_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0092       reg_apb_wrp_0.reg16x8_0.un1_data_out8_114     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_218_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0093       reg_apb_wrp_0.reg16x8_0.un1_data_out8_59      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_249_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0094       reg_apb_wrp_0.reg16x8_0.un1_data_out8_83      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_146_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0095       reg_apb_wrp_0.reg16x8_0.un1_data_out8_123     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_129_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0096       reg_apb_wrp_0.reg16x8_0.un1_data_out8_2       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_137_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0097       reg_apb_wrp_0.reg16x8_0.un1_data_out8_14      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_189_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0098       reg_apb_wrp_0.reg16x8_0.un1_data_out8_30      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_205_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0099       reg_apb_wrp_0.reg16x8_0.un1_data_out8_126     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_181_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0100       reg_apb_wrp_0.reg16x8_0.un1_data_out8_5       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_237_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0101       reg_apb_wrp_0.reg16x8_0.un1_data_out8_73      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_192_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0102       reg_apb_wrp_0.reg16x8_0.un1_data_out8_98      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_168_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0103       reg_apb_wrp_0.reg16x8_0.un1_data_out8_89      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_224_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0104       reg_apb_wrp_0.reg16x8_0.un1_data_out8_17      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_240_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0105       reg_apb_wrp_0.reg16x8_0.un1_data_out8_105     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_209_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0106       reg_apb_wrp_0.reg16x8_0.un1_data_out8_113     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_217_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0107       reg_apb_wrp_0.reg16x8_0.un1_data_out8_58      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_248_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0108       reg_apb_wrp_0.reg16x8_0.un1_data_out8_82      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_145_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0109       reg_apb_wrp_0.reg16x8_0.un1_data_out8_13      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_154_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0110       reg_apb_wrp_0.reg16x8_0.un1_data_out8         CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_136_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0111       reg_apb_wrp_0.reg16x8_0.un1_data_out8_12      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_187_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0112       reg_apb_wrp_0.reg16x8_0.un1_data_out8_28      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_203_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0113       reg_apb_wrp_0.reg16x8_0.un1_data_out8_124     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_179_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0114       reg_apb_wrp_0.reg16x8_0.un1_data_out8_7       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_235_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0115       reg_apb_wrp_0.reg16x8_0.un1_data_out8_72      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_190_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0116       reg_apb_wrp_0.reg16x8_0.un1_data_out8_97      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_206_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0117       reg_apb_wrp_0.reg16x8_0.un1_data_out8_88      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_182_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0118       reg_apb_wrp_0.reg16x8_0.un1_data_out8_16      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_238_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0119       reg_apb_wrp_0.reg16x8_0.un1_data_out8_104     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_208_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0120       reg_apb_wrp_0.reg16x8_0.un1_data_out8_112     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_216_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0121       reg_apb_wrp_0.reg16x8_0.un1_data_out8_57      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_251_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0122       reg_apb_wrp_0.reg16x8_0.un1_data_out8_81      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_144_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0123       reg_apb_wrp_0.reg16x8_0.un1_data_out8_11      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_153_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0124       reg_apb_wrp_0.reg16x8_0.un1_data_out8_27      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_161_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0125       reg_apb_wrp_0.reg16x8_0.un1_data_out8_80      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_147_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0126       reg_apb_wrp_0.reg16x8_0.un1_data_out8_9       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0127       reg_apb_wrp_0.reg16x8_0.un1_data_out8_25      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_160_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0128       reg_apb_wrp_0.reg16x8_0.un1_data_out8_121     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_data_out8_128_rs     No gated clock conversion method for cell cell:ACG4.SLE
+==========================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+Writing Analyst data base D:\Practice\hello_regs\synthesis\hello_regs.srm
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_23 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_111 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_119 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_60 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_110 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_118 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_63 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_87 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_46 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_39 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_55 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_10 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_26 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_122 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_1 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_71 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_79 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_100 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_95 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_117 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_62 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_86 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_44 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_37 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_53 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_24 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_120 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_3 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_70 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_78 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_103 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_94 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_22 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_61 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_85 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_42 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_35 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_51 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_67 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_45 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_38 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_54 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_69 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_77 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_102 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_93 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_21 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_109 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_84 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_40 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_33 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_49 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_65 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_47 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_36 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_52 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_68 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_76 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_101 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_92 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_20 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_108 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_116 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_15 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_31 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_127 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_6 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_41 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_34 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_50 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_66 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_75 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_96 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_91 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_19 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_107 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_115 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_56 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_29 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_125 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_4 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_43 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_32 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_48 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_64 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_74 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_99 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_90 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_18 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_106 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_114 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_59 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_83 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_123 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_2 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_14 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_30 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_126 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_5 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_73 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_98 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_89 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_17 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_105 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_113 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_58 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_82 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_13 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_12 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_28 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_124 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_7 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_72 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_97 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_88 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_16 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_104 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_112 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_57 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_81 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_11 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_27 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_80 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_9 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_25 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_121 appears to be an unidentified clock source. Assuming default frequency. 
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:04s; Memory used current: 137MB peak: 154MB)
+
+Writing Analyst data base D:\Practice\hello_regs\synthesis\synwork\hello_regs_m.srm
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_23 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_111 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_119 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_60 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_110 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_118 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_63 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_87 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_46 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_39 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_55 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_10 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_26 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_122 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_1 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_71 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_79 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_100 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_95 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_117 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_62 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_86 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_44 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_37 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_53 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_24 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_120 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_3 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_70 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_78 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_103 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_94 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_22 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_61 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_85 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_42 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_35 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_51 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_67 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_45 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_38 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_54 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_69 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_77 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_102 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_93 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_21 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_109 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_84 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_40 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_33 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_49 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_65 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_47 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_36 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_52 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_68 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_76 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_101 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_92 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_20 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_108 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_116 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_15 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_31 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_127 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_6 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_41 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_34 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_50 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_66 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_75 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_96 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_91 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_19 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_107 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_115 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_56 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_29 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_125 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_4 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_43 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_32 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_48 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_64 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_74 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_99 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_90 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_18 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_106 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_114 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_59 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_83 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_123 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_2 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_14 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_30 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_126 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_5 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_73 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_98 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_89 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_17 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_105 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_113 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_58 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_82 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_13 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_12 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_28 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_124 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_7 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_72 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_97 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_88 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_16 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_104 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_112 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_57 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_81 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_11 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_27 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_80 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_9 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_25 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_121 appears to be an unidentified clock source. Assuming default frequency. 
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:05s; Memory used current: 137MB peak: 154MB)
+
+Writing EDIF Netlist and constraint files
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_23 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_111 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_119 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_60 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_110 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_118 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_63 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_87 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_46 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_39 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_55 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_10 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_26 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_122 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_1 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_71 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_79 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_100 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_95 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_117 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_62 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_86 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_44 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_37 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_53 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_24 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_120 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_3 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_70 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_78 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_103 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_94 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_22 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_61 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_85 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_42 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_35 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_51 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_67 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_45 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_38 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_54 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_69 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_77 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_102 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_93 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_21 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_109 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_84 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_40 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_33 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_49 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_65 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_47 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_36 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_52 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_68 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_76 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_101 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_92 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_20 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_108 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_116 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_15 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_31 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_127 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_6 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_41 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_34 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_50 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_66 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_75 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_96 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_91 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_19 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_107 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_115 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_56 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_29 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_125 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_4 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_43 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_32 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_48 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_64 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_74 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_99 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_90 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_18 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_106 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_114 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_59 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_83 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_123 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_2 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_14 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_30 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_126 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_5 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_73 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_98 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_89 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_17 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_105 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_113 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_58 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_82 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_13 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_12 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_28 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_124 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_7 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_72 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_97 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_88 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_16 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_104 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_112 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_57 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_81 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_11 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_27 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_80 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_9 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_25 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\practice\hello_regs\hdl\reg32x8.v":37:8:37:9|Net reg_apb_wrp_0.reg16x8_0.un1_data_out8_121 appears to be an unidentified clock source. Assuming default frequency. 
+@N: BW103 |Synopsys Constraint File time units using default value of 1ns 
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+I-2014.03M-SP1
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:06s; Memory used current: 138MB peak: 154MB)
+
+@W: MT246 :"d:\practice\hello_regs\component\work\hello_regs\osc_0\hello_regs_osc_0_osc.v":24:23:24:42|Blackbox RCOSC_25_50MHZ_FAB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"d:\practice\hello_regs\component\work\hello_regs\fccc_0\hello_regs_fccc_0_fccc.v":20:36:20:43|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:OSC_0.N_RCOSC_25_50MHZ_CLKINT"
+
+@W: MT420 |Found inferred clock hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:FCCC_0.GL0_net"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Jul 14 10:43:50 2015
+#
+
+
+Top view:               hello_regs
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 2.979
+
+                                                                Requested     Estimated      Requested     Estimated               Clock        Clock              
+Starting Clock                                                  Frequency     Frequency      Period        Period        Slack     Type         Group              
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                   100.0 MHz     142.4 MHz      10.000        7.021         2.979     inferred     Inferred_clkgroup_1
+hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     100.0 MHz     234.7 MHz      10.000        4.261         5.739     inferred     Inferred_clkgroup_0
+System                                                          100.0 MHz     1024.1 MHz     10.000        0.977         9.024     system       system_clkgroup    
+===================================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                     Ending                                                       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                       System                                                       |  10.000      9.024  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                       hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock  |  10.000      5.778  |  No paths    -      |  No paths    -      |  No paths    -    
+hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock  hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock  |  10.000      5.739  |  No paths    -      |  No paths    -      |  No paths    -    
+hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock  hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock                |  10.000      2.980  |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                    Starting                                                                                                                         Arrival          
+Instance                            Reference                                         Type        Pin                Net                                             Time        Slack
+                                    Clock                                                                                                                                             
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[28]     hello_regs_MSS_0_FIC_0_APB_MASTER_PADDR[28]     3.482       2.979
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[31]     hello_regs_MSS_0_FIC_0_APB_MASTER_PADDR[31]     3.307       3.291
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[30]     hello_regs_MSS_0_FIC_0_APB_MASTER_PADDR[30]     2.992       3.536
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[29]     hello_regs_MSS_0_FIC_0_APB_MASTER_PADDR[29]     3.002       3.552
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_SEL          hello_regs_MSS_0_FIC_0_APB_MASTER_PSELx         2.965       3.621
+======================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                    Starting                                                                                                               Required          
+Instance                            Reference                                         Type        Pin                Net                                   Time         Slack
+                                    Clock                                                                                                                                    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[3]     CoreAPB3_0_APBmslave0_PRDATA_m[3]     9.483        2.979
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[4]     CoreAPB3_0_APBmslave0_PRDATA_m[4]     9.539        3.107
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[0]     CoreAPB3_0_APBmslave0_PRDATA_m[0]     9.617        3.185
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[6]     CoreAPB3_0_APBmslave0_PRDATA_m[6]     9.651        3.219
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[5]     CoreAPB3_0_APBmslave0_PRDATA_m[5]     9.672        3.240
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[1]     CoreAPB3_0_APBmslave0_PRDATA_m[1]     9.684        3.252
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[2]     CoreAPB3_0_APBmslave0_PRDATA_m[2]     9.706        3.273
+hello_regs_MSS_0.MSS_ADLIB_INST     hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[7]     CoreAPB3_0_APBmslave0_PRDATA_m[7]     9.763        3.330
+=============================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.517
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.483
+
+    - Propagation time:                      6.503
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     2.980
+
+    Number of logic level(s):                2
+    Starting point:                          hello_regs_MSS_0.MSS_ADLIB_INST / F_HM0_ADDR[28]
+    Ending point:                            hello_regs_MSS_0.MSS_ADLIB_INST / F_HM0_RDATA[3]
+    The start point is clocked by            hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK_BASE
+    The end   point is clocked by            hello_regs_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK_BASE
+
+Instance / Net                                              Pin                Pin               Arrival     No. of    
+Name                                            Type        Name               Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------
+hello_regs_MSS_0.MSS_ADLIB_INST                 MSS_010     F_HM0_ADDR[28]     Out     3.482     3.482       -         
+hello_regs_MSS_0_FIC_0_APB_MASTER_PADDR[28]     Net         -                  -       0.971     -           1         
+CoreAPB3_0.iPSELS_2[0]                          CFG3        C                  In      -         4.453       -         
+CoreAPB3_0.iPSELS_2[0]                          CFG3        Y                  Out     0.200     4.653       -         
+iPSELS_2[0]                                     Net         -                  -       0.736     -           10        
+hello_regs_MSS_0.MSS_ADLIB_INST_RNO_2           CFG4        B                  In      -         5.389       -         
+hello_regs_MSS_0.MSS_ADLIB_INST_RNO_2           CFG4        Y                  Out     0.143     5.532       -         
+CoreAPB3_0_APBmslave0_PRDATA_m[3]               Net         -                  -       0.971     -           1         
+hello_regs_MSS_0.MSS_ADLIB_INST                 MSS_010     F_HM0_RDATA[3]     In      -         6.503       -         
+=======================================================================================================================
+Total path delay (propagation time + setup) of 7.020 is 4.342(61.8%) logic and 2.679(38.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                  Starting                                                                                                   Arrival          
+Instance                                          Reference                                                       Type     Pin     Net                       Time        Slack
+                                                  Clock                                                                                                                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.mem_1_[0]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_1_rs[0]               0.076       5.739
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_9_set       hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       un1_data_out8_9_set       0.076       5.854
+reg_apb_wrp_0.reg16x8_0.mem_3_[0]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_3_rs[0]               0.076       5.953
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_121_set     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       un1_data_out8_121_set     0.076       6.068
+reg_apb_wrp_0.reg16x8_0.mem_1_[2]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_1_rs[2]               0.076       6.113
+reg_apb_wrp_0.reg16x8_0.mem_1_[6]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_1_rs[6]               0.076       6.113
+reg_apb_wrp_0.reg16x8_0.mem_9_[1]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_9_rs[1]               0.076       6.113
+reg_apb_wrp_0.reg16x8_0.mem_9_[4]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_9_rs[4]               0.076       6.113
+reg_apb_wrp_0.reg16x8_0.mem_9_[7]                 hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       mem_9_rs[7]               0.076       6.113
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_13_set      hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      Q       un1_data_out8_13_set      0.076       6.228
+==============================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                                      Required          
+Instance                                Reference                                                       Type     Pin     Net          Time         Slack
+                                        Clock                                                                                                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.data_out[0]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_51_i_0     9.778        5.739
+reg_apb_wrp_0.reg16x8_0.data_out[1]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_89_i_0     9.778        6.113
+reg_apb_wrp_0.reg16x8_0.data_out[2]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_49_i_0     9.778        6.113
+reg_apb_wrp_0.reg16x8_0.data_out[4]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_36_i_0     9.778        6.113
+reg_apb_wrp_0.reg16x8_0.data_out[6]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_91_i_0     9.778        6.113
+reg_apb_wrp_0.reg16x8_0.data_out[7]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_34_i_0     9.778        6.113
+reg_apb_wrp_0.reg16x8_0.data_out[3]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_25_i_0     9.778        6.298
+reg_apb_wrp_0.reg16x8_0.data_out[5]     hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock     SLE      D       N_47_i_0     9.778        6.298
+========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      4.039
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 5.739
+
+    Number of logic level(s):                5
+    Starting point:                          reg_apb_wrp_0.reg16x8_0.mem_1_[0] / Q
+    Ending point:                            reg_apb_wrp_0.reg16x8_0.data_out[0] / D
+    The start point is clocked by            hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                    Pin      Pin               Arrival     No. of    
+Name                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.mem_1_[0]                        SLE      Q        Out     0.076     0.076       -         
+mem_1_rs[0]                                              Net      -        -       0.509     -           1         
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs_RNIHTAV     CFG3     C        In      -         0.585       -         
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs_RNIHTAV     CFG3     Y        Out     0.182     0.767       -         
+mem_1_[0]                                                Net      -        -       0.590     -           3         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_3[0]           CFG4     D        In      -         1.357       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_3[0]           CFG4     Y        Out     0.411     1.768       -         
+data_out_2_15_i_0_3[0]                                   Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_9[0]           CFG4     D        In      -         2.251       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_9[0]           CFG4     Y        Out     0.408     2.659       -         
+data_out_2_15_i_0_9[0]                                   Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_12[0]          CFG3     B        In      -         3.142       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_12[0]          CFG3     Y        Out     0.143     3.285       -         
+data_out_2_15_i_0_12[0]                                  Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_RNO[0]                  CFG3     B        In      -         3.768       -         
+reg_apb_wrp_0.reg16x8_0.data_out_RNO[0]                  CFG3     Y        Out     0.133     3.902       -         
+N_51_i_0                                                 Net      -        -       0.138     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out[0]                      SLE      D        In      -         4.039       -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 4.261 is 1.575(37.0%) logic and 2.686(63.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                 Starting                                                Arrival          
+Instance                                         Reference     Type     Pin     Net                      Time        Slack
+                                                 Clock                                                                    
+--------------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs     System        SLE      Q       un1_data_out8_152_rs     0.076       5.778
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_128_rs     System        SLE      Q       un1_data_out8_128_rs     0.076       5.992
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_154_rs     System        SLE      Q       un1_data_out8_154_rs     0.076       6.152
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_158_rs     System        SLE      Q       un1_data_out8_158_rs     0.076       6.152
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_192_rs     System        SLE      Q       un1_data_out8_192_rs     0.076       6.152
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_198_rs     System        SLE      Q       un1_data_out8_198_rs     0.076       6.152
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_204_rs     System        SLE      Q       un1_data_out8_204_rs     0.076       6.152
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_187_rs     System        SLE      Q       un1_data_out8_187_rs     0.076       6.327
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_147_rs     System        SLE      Q       un1_data_out8_147_rs     0.076       6.337
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_153_rs     System        SLE      Q       un1_data_out8_153_rs     0.076       6.337
+==========================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                                                    Required          
+Instance                                Reference     Type                   Pin                Net                                                 Time         Slack
+                                        Clock                                                                                                                         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.data_out[0]     System        SLE                    D                  N_51_i_0                                            9.778        5.778
+reg_apb_wrp_0.reg16x8_0.data_out[1]     System        SLE                    D                  N_89_i_0                                            9.778        6.152
+reg_apb_wrp_0.reg16x8_0.data_out[2]     System        SLE                    D                  N_49_i_0                                            9.778        6.152
+reg_apb_wrp_0.reg16x8_0.data_out[4]     System        SLE                    D                  N_36_i_0                                            9.778        6.152
+reg_apb_wrp_0.reg16x8_0.data_out[6]     System        SLE                    D                  N_91_i_0                                            9.778        6.152
+reg_apb_wrp_0.reg16x8_0.data_out[7]     System        SLE                    D                  N_34_i_0                                            9.778        6.152
+reg_apb_wrp_0.reg16x8_0.data_out[3]     System        SLE                    D                  N_25_i_0                                            9.778        6.337
+reg_apb_wrp_0.reg16x8_0.data_out[5]     System        SLE                    D                  N_47_i_0                                            9.778        6.337
+FCCC_0.CCC_INST                         System        CCC                    RCOSC_25_50MHZ     OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     10.000       9.024
+OSC_0.I_RCOSC_25_50MHZ_FAB              System        RCOSC_25_50MHZ_FAB     A                  OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     10.000       9.024
+======================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      4.000
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 5.778
+
+    Number of logic level(s):                5
+    Starting point:                          reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs / Q
+    Ending point:                            reg_apb_wrp_0.reg16x8_0.data_out[0] / D
+    The start point is clocked by            System [rising] on pin CLK
+    The end   point is clocked by            hello_regs_OSC_0_OSC|N_RCOSC_25_50MHZ_CLKINT_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                    Pin      Pin               Arrival     No. of    
+Name                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs             SLE      Q        Out     0.076     0.076       -         
+un1_data_out8_152_rs                                     Net      -        -       0.509     -           1         
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs_RNIHTAV     CFG3     B        In      -         0.585       -         
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_152_rs_RNIHTAV     CFG3     Y        Out     0.143     0.728       -         
+mem_1_[0]                                                Net      -        -       0.590     -           3         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_3[0]           CFG4     D        In      -         1.318       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_3[0]           CFG4     Y        Out     0.411     1.729       -         
+data_out_2_15_i_0_3[0]                                   Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_9[0]           CFG4     D        In      -         2.212       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_9[0]           CFG4     Y        Out     0.408     2.620       -         
+data_out_2_15_i_0_9[0]                                   Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_12[0]          CFG3     B        In      -         3.103       -         
+reg_apb_wrp_0.reg16x8_0.data_out_2_15_i_0_12[0]          CFG3     Y        Out     0.143     3.246       -         
+data_out_2_15_i_0_12[0]                                  Net      -        -       0.483     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out_RNO[0]                  CFG3     B        In      -         3.729       -         
+reg_apb_wrp_0.reg16x8_0.data_out_RNO[0]                  CFG3     Y        Out     0.133     3.862       -         
+N_51_i_0                                                 Net      -        -       0.138     -           1         
+reg_apb_wrp_0.reg16x8_0.data_out[0]                      SLE      D        In      -         4.000       -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 4.222 is 1.536(36.4%) logic and 2.686(63.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report for hello_regs 
+
+Mapping to part: m2s010fbga484-1
+Cell usage:
+CCC             1 use
+CLKINT          2 uses
+MSS_010         1 use
+RCOSC_25_50MHZ  1 use
+RCOSC_25_50MHZ_FAB  1 use
+CFG1           128 uses
+CFG2           37 uses
+CFG3           396 uses
+CFG4           92 uses
+
+
+Sequential Cells: 
+SLE            392 uses
+
+DSP Blocks:    0
+
+I/O ports: 3
+I/O primitives: 3
+INBUF          1 use
+OUTBUF         1 use
+TRIBUFF        1 use
+
+
+Global Clock Buffers: 2
+
+
+Total LUTs:    653
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K18  Interface Logic : SLEs = 0; LUTs = 0;
+MACC     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  392 + 0 + 0 + 0 = 392;
+Total number of LUTs after P&R:  653 + 0 + 0 + 0 = 653;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 51MB peak: 154MB)
+
+Process took 0h:00m:08s realtime, 0h:00m:07s cputime
+# Tue Jul 14 10:43:50 2015
+
+###########################################################]

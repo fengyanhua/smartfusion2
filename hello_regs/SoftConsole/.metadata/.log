@@ -1,0 +1,24 @@
+!SESSION 2015-08-26 10:33:30.963 -----------------------------------------------
+eclipse.buildId=M20130329-1600
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-26 10:35:36.500
+!MESSAGE Indexed 'hello_regs_MSS_CM3_app' (0 sources, 21 headers) in 1.40 sec: 137 declarations; 309 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-26 10:35:58.870
+!MESSAGE Indexed 'hello_gpio_MSS_CM3_app' (0 sources, 21 headers) in 0.16 sec: 137 declarations; 309 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-08-26 10:35:59.509
+!MESSAGE Indexed 'hello_gpio_MSS_CM3_hw_platform' (0 sources, 21 headers) in 0.12 sec: 137 declarations; 309 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.22%)
+!SESSION 2015-09-02 11:13:29.862 -----------------------------------------------
+eclipse.buildId=M20130329-1600
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-09-02 11:13:59.677
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

@@ -1,0 +1,23 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3
+@N: CG364 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3
+@N: CG364 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v":21:7:21:24|Synthesizing module coreapb3_iaddr_reg
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:44|Synthesizing module hello_regs_COREAPBLSRAM_0_COREAPBLSRAM
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":377:7:377:13|Synthesizing module RAM1K18
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":28:7:28:51|Synthesizing module hello_regs_COREAPBLSRAM_0_lsram_512to35328x32
+@N: CG364 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":23:7:23:14|Synthesizing module CoreGPIO
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":371:7:371:9|Synthesizing module VCC
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":367:7:367:9|Synthesizing module GND
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":722:7:722:9|Synthesizing module CCC
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v":5:7:5:28|Synthesizing module hello_regs_FCCC_0_FCCC
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":268:7:268:11|Synthesizing module INBUF
+@N: CG364 :"E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":280:7:280:13|Synthesizing module TRIBUFF
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v":5:7:5:13|Synthesizing module MSS_010
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v":9:7:9:20|Synthesizing module hello_regs_MSS
+@N: CG364 :"E:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":5:7:5:26|Synthesizing module hello_regs_OSC_0_OSC
+@N: CG364 :"E:\Practice\hello_regs\hdl\reg32x8.v":4:7:4:13|Synthesizing module reg16x8
+@N: CG364 :"E:\Practice\hello_regs\hdl\reg_apb_wrp.v":21:7:21:17|Synthesizing module reg_apb_wrp
+@N: CG364 :"E:\Practice\hello_regs\component\work\hello_regs\hello_regs.v":9:7:9:16|Synthesizing module hello_regs
+

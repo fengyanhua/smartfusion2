@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Practice/FIC/simulation
+vCoreAPB3
+Z1 !s110 1440745690
+!i10b 1
+!s100 RAFUo[=O<WdP_EB9cePB[1
+Im@3Sl91gOeV<0GhbVKFVS0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1436784939
+8D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+FD:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+L0 31
+Z4 OW;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1440745690.391000
+!s107 D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v|
+!s90 -reportprogress|300|-work|COREAPB3_LIB|D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v|
+!s101 -O0
+!i113 1
+Z5 o-work COREAPB3_LIB -O0
+n@core@a@p@b3
+vcoreapb3_iaddr_reg
+R1
+!i10b 1
+!s100 WGY?k0U=4WL^CoU[?A8La3
+ITEzEnb]EhoZ2]:ILXAO0?1
+R2
+R0
+R3
+8D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+FD:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+L0 21
+R4
+r1
+!s85 0
+31
+!s108 1440745690.235000
+!s107 D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v|
+!s90 -reportprogress|300|-work|COREAPB3_LIB|D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v|
+!s101 -O0
+!i113 1
+R5
+vCOREAPB3_MUXPTOB3
+R1
+!i10b 1
+!s100 Ogo[hbd8LN1;1dg8^^SXO2
+Ib8AKQ_]<2InaNJmkEWANQ2
+R2
+R0
+R3
+8D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+FD:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+L0 30
+R4
+r1
+!s85 0
+31
+!s108 1440745689.954000
+!s107 D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v|
+!s90 -reportprogress|300|-work|COREAPB3_LIB|D:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v|
+!s101 -O0
+!i113 1
+R5
+n@c@o@r@e@a@p@b3_@m@u@x@p@t@o@b3

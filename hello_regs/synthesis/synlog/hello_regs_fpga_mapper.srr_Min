@@ -1,0 +1,216 @@
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Sep 15 18:43:13 2015
+#
+
+
+Top view:               hello_regs
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 0.680
+
+                                                  Requested     Estimated      Requested     Estimated               Clock        Clock              
+Starting Clock                                    Frequency     Frequency      Period        Period        Slack     Type         Group              
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     100.0 MHz     106.6 MHz      10.000        9.384         0.616     inferred     Inferred_clkgroup_0
+System                                            100.0 MHz     1029.4 MHz     10.000        0.971         9.029     system       system_clkgroup    
+=====================================================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                       Ending                                         |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                         System                                         |  0.000       0.680  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                         hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock  |  0.000       1.296  |  No paths    -      |  No paths    -      |  No paths    -    
+hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock  hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock  |  0.000       0.996  |  No paths    -      |  No paths    -      |  No paths    -    
+====================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                 Starting                                                                                            Arrival          
+Instance                                         Reference                                         Type     Pin     Net                              Time        Slack
+                                                 Clock                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+COREAPBLSRAM_0.PREADY_reg                        hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       CoreAPB3_0_APBmslave4_PREADY     0.066       0.996
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_2_set      hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_2_set              0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_4_set      hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_4_set              0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_6_set      hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_6_set              0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_8_set      hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_8_set              0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_10_set     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_10_set             0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_28_set     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_28_set             0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_65_set     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_65_set             0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_67_set     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_67_set             0.053       1.243
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_9_set      hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      Q       un1_data_out8_9_set              0.053       1.296
+======================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                                       Required          
+Instance                                Reference                                         Type     Pin     Net                         Time         Slack
+                                        Clock                                                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+COREAPBLSRAM_0.PREADY_reg               hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       PREADY_reg6_i_0             0.155        0.996
+reg_apb_wrp_0.reg16x8_0.data_out[0]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_11                        0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[1]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_9                         0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[2]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_13                        0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[3]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_7                         0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[4]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_15                        0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[5]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_17                        0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[6]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_19                        0.155        1.243
+reg_apb_wrp_0.reg16x8_0.data_out[7]     hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       N_5                         0.155        1.243
+COREAPBLSRAM_0.PRDATA_reg[0]            hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock     SLE      D       lsram_width32_PRDATA[0]     0.155        1.905
+=========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.151
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.155
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.996
+
+    Number of logic level(s):                2
+    Starting point:                          COREAPBLSRAM_0.PREADY_reg / Q
+    Ending point:                            COREAPBLSRAM_0.PREADY_reg / D
+    The start point is clocked by            hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            hello_regs_FCCC_0_FCCC|GL1_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                       Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+COREAPBLSRAM_0.PREADY_reg                  SLE      Q        Out     0.066     0.066       -         
+CoreAPB3_0_APBmslave4_PREADY               Net      -        -       0.411     -           2         
+COREAPBLSRAM_0.PREADY_reg6_0_a3_0_a3_0     CFG2     B        In      -         0.476       -         
+COREAPBLSRAM_0.PREADY_reg6_0_a3_0_a3_0     CFG2     Y        Out     0.100     0.577       -         
+PREADY_reg6_0_a3_0_a3_0                    Net      -        -       0.338     -           1         
+COREAPBLSRAM_0.PREADY_reg6_i               CFG4     C        In      -         0.915       -         
+COREAPBLSRAM_0.PREADY_reg6_i               CFG4     Y        Out     0.140     1.055       -         
+PREADY_reg6_i_0                            Net      -        -       0.097     -           1         
+COREAPBLSRAM_0.PREADY_reg                  SLE      D        In      -         1.151       -         
+=====================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                 Starting                                                                                        Arrival          
+Instance                                         Reference     Type               Pin        Net                                                 Time        Slack
+                                                 Clock                                                                                                            
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OSC_0.I_RCOSC_25_50MHZ                           System        RCOSC_25_50MHZ     CLKOUT     OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     0.000       0.680
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_137_rs     System        SLE                Q          un1_data_out8_137_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_138_rs     System        SLE                Q          un1_data_out8_138_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_139_rs     System        SLE                Q          un1_data_out8_139_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_140_rs     System        SLE                Q          un1_data_out8_140_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_141_rs     System        SLE                Q          un1_data_out8_141_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_143_rs     System        SLE                Q          un1_data_out8_143_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_185_rs     System        SLE                Q          un1_data_out8_185_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_203_rs     System        SLE                Q          un1_data_out8_203_rs                                0.053       1.296
+reg_apb_wrp_0.reg16x8_0.un1_data_out8_136_rs     System        SLE                Q          un1_data_out8_136_rs                                0.053       1.349
+==================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                                      Required          
+Instance                                Reference     Type     Pin                Net                                                 Time         Slack
+                                        Clock                                                                                                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+FCCC_0.CCC_INST                         System        CCC      RCOSC_25_50MHZ     OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     0.000        0.680
+reg_apb_wrp_0.reg16x8_0.data_out[0]     System        SLE      D                  N_11                                                0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[1]     System        SLE      D                  N_9                                                 0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[2]     System        SLE      D                  N_13                                                0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[3]     System        SLE      D                  N_7                                                 0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[4]     System        SLE      D                  N_15                                                0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[5]     System        SLE      D                  N_17                                                0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[6]     System        SLE      D                  N_19                                                0.155        1.296
+reg_apb_wrp_0.reg16x8_0.data_out[7]     System        SLE      D                  N_5                                                 0.155        1.296
+========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.680
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (critical) :                     0.680
+
+    Number of logic level(s):                0
+    Starting point:                          OSC_0.I_RCOSC_25_50MHZ / CLKOUT
+    Ending point:                            FCCC_0.CCC_INST / RCOSC_25_50MHZ
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                                         Pin                Pin               Arrival     No. of    
+Name                                                Type               Name               Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------
+OSC_0.I_RCOSC_25_50MHZ                              RCOSC_25_50MHZ     CLKOUT             Out     0.000     0.000       -         
+OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     Net                -                  -       0.680     -           1         
+FCCC_0.CCC_INST                                     CCC                RCOSC_25_50MHZ     In      -         0.680       -         
+==================================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

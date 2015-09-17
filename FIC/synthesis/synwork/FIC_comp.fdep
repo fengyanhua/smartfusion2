@@ -1,0 +1,102 @@
+#OPTIONS:"|-top|FIC|-prodtype|synplify_pro|-primux|-dspmac|-pqdpadd|-fixsmult|-divnmod|-nram|-I|D:\\Practice\\FIC\\synthesis\\|-I|D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib|-v2001|-devicelib|D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|work"
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\bin64\\c_ver.exe":1412864178
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v":1412910306
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\umr_capim.v":1412864098
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_objects.v":1412863844
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_pipes.svh":1412863844
+#CUR:"D:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\hypermods.v":1412863844
+#CUR:"D:\\Practice\\FIC\\component\\Actel\\DirectCore\\CoreGPIO\\3.0.120\\rtl\\vlog\\core\\coregpio.v":1436958366
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\FCCC_0\\FIC_FCCC_0_FCCC.v":1441856965
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC_MSS\\FIC_MSS_syn.v":1441163689
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC_MSS\\FIC_MSS.v":1441163690
+#CUR:"D:\\Practice\\FIC\\component\\Actel\\SgCore\\OSC\\1.0.103\\osc_comps.v":1435912965
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\OSC_0\\FIC_OSC_0_OSC.v":1441856969
+#CUR:"D:\\Practice\\FIC\\hdl\\reg16x8.v":1440486907
+#CUR:"D:\\Practice\\FIC\\hdl\\reg_apb_wrp.v":1440486907
+#CUR:"D:\\Practice\\FIC\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_muxptob3.v":1436784939
+#CUR:"D:\\Practice\\FIC\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_iaddr_reg.v":1436784939
+#CUR:"D:\\Practice\\FIC\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3.v":1436784939
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_512to35328x32.v":1441856961
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_512to46kx24.v":1441856961
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_1024to70656x16.v":1441856960
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_2048to141312x8.v":1441856961
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\COREAPBLSRAM_0\\rtl\\vlog\\core\\CoreAPBLSRAM.v":1441856960
+#CUR:"D:\\Practice\\FIC\\component\\work\\FIC\\FIC.v":1441856969
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v" verilog
+1			"D:\Practice\FIC\component\work\FIC\FCCC_0\FIC_FCCC_0_FCCC.v" verilog
+2			"D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS_syn.v" verilog
+3			"D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS.v" verilog
+4			"D:\Practice\FIC\component\Actel\SgCore\OSC\1.0.103\osc_comps.v" verilog
+5			"D:\Practice\FIC\component\work\FIC\OSC_0\FIC_OSC_0_OSC.v" verilog
+6			"D:\Practice\FIC\hdl\reg16x8.v" verilog
+7			"D:\Practice\FIC\hdl\reg_apb_wrp.v" verilog
+8			"D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v" verilog
+9			"D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v" verilog
+10			"D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v" verilog
+11			"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v" verilog
+12			"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v" verilog
+13			"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v" verilog
+14			"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v" verilog
+15			"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v" verilog
+16			"D:\Practice\FIC\component\work\FIC\FIC.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 -1
+4 -1
+5 -1
+6 -1
+7 6
+8 -1
+9 -1
+10 8 9
+11 -1
+12 -1
+13 -1
+14 -1
+15 11 12 13 14
+16 10 15 0 1 3 5 7
+#Dependency Lists(Users Of)
+0 16
+1 16
+2 -1
+3 16
+4 -1
+5 16
+6 7
+7 16
+8 10
+9 10
+10 16
+11 15
+12 15
+13 15
+14 15
+15 16
+16 -1
+#Design Unit to File Association
+module work CoreGPIO 0
+module work FIC_FCCC_0_FCCC 1
+module work MSS_010 2
+module work FIC_MSS 3
+module work RCOSC_1MHZ 4
+module work RCOSC_25_50MHZ 4
+module work XTLOSC 4
+module work RCOSC_1MHZ_FAB 4
+module work RCOSC_25_50MHZ_FAB 4
+module work XTLOSC_FAB 4
+module work FIC_OSC_0_OSC 5
+module work reg16x8 6
+module work reg_apb_wrp 7
+module work FIC 16
+module COREAPB3_LIB COREAPB3_MUXPTOB3 8
+module COREAPB3_LIB coreapb3_iaddr_reg 9
+module COREAPB3_LIB CoreAPB3 10
+module COREAPBLSRAM_LIB FIC_COREAPBLSRAM_0_lsram_512to35328x32 11
+module COREAPBLSRAM_LIB FIC_COREAPBLSRAM_0_lsram_512to46kx24 12
+module COREAPBLSRAM_LIB FIC_COREAPBLSRAM_0_lsram_1024to70656x16 13
+module COREAPBLSRAM_LIB FIC_COREAPBLSRAM_0_lsram_2048to141312x8 14
+module COREAPBLSRAM_LIB FIC_COREAPBLSRAM_0_COREAPBLSRAM 15

@@ -1,0 +1,37 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.5 SP3 (Version 11.5.3.10)
+
+Date      :  Tue Sep 15 10:49:26 2015
+Project   :  E:\Practice\FIC
+Component :  FIC
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    E:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+    E:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    E:/Practice/FIC/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+    E:/Practice/FIC/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vlog/core/coregpio.v
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/core/CoreAPBLSRAM.v
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/core/lsram_1024to70656x16.v
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/core/lsram_2048to141312x8.v
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to35328x32.v
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to46kx24.v
+    E:/Practice/FIC/component/work/FIC/FCCC_0/FIC_FCCC_0_FCCC.v
+    E:/Practice/FIC/component/work/FIC/FIC.v
+    E:/Practice/FIC/component/work/FIC/OSC_0/FIC_OSC_0_OSC.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    E:/Practice/FIC/component/Actel/SgCore/OSC/1.0.103/osc_comps.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    E:/Practice/FIC/component/Actel/SgCore/OSC/1.0.103/osc_comps_pre.v
+
+Stimulus files for all Simulation tools:
+    E:/Practice/FIC/component/work/FIC/subsystem.bfm
+
+    E:/Practice/FIC/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/coreparameters.v
+    E:/Practice/FIC/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/compileList.do
+    E:/Practice/FIC/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/run.do
+    E:/Practice/FIC/component/Actel/DirectCore/COREAPBLSRAM/2.0.108/mti/scripts/wave.do
+    E:/Practice/FIC/component/work/FIC/COREAPBLSRAM_0/rtl/vlog/test/user/tb.v
+

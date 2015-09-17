@@ -1,0 +1,90 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.5 SP3 11.5.3.10
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA
+# Date generated: Thu Sep 10 16:23:41 2015 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io {GPIO_OUT_1[0]}  \
+    -pinname Y19        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[1]}  \
+    -pinname K17        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[2]}  \
+    -pinname AB18       \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[3]}  \
+    -pinname R17        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[4]}  \
+    -pinname Y18        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[5]}  \
+    -pinname AB19       \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[6]}  \
+    -pinname V19        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT_1[7]}  \
+    -pinname K15        \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+set_io MSS_RESET_N_M2F  \
+    -pinname B1         \
+    -fixed yes          \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+

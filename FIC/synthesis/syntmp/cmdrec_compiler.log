@@ -1,0 +1,24 @@
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\c_ver.exe  -osyn  D:\Practice\FIC\synthesis\synwork\FIC_comp.srs  -top  FIC  -prodtype  synplify_pro  -primux -dspmac -pqdpadd -fixsmult -divnmod -nram   -I D:\Practice\FIC\synthesis\  -I D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib   -v2001  -devicelib  D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v  -encrypt  -pro  -dmgen  D:\Practice\FIC\synthesis\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v -lib work D:\Practice\FIC\component\work\FIC\FCCC_0\FIC_FCCC_0_FCCC.v -lib work D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS_syn.v -lib work D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS.v -lib work D:\Practice\FIC\component\Actel\SgCore\OSC\1.0.103\osc_comps.v -lib work D:\Practice\FIC\component\work\FIC\OSC_0\FIC_OSC_0_OSC.v -lib work D:\Practice\FIC\hdl\reg16x8.v -lib work D:\Practice\FIC\hdl\reg_apb_wrp.v -lib COREAPB3_LIB D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v -lib COREAPB3_LIB D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v -lib COREAPB3_LIB D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v -lib COREAPBLSRAM_LIB D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v -lib COREAPBLSRAM_LIB D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v -lib COREAPBLSRAM_LIB D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v -lib COREAPBLSRAM_LIB D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v -lib COREAPBLSRAM_LIB D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v -lib work D:\Practice\FIC\component\work\FIC\FIC.v  -log  D:\Practice\FIC\synthesis\synlog\FIC_compiler.srr 
+rc:1 success:1
+D:\Practice\FIC\synthesis\synwork\FIC_comp.srs|o|1441856994|169967
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v|i|1412910306|16424
+D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v|i|1436958366|27986
+D:\Practice\FIC\component\work\FIC\FCCC_0\FIC_FCCC_0_FCCC.v|i|1441856965|1720
+D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS_syn.v|i|1441163689|53987
+D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS.v|i|1441163690|42854
+D:\Practice\FIC\component\Actel\SgCore\OSC\1.0.103\osc_comps.v|i|1435912965|924
+D:\Practice\FIC\component\work\FIC\OSC_0\FIC_OSC_0_OSC.v|i|1441856969|531
+D:\Practice\FIC\hdl\reg16x8.v|i|1440486907|1308
+D:\Practice\FIC\hdl\reg_apb_wrp.v|i|1440486907|3626
+D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v|i|1436784939|5708
+D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v|i|1436784939|4465
+D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v|i|1436784939|29701
+D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v|i|1441856961|1371147
+D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v|i|1441856961|1498834
+D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v|i|1441856960|2048007
+D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v|i|1441856961|1968667
+D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v|i|1441856960|16783
+D:\Practice\FIC\component\work\FIC\FIC.v|i|1441856969|23153
+D:\Practice\FIC\synthesis\synlog\FIC_compiler.srr|o|1441856994|26580
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin\c_ver.exe|i|1412863976|2306560
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\c_ver.exe|i|1412864178|5845504

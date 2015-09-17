@@ -1,0 +1,15 @@
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  E:\Practice\hello_regs\synthesis   -part M2S010  -package FBGA484  -grade -1    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -opcond COMWC -report_path 0 -RWCheckOnRam 0 -summaryfile E:\Practice\hello_regs\synthesis\synlog\report\hello_regs_fpga_mapper.xml  -top_level_module  hello_regs  -flow mapping  -mp  1  -prjfile  E:\Practice\hello_regs\synthesis\scratchproject.prs  -implementation  synthesis  -licensetype  synplifypro_actel  -multisrs  -oedif  E:\Practice\hello_regs\synthesis\hello_regs.edn   -freq 100.000   E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd  -sap  E:\Practice\hello_regs\synthesis\hello_regs.sap  -otap  E:\Practice\hello_regs\synthesis\hello_regs.tap  -omap  E:\Practice\hello_regs\synthesis\hello_regs.map  -devicelib  E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v  -sap  E:\Practice\hello_regs\synthesis\hello_regs.sap  -ologparam  E:\Practice\hello_regs\synthesis\syntmp\hello_regs.plg  -osyn  E:\Practice\hello_regs\synthesis\hello_regs.srm  -prjdir  E:\Practice\hello_regs\synthesis\  -prjname  hello_regs_syn  -log  E:\Practice\hello_regs\synthesis\synlog\hello_regs_fpga_mapper.srr 
+rc:1 success:1
+E:\Practice\hello_regs\synthesis\scratchproject.prs|o|1442313764|3353
+E:\Practice\hello_regs\synthesis\hello_regs.edn|o|1442313792|1037147
+E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd|i|1442313780|128068
+E:\Practice\hello_regs\synthesis\hello_regs.sap|o|1442313780|49741
+E:\Practice\hello_regs\synthesis\hello_regs.tap|o|0|0
+E:\Practice\hello_regs\synthesis\hello_regs.map|o|1442313793|28
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v|i|1412910306|16424
+E:\Practice\hello_regs\synthesis\hello_regs.sap|o|1442313780|49741
+E:\Practice\hello_regs\synthesis\syntmp\hello_regs.plg|o|1442313793|1629
+E:\Practice\hello_regs\synthesis\hello_regs.srm|o|1442313791|19820
+E:\Practice\hello_regs\synthesis\synlog\hello_regs_fpga_mapper.srr|o|1442313793|124056
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin\m_generic.exe|i|1413423026|22941184
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe|i|1413425106|34740736

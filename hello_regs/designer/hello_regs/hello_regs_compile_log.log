@@ -1,0 +1,75 @@
+The 'set_device' command succeeded.
+The 'read_edif' command succeeded.
+The 'write_adl' command succeeded.
+The Execute Script command succeeded.
+Running 'g4compile.exe' in 64-bit mode
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_defvar' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+The 'set_compile_info' command succeeded.
+Warning:  CMP007: Top level port GPIO_IN<7> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<6> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<5> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<4> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<3> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<2> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<1> is not connected to any IO pad
+Warning:  CMP007: Top level port GPIO_IN<0> is not connected to any IO pad
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       2 
+      Globals that cannot be demoted:      1 
+      Globals considered for demotion:     1 
+
+
+Info: List of globals that cannot be demoted: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    340    0      0      'FCCC_0/GL1_INST' 
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    0      83     257    'hello_regs_MSS_0/MSS_ADLIB_INST_RNIUO3B' 
+
+Info: Demotion information: 
+      Disconnected 257 data pins from global 'hello_regs_MSS_0/MSS_ADLIB_INST_RNIUO3B'. 
+Info: Added 0 row global instances. 
+Info: Deleted 0 global instances. 
+
+===============================================================================.
+
+INFO: Reading User PDC file E:/Practice/hello_regs/constraint/io/hello_regs.io.pdc. 0 error(s) and 0 warning(s)
+The 'compile' command succeeded.
+The Execute Script command succeeded.
+Running 'st_shell.exe' in 64-bit mode
+Running 'g4layout.exe' in 64-bit mode

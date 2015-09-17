@@ -1,0 +1,49 @@
+FlashPro
+Version: 11.5.3.10
+Release: v11.5 SP3
+
+Software Version: 11.5.3.10
+Driver : 3.0.0 build 1
+programmer '92882' : FlashPro4
+Opened 'E:/Practice/hello_regs/designer/hello_regs/hello_regs_fp/hello_regs.pro'
+The 'open_project' command succeeded.
+IPD file 'E:/Practice/hello_regs/designer/hello_regs/hello_regs.ipd' has been loaded
+successfully.
+DESIGN : hello_regs;  CHECKSUM : 119B;  PDB_VERSION : 1.9
+The 'set_programming_file' command succeeded.
+Warning: Programming is already enabled for device 'M2S010'.
+The 'enable_device' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer '92882' : Scan Chain...
+Warning: programmer '92882' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '92882' : Check Chain...
+programmer '92882' : Scan and Check Chain PASSED.
+programmer '92882' : device 'M2S010' : Executing action PROGRAM
+programmer '92882' : device 'M2S010' : EXPORT ISC_ENABLE_RESULT[32] = 007b6844
+programmer '92882' : device 'M2S010' : EXPORT CRCERR: [1] = 0
+programmer '92882' : device 'M2S010' : EXPORT EDCERR: [1] = 0
+programmer '92882' : device 'M2S010' : TEMPGRADE: ROOM
+programmer '92882' : device 'M2S010' : EXPORT VPPRANGE: [3] = 2
+programmer '92882' : device 'M2S010' : VPPRANGE: HIGH
+programmer '92882' : device 'M2S010' : EXPORT TEMP: [8] = 68
+programmer '92882' : device 'M2S010' : EXPORT VPP: [8] = 7b
+programmer '92882' : device 'M2S010' : Programming FPGA Array and eNVM...
+programmer '92882' : device 'M2S010' :
+===================================================================================
+programmer '92882' : device 'M2S010' : EXPORT DSN[128] = 03e8aa010000cd5a00e10001000e0013
+programmer '92882' : device 'M2S010' :
+===================================================================================
+programmer '92882' : device 'M2S010' : Finished: Wed Sep 16 10:11:46 2015 (Elapsed time
+00:00:31)
+programmer '92882' : device 'M2S010' : Executing action PROGRAM PASSED.
+programmer '92882' : Chain programming PASSED.
+Chain Programming Finished: Wed Sep 16 10:11:46 2015 (Elapsed time 00:00:31)
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

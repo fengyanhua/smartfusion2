@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>hello_regs</design>
+	<target_edif>E:\Practice\hello_regs\synthesis\hello_regs.edn</target_edif>
+</SynplifyOutput>

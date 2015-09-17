@@ -1,0 +1,120 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.5 SP3 11.5.3.10
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA
+# Date generated: Wed Sep 02 10:49:50 2015 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io {GPIO_IN[0]}   \
+    -pinname H6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[1]}   \
+    -pinname J6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[2]}   \
+    -pinname K6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[3]}   \
+    -pinname H7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[4]}   \
+    -pinname K7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[5]}   \
+    -pinname G7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[6]}   \
+    -pinname K15      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_OUT[0]}   \
+    -pinname F6        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[1]}   \
+    -pinname L16       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[2]}   \
+    -pinname G6        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[3]}   \
+    -pinname P16       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[4]}   \
+    -pinname F5        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[5]}   \
+    -pinname AB18      \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[6]}   \
+    -pinname P1        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+

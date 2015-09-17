@@ -1,0 +1,15 @@
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\Practice\FIC\synthesis   -part M2S010  -package FBGA484  -grade -1    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -opcond COMWC -report_path 0 -RWCheckOnRam 0 -summaryfile D:\Practice\FIC\synthesis\synlog\report\FIC_fpga_mapper.xml  -top_level_module  FIC  -flow mapping  -mp  1  -prjfile  D:\Practice\FIC\synthesis\scratchproject.prs  -implementation  synthesis  -licensetype  synplifypro_actel  -multisrs  -oedif  D:\Practice\FIC\synthesis\FIC.edn   -freq 100.000   D:\Practice\FIC\synthesis\synwork\FIC_prem.srd  -sap  D:\Practice\FIC\synthesis\FIC.sap  -otap  D:\Practice\FIC\synthesis\FIC.tap  -omap  D:\Practice\FIC\synthesis\FIC.map  -devicelib  D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v  -sap  D:\Practice\FIC\synthesis\FIC.sap  -ologparam  D:\Practice\FIC\synthesis\syntmp\FIC.plg  -osyn  D:\Practice\FIC\synthesis\FIC.srm  -prjdir  D:\Practice\FIC\synthesis\  -prjname  FIC_syn  -log  D:\Practice\FIC\synthesis\synlog\FIC_fpga_mapper.srr 
+rc:1 success:1
+D:\Practice\FIC\synthesis\scratchproject.prs|o|1441159304|3094
+D:\Practice\FIC\synthesis\FIC.edn|o|1441857021|1716495
+D:\Practice\FIC\synthesis\synwork\FIC_prem.srd|i|1441856999|214419
+D:\Practice\FIC\synthesis\FIC.sap|o|1441856999|131017
+D:\Practice\FIC\synthesis\FIC.tap|o|0|0
+D:\Practice\FIC\synthesis\FIC.map|o|1441857022|28
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v|i|1412910306|16424
+D:\Practice\FIC\synthesis\FIC.sap|o|1441856999|131017
+D:\Practice\FIC\synthesis\syntmp\FIC.plg|o|1441857022|1524
+D:\Practice\FIC\synthesis\FIC.srm|o|1441857020|25984
+D:\Practice\FIC\synthesis\synlog\FIC_fpga_mapper.srr|o|1441857022|157744
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin\m_generic.exe|i|1413423026|22941184
+D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe|i|1413425106|34740736

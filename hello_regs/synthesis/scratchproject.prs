@@ -1,0 +1,79 @@
+#--  Synopsys, Inc.
+#--  Version I-2014.03M-SP1
+#--  Project file E:\Practice\hello_regs\synthesis\scratchproject.prs
+
+#project files
+add_file -verilog "E:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v"
+add_file -verilog "E:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v"
+add_file -verilog "E:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS_syn.v"
+add_file -verilog "E:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v"
+add_file -verilog "E:/Practice/hello_regs/component/Actel/SgCore/OSC/1.0.103/osc_comps.v"
+add_file -verilog "E:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v"
+add_file -verilog "E:/Practice/hello_regs/hdl/reg32x8.v"
+add_file -verilog "E:/Practice/hello_regs/hdl/reg_apb_wrp.v"
+add_file -verilog -lib COREAPB3_LIB "E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v"
+add_file -verilog -lib COREAPB3_LIB "E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v"
+add_file -verilog -lib COREAPB3_LIB "E:/Practice/hello_regs/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v"
+add_file -verilog -lib COREAPBLSRAM_LIB "E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to35328x32.v"
+add_file -verilog -lib COREAPBLSRAM_LIB "E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to46kx24.v"
+add_file -verilog -lib COREAPBLSRAM_LIB "E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_1024to70656x16.v"
+add_file -verilog -lib COREAPBLSRAM_LIB "E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/lsram_2048to141312x8.v"
+add_file -verilog -lib COREAPBLSRAM_LIB "E:/Practice/hello_regs/component/work/hello_regs/COREAPBLSRAM_0/rtl/vlog/core/CoreAPBLSRAM.v"
+add_file -verilog "E:/Practice/hello_regs/component/work/hello_regs/hello_regs.v"
+
+
+
+#implementation: "synthesis"
+impl -add E:\Practice\hello_regs\synthesis -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+
+#device options
+set_option -technology SmartFusion2
+set_option -part M2S010
+set_option -package FBGA484
+set_option -speed_grade -1
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "hello_regs"
+
+# mapper_options
+set_option -frequency 100.000
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# actel_options
+set_option -RWCheckOnRam 0
+
+# Microsemi G4
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -opcond COMWC
+set_option -retiming 0
+set_option -report_path 0
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "E:/Practice/hello_regs/synthesis/hello_regs.edn"
+impl -active "synthesis"

@@ -1,0 +1,15 @@
+FlashPro
+Version: 11.5.3.10
+Release: v11.5 SP3
+
+Software Version: 11.5.3.10
+Opened 'E:/Practice/hello_regs/designer/hello_regs/hello_regs_fp/hello_regs.pro'
+The 'open_project' command succeeded.
+PDB file 'E:\Practice\hello_regs\designer\hello_regs\cfa3f644-ea8d-4f73-aa8d-cf73ea8dcf73.pdb'
+has been loaded successfully.
+DESIGN : hello_regs;  CHECKSUM : 119B;  PDB_VERSION : 1.9
+The 'load_programming_data' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

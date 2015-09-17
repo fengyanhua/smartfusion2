@@ -1,0 +1,32 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.5 SP3 (Version 11.5.3.10)
+
+Date      :  Tue Sep 15 16:52:46 2015
+Project   :  E:\Practice\hello_regs
+Component :  hello_regs_MSS
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS_pre.v
+
+Stimulus files for all Simulation tools:
+    E:/Practice/hello_regs/component/Actel/SmartFusion2MSS/MSS/1.1.300/peripheral_init.bfm
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/CM3_compile_bfm.tcl
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/test.bfm
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/user.bfm
+
+Firmware files for all Software IDE tools:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/sys_config_mss_clocks.h
+
+Configuration files to be used for Programming:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/ENVM.cfg
+
+Configuration files to be used for all Simulation tools:
+    E:/Practice/hello_regs/component/work/hello_regs_MSS/ENVM.cfg
+

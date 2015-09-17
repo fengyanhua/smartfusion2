@@ -1,0 +1,28 @@
+@N|Running in 64-bit mode
+@N: CG364 :"D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3
+@N: CG364 :"D:\Practice\FIC\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3
+@N: CG364 :"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:37|Synthesizing module FIC_COREAPBLSRAM_0_COREAPBLSRAM
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":377:7:377:13|Synthesizing module RAM1K18
+@N: CG364 :"D:\Practice\FIC\component\work\FIC\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":28:7:28:44|Synthesizing module FIC_COREAPBLSRAM_0_lsram_512to35328x32
+@N: CG364 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":23:7:23:14|Synthesizing module CoreGPIO
+@N: CG179 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":428:15:428:26|Removing redundant assignment
+@N: CG179 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":448:15:448:26|Removing redundant assignment
+@N: CG179 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":468:16:468:28|Removing redundant assignment
+@N: CG179 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":504:16:504:28|Removing redundant assignment
+@N: CG179 :"D:\Practice\FIC\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":507:16:507:28|Removing redundant assignment
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":371:7:371:9|Synthesizing module VCC
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":367:7:367:9|Synthesizing module GND
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":722:7:722:9|Synthesizing module CCC
+@N: CG364 :"D:\Practice\FIC\component\work\FIC\FCCC_0\FIC_FCCC_0_FCCC.v":5:7:5:21|Synthesizing module FIC_FCCC_0_FCCC
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":268:7:268:11|Synthesizing module INBUF
+@N: CG364 :"D:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v":280:7:280:13|Synthesizing module TRIBUFF
+@N: CG364 :"D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS_syn.v":5:7:5:13|Synthesizing module MSS_010
+@N: CG364 :"D:\Practice\FIC\component\work\FIC_MSS\FIC_MSS.v":9:7:9:13|Synthesizing module FIC_MSS
+@N: CG364 :"D:\Practice\FIC\component\Actel\SgCore\OSC\1.0.103\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ
+@N: CG364 :"D:\Practice\FIC\component\work\FIC\OSC_0\FIC_OSC_0_OSC.v":5:7:5:19|Synthesizing module FIC_OSC_0_OSC
+@N: CG364 :"D:\Practice\FIC\hdl\reg16x8.v":4:7:4:13|Synthesizing module reg16x8
+@N: CG364 :"D:\Practice\FIC\hdl\reg_apb_wrp.v":20:7:20:17|Synthesizing module reg_apb_wrp
+@N: CG364 :"D:\Practice\FIC\component\work\FIC\FIC.v":9:7:9:9|Synthesizing module FIC
+@N: CL201 :"D:\Practice\FIC\hdl\reg_apb_wrp.v":46:0:46:5|Trying to extract state machine for register fsm
+

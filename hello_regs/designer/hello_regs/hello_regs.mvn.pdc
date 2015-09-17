@@ -1,0 +1,52 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.5 SP3 11.5.3.10
+
+# Design Name:  
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA , Speed grade: -1 
+
+# Date generated: Tue Sep 15 18:51:55 2015 
+
+
+#
+# IO banks setting
+#
+
+set_iobank Bank1 -vcci 3.30 -fixed no
+set_iobank Bank2 -vcci 3.30 -fixed no
+set_iobank Bank4 -vcci 3.30 -fixed no
+set_iobank Bank7 -vcci 3.30 -fixed no
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# I/O constraints
+#
+
+set_io GPIO_OUT_1\[0\] -DIRECTION OUTPUT -pinname Y19 -fixed yes
+set_io GPIO_OUT_1\[1\] -DIRECTION OUTPUT -pinname K17 -fixed yes
+set_io GPIO_OUT_1\[2\] -DIRECTION OUTPUT -pinname AB18 -fixed yes
+set_io GPIO_OUT_1\[3\] -DIRECTION OUTPUT -pinname R17 -fixed yes
+set_io GPIO_OUT_1\[4\] -DIRECTION OUTPUT -pinname Y18 -fixed yes
+set_io GPIO_OUT_1\[5\] -DIRECTION OUTPUT -pinname AB19 -fixed yes
+set_io GPIO_OUT_1\[6\] -DIRECTION OUTPUT -pinname V19 -fixed yes
+set_io GPIO_OUT_1\[7\] -DIRECTION OUTPUT -pinname K15 -fixed yes
+set_io MMUART_0_RXD -DIRECTION INPUT -pinname C22 -fixed yes
+set_io MMUART_0_TXD -DIRECTION OUTPUT -pinname D21 -fixed yes
+set_io MSS_RESET_N_M2F -DIRECTION OUTPUT -pinname B1 -fixed yes
+
+#
+# Core cell constraints
+#
+

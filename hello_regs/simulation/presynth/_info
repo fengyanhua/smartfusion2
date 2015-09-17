@@ -1,0 +1,183 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Practice/hello_regs/simulation
+vCoreGPIO
+Z1 !s110 1441851735
+!i10b 1
+!s100 KY6WC]30eEG`f4faEYD7J2
+I4m4fJWjgM<ccDJ_k1zI:?3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1441850373
+8D:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v
+FD:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v
+L0 23
+Z3 OW;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1441851735.030000
+!s107 D:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v|
+!s101 -O0
+!i113 1
+Z4 o-work presynth -O0
+n@core@g@p@i@o
+vhello_regs
+Z5 !s110 1441851736
+!i10b 1
+!s100 B2<clQ[BNK?F`f18dnU;>3
+IbcNjlcITa?Q68nmbhFl3>3
+R2
+R0
+w1441851271
+8D:/Practice/hello_regs/component/work/hello_regs/hello_regs.v
+FD:/Practice/hello_regs/component/work/hello_regs/hello_regs.v
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1441851736.481000
+!s107 D:/Practice/hello_regs/component/work/hello_regs/hello_regs.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/component/work/hello_regs/hello_regs.v|
+!s101 -O0
+!i113 1
+R4
+vhello_regs_FCCC_0_FCCC
+R1
+!i10b 1
+!s100 NBJ`3S]nchC_:i359lLL]2
+IhS:o[4GN`ECkOkU9RmX@63
+R2
+R0
+w1441851266
+8D:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v
+FD:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1441851735.248000
+!s107 D:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/component/work/hello_regs/FCCC_0/hello_regs_FCCC_0_FCCC.v|
+!s101 -O0
+!i113 1
+R4
+nhello_regs_@f@c@c@c_0_@f@c@c@c
+vhello_regs_MSS
+R1
+!i10b 1
+!s100 _X@Uc>2I[FCdOc<RkjeEP0
+IK`Jjf]>oXXU[l;=UKh3KZ1
+R2
+R0
+w1440081555
+8D:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v
+FD:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1441851735.404000
+!s107 D:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/component/work/hello_regs_MSS/hello_regs_MSS.v|
+!s101 -O0
+!i113 1
+R4
+nhello_regs_@m@s@s
+vhello_regs_OSC_0_OSC
+R1
+!i10b 1
+!s100 WDRIVM;JbaWF[IZ0WT^ec3
+I`1KcG_3TH?GX2m5DdO9ZO2
+R2
+R0
+w1441851270
+8D:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v
+FD:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1441851735.560000
+!s107 D:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/component/work/hello_regs/OSC_0/hello_regs_OSC_0_OSC.v|
+!s101 -O0
+!i113 1
+R4
+nhello_regs_@o@s@c_0_@o@s@c
+vreg16x8
+R1
+!i10b 1
+!s100 N<QTdNgO0oD5Xm65`^8j31
+IN2S58UaH`ZSGP9WoKO?Hf2
+R2
+R0
+Z6 w1436840458
+8D:/Practice/hello_regs/hdl/reg32x8.v
+FD:/Practice/hello_regs/hdl/reg32x8.v
+L0 4
+R3
+r1
+!s85 0
+31
+!s108 1441851735.716000
+!s107 D:/Practice/hello_regs/hdl/reg32x8.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/hdl/reg32x8.v|
+!s101 -O0
+!i113 1
+R4
+vreg_apb_wrp
+R1
+!i10b 1
+!s100 e?kINk=_P6dnABGz<S`]C3
+IFG1O=z]egGKnXaTHNk5Ml2
+R2
+R0
+R6
+8D:/Practice/hello_regs/hdl/reg_apb_wrp.v
+FD:/Practice/hello_regs/hdl/reg_apb_wrp.v
+Z7 L0 21
+R3
+r1
+!s85 0
+31
+!s108 1441851735.857000
+!s107 D:/Practice/hello_regs/hdl/reg_apb_wrp.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/hello_regs/hdl/reg_apb_wrp.v|
+!s101 -O0
+!i113 1
+R4
+vtest_regs
+R5
+!i10b 1
+!s100 B5^0DDDLanIeVOecPjaD10
+I:cBXM^Qz:294bhI`hSEKV0
+R2
+R0
+w1436949340
+8D:/Practice/hello_regs/stimulus/test_regs.v
+FD:/Practice/hello_regs/stimulus/test_regs.v
+R7
+R3
+r1
+!s85 0
+31
+!s108 1441851736.652000
+!s107 D:/Practice/hello_regs/stimulus/test_regs.v|
+!s90 -reportprogress|300|+incdir+D:/Practice/hello_regs/stimulus|-work|presynth|D:/Practice/hello_regs/stimulus/test_regs.v|
+!s101 -O0
+!i113 1
+R4
+!s92 +incdir+D:/Practice/hello_regs/stimulus -work presynth -O0

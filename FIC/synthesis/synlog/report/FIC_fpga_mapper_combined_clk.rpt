@@ -1,0 +1,150 @@
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 700 clock pin(s) of sequential element(s)
+128 gated/generated clock tree(s) driving 128 clock pin(s) of sequential element(s)
+0 instances converted, 128 sequential instances remain driven by gated/generated clocks
+
+============================== Non-Gated/Non-Generated Clocks ==============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance     
+--------------------------------------------------------------------------------------------
+@K:CKID0129       FCCC_0.GL1_INST     CLKINT                 700        reg_apb_wrp_0.fsm[1]
+============================================================================================
+======================================================================================= Gated/Generated Clocks =======================================================================================
+Clock Tree ID     Driving Element                             Drive Element Type     Fanout     Sample Instance                                Explanation                                            
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_23      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_231_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0002       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_111     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_239_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0003       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_119     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_247_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0004       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_60      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_252_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0005       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_110     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_238_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0006       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_118     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_246_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0007       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_63      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_255_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0008       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_8       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_135_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0009       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_24      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_143_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0010       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_120     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_151_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0011       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_55      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_160_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0012       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_11      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_170_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0013       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_27      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_186_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0014       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_123     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_202_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0015       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_1       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_217_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0016       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_71      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_173_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0017       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_79      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_189_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0018       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_100     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_205_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0019       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_95      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_220_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0020       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_117     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_245_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0021       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_62      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_254_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0022       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_87      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_134_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0023       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_45      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_142_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0024       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_38      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_150_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0025       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_83      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_159_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0026       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_9       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_168_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0027       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_25      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_184_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0028       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_121     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_200_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0029       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_3       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_215_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0030       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_70      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_171_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0031       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_78      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_187_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0032       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_103     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_203_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0033       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_94      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_218_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0034       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_22      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_230_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0035       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_58      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_253_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0036       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_86      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_133_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0037       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_47      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_141_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0038       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_36      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_149_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0039       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_52      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_157_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0040       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_67      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_166_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0041       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_46      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_182_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0042       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_39      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_198_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0043       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_54      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_213_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0044       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_69      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_169_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0045       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_77      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_185_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0046       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_102     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_201_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0047       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_93      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_216_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0048       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_21      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_229_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0049       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_109     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_237_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0050       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_85      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_132_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0051       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_41      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_140_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0052       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_34      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_148_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0053       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_50      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_156_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0054       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_65      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_165_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0055       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_44      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_180_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0056       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_37      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_196_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0057       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_53      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_158_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0058       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_68      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_167_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0059       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_76      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_183_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0060       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_101     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_199_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0061       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_92      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_214_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0062       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_20      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_228_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0063       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_108     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_236_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0064       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_116     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_244_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0065       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_43      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_139_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0066       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_32      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_147_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0067       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_48      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_155_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0068       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_6       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_164_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0069       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_42      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_178_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0070       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_35      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_194_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0071       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_51      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_210_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0072       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_66      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_225_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0073       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_75      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_181_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0074       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_96      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_197_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0075       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_91      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_212_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0076       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_19      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_227_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0077       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_107     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_235_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0078       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_115     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_243_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0079       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_61      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_251_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0080       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_30      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_146_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0081       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_126     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_154_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0082       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_4       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_163_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0083       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_40      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_176_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0084       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_33      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_192_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0085       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_49      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_208_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0086       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_64      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_223_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0087       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_74      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_179_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0088       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_99      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_195_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0089       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_90      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_211_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0090       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_18      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_226_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0091       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_106     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_234_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0092       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_114     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_242_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0093       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_56      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_250_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0094       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_84      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_130_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0095       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_124     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_153_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0096       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_2       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_162_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0097       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_15      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_174_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0098       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_31      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_190_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0099       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_127     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_206_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0100       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_5       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_221_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0101       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_73      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_177_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0102       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_98      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_193_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0103       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_89      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_209_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0104       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_17      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_224_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0105       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_105     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_233_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0106       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_113     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_241_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0107       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_59      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_249_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0108       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_82      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_129_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0109       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_14      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_138_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0110       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5         CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_161_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0111       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_13      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_172_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0112       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_29      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_188_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0113       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_125     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_204_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0114       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_7       CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_219_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0115       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_72      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_175_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0116       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_97      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_191_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0117       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_88      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_207_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0118       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_16      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_222_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0119       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_104     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_232_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0120       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_112     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_240_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0121       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_57      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_248_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0122       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_81      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_128_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0123       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_12      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_137_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0124       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_28      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_145_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0125       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_80      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_131_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0126       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_10      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_136_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0127       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_26      CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_144_rs     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0128       reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_122     CFG3                   1          reg_apb_wrp_0.reg16x8_0.un1_mem_0_5_152_rs     No gated clock conversion method for cell cell:ACG4.SLE
+======================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+

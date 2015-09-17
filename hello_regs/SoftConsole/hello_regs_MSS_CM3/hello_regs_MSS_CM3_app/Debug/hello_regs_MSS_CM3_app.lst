@@ -1,0 +1,2963 @@
+
+hello_regs_MSS_CM3_app:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vector_table 00000190  20000000  20000000  00008000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .init         00000560  20000190  20000190  00008190  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text         00000d30  200006f0  200006f0  000086f0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .data         00000020  20001420  20001420  00009420  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .bss          00000090  20001440  20001440  00009440  2**2
+                  ALLOC
+  5 .heap         0000bb30  200014d0  200014d0  00009440  2**0
+                  ALLOC
+  6 .stack        00003000  2000d000  2000d000  00009440  2**0
+                  ALLOC
+  7 .comment      000000ac  00000000  00000000  00009440  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 000002e8  00000000  00000000  000094ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_pubnames 000006e0  00000000  00000000  000097d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_info   000038c9  00000000  00000000  00009eb4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_abbrev 00000694  00000000  00000000  0000d77d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   0000126a  00000000  00000000  0000de11  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_frame  00000a24  00000000  00000000  0000f07c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_str    00001ced  00000000  00000000  0000faa0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_loc    0000111f  00000000  00000000  0001178d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_macinfo 0001bafb  00000000  00000000  000128ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .ARM.attributes 00000025  00000000  00000000  0002e3a7  2**0
+                  CONTENTS, READONLY
+ 18 .debug_ranges 000002c8  00000000  00000000  0002e3cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .init:
+
+20000190 <Reset_Handler>:
+20000190:	f04f 0b00 	mov.w	fp, #0
+20000194:	f8df 021a 	ldr.w	r0, [pc, #538]	; 200003b2 <SF2_MDDR_MODE_CR>
+20000198:	6800      	ldr	r0, [r0, #0]
+2000019a:	f8df 1212 	ldr.w	r1, [pc, #530]	; 200003ae <SF2_EDAC_CR>
+2000019e:	6809      	ldr	r1, [r1, #0]
+200001a0:	f001 0103 	and.w	r1, r1, #3
+200001a4:	f000 001c 	and.w	r0, r0, #28
+200001a8:	2814      	cmp	r0, #20
+200001aa:	d101      	bne.n	200001b0 <check_esram_edac>
+200001ac:	f04b 0b02 	orr.w	fp, fp, #2
+
+200001b0 <check_esram_edac>:
+200001b0:	2900      	cmp	r1, #0
+200001b2:	d001      	beq.n	200001b8 <check_stack_init>
+200001b4:	f04b 0b01 	orr.w	fp, fp, #1
+
+200001b8 <check_stack_init>:
+200001b8:	f1bb 0f00 	cmp.w	fp, #0
+200001bc:	d00d      	beq.n	200001da <system_init>
+
+200001be <clear_stack>:
+200001be:	487e      	ldr	r0, [pc, #504]	; (200003b8 <SF2_MDDR_MODE_CR+0x6>)
+200001c0:	497e      	ldr	r1, [pc, #504]	; (200003bc <SF2_MDDR_MODE_CR+0xa>)
+200001c2:	f8df 21ce 	ldr.w	r2, [pc, #462]	; 20000392 <RAM_INIT_PATTERN>
+200001c6:	f8df 31ca 	ldr.w	r3, [pc, #458]	; 20000392 <RAM_INIT_PATTERN>
+200001ca:	f8df 41c6 	ldr.w	r4, [pc, #454]	; 20000392 <RAM_INIT_PATTERN>
+200001ce:	f8df 51c2 	ldr.w	r5, [pc, #450]	; 20000392 <RAM_INIT_PATTERN>
+
+200001d2 <clear_stack_loop>:
+200001d2:	4288      	cmp	r0, r1
+200001d4:	bf18      	it	ne
+200001d6:	c03c      	stmiane	r0!, {r2, r3, r4, r5}
+200001d8:	d1fb      	bne.n	200001d2 <clear_stack_loop>
+
+200001da <system_init>:
+200001da:	4879      	ldr	r0, [pc, #484]	; (200003c0 <SF2_MDDR_MODE_CR+0xe>)
+200001dc:	4780      	blx	r0
+200001de:	f00b 0a02 	and.w	sl, fp, #2
+200001e2:	f1ba 0f00 	cmp.w	sl, #0
+200001e6:	d00c      	beq.n	20000202 <remap_memory>
+200001e8:	f8df 01ba 	ldr.w	r0, [pc, #442]	; 200003a6 <SF2_DDRB_NB_SIZE>
+200001ec:	f8df 11ba 	ldr.w	r1, [pc, #442]	; 200003aa <SF2_DDRB_CR>
+200001f0:	6802      	ldr	r2, [r0, #0]
+200001f2:	680b      	ldr	r3, [r1, #0]
+200001f4:	b40f      	push	{r0, r1, r2, r3}
+200001f6:	f04f 0200 	mov.w	r2, #0
+200001fa:	f04f 03ff 	mov.w	r3, #255	; 0xff
+200001fe:	6002      	str	r2, [r0, #0]
+20000200:	600b      	str	r3, [r1, #0]
+
+20000202 <remap_memory>:
+20000202:	4870      	ldr	r0, [pc, #448]	; (200003c4 <SF2_MDDR_MODE_CR+0x12>)
+20000204:	4a70      	ldr	r2, [pc, #448]	; (200003c8 <SF2_MDDR_MODE_CR+0x16>)
+20000206:	4b71      	ldr	r3, [pc, #452]	; (200003cc <SF2_MDDR_MODE_CR+0x1a>)
+20000208:	2802      	cmp	r0, #2
+2000020a:	d108      	bne.n	2000021e <check_esram_remap>
+2000020c:	f8df 118a 	ldr.w	r1, [pc, #394]	; 2000039a <SF2_ESRAM_CR>
+20000210:	600a      	str	r2, [r1, #0]
+20000212:	f8df 118e 	ldr.w	r1, [pc, #398]	; 200003a2 <SF2_ENVM_REMAP_CR>
+20000216:	600a      	str	r2, [r1, #0]
+20000218:	f8df 1182 	ldr.w	r1, [pc, #386]	; 2000039e <SF2_DDR_CR>
+2000021c:	600b      	str	r3, [r1, #0]
+
+2000021e <check_esram_remap>:
+2000021e:	2801      	cmp	r0, #1
+20000220:	d108      	bne.n	20000234 <check_mirrored_nvm>
+20000222:	f8df 117a 	ldr.w	r1, [pc, #378]	; 2000039e <SF2_DDR_CR>
+20000226:	600a      	str	r2, [r1, #0]
+20000228:	f8df 1176 	ldr.w	r1, [pc, #374]	; 200003a2 <SF2_ENVM_REMAP_CR>
+2000022c:	600a      	str	r2, [r1, #0]
+2000022e:	f8df 116a 	ldr.w	r1, [pc, #362]	; 2000039a <SF2_ESRAM_CR>
+20000232:	600b      	str	r3, [r1, #0]
+
+20000234 <check_mirrored_nvm>:
+20000234:	4866      	ldr	r0, [pc, #408]	; (200003d0 <SF2_MDDR_MODE_CR+0x1e>)
+20000236:	2800      	cmp	r0, #0
+20000238:	d109      	bne.n	2000024e <copy_data>
+2000023a:	4866      	ldr	r0, [pc, #408]	; (200003d4 <SF2_MDDR_MODE_CR+0x22>)
+2000023c:	4966      	ldr	r1, [pc, #408]	; (200003d8 <SF2_MDDR_MODE_CR+0x26>)
+2000023e:	4a67      	ldr	r2, [pc, #412]	; (200003dc <SF2_MDDR_MODE_CR+0x2a>)
+20000240:	f000 f83a 	bl	200002b8 <block_copy>
+
+20000244 <copy_text>:
+20000244:	4866      	ldr	r0, [pc, #408]	; (200003e0 <SF2_MDDR_MODE_CR+0x2e>)
+20000246:	4967      	ldr	r1, [pc, #412]	; (200003e4 <SF2_MDDR_MODE_CR+0x32>)
+20000248:	4a67      	ldr	r2, [pc, #412]	; (200003e8 <SF2_MDDR_MODE_CR+0x36>)
+2000024a:	f000 f835 	bl	200002b8 <block_copy>
+
+2000024e <copy_data>:
+2000024e:	4867      	ldr	r0, [pc, #412]	; (200003ec <SF2_MDDR_MODE_CR+0x3a>)
+20000250:	4967      	ldr	r1, [pc, #412]	; (200003f0 <SF2_MDDR_MODE_CR+0x3e>)
+20000252:	4a68      	ldr	r2, [pc, #416]	; (200003f4 <SF2_MDDR_MODE_CR+0x42>)
+20000254:	f000 f830 	bl	200002b8 <block_copy>
+
+20000258 <clear_bss>:
+20000258:	4867      	ldr	r0, [pc, #412]	; (200003f8 <SF2_MDDR_MODE_CR+0x46>)
+2000025a:	4968      	ldr	r1, [pc, #416]	; (200003fc <SF2_MDDR_MODE_CR+0x4a>)
+2000025c:	4a5a      	ldr	r2, [pc, #360]	; (200003c8 <SF2_MDDR_MODE_CR+0x16>)
+2000025e:	4b5a      	ldr	r3, [pc, #360]	; (200003c8 <SF2_MDDR_MODE_CR+0x16>)
+20000260:	4c59      	ldr	r4, [pc, #356]	; (200003c8 <SF2_MDDR_MODE_CR+0x16>)
+20000262:	4d59      	ldr	r5, [pc, #356]	; (200003c8 <SF2_MDDR_MODE_CR+0x16>)
+
+20000264 <clear_bss_loop>:
+20000264:	4288      	cmp	r0, r1
+20000266:	bf18      	it	ne
+20000268:	c03c      	stmiane	r0!, {r2, r3, r4, r5}
+2000026a:	d1fb      	bne.n	20000264 <clear_bss_loop>
+
+2000026c <clear_heap>:
+2000026c:	f1bb 0f00 	cmp.w	fp, #0
+20000270:	d016      	beq.n	200002a0 <call_glob_ctor>
+20000272:	4863      	ldr	r0, [pc, #396]	; (20000400 <SF2_MDDR_MODE_CR+0x4e>)
+20000274:	4963      	ldr	r1, [pc, #396]	; (20000404 <SF2_MDDR_MODE_CR+0x52>)
+20000276:	f8df 211e 	ldr.w	r2, [pc, #286]	; 20000396 <HEAP_INIT_PATTERN>
+2000027a:	f8df 311a 	ldr.w	r3, [pc, #282]	; 20000396 <HEAP_INIT_PATTERN>
+2000027e:	f8df 4116 	ldr.w	r4, [pc, #278]	; 20000396 <HEAP_INIT_PATTERN>
+20000282:	f8df 5112 	ldr.w	r5, [pc, #274]	; 20000396 <HEAP_INIT_PATTERN>
+
+20000286 <clear_heap_loop>:
+20000286:	4288      	cmp	r0, r1
+20000288:	bf18      	it	ne
+2000028a:	c03c      	stmiane	r0!, {r2, r3, r4, r5}
+2000028c:	d1fb      	bne.n	20000286 <clear_heap_loop>
+2000028e:	f00b 0a02 	and.w	sl, fp, #2
+20000292:	f1ba 0f00 	cmp.w	sl, #0
+20000296:	d003      	beq.n	200002a0 <call_glob_ctor>
+20000298:	bc0f      	pop	{r0, r1, r2, r3}
+2000029a:	6002      	str	r2, [r0, #0]
+2000029c:	600b      	str	r3, [r1, #0]
+	...
+
+200002a0 <call_glob_ctor>:
+200002a0:	f8df 0164 	ldr.w	r0, [pc, #356]	; 20000408 <SF2_MDDR_MODE_CR+0x56>
+200002a4:	f20f 0e03 	addw	lr, pc, #3
+200002a8:	4700      	bx	r0
+
+200002aa <branch_to_main>:
+200002aa:	f04f 0000 	mov.w	r0, #0
+200002ae:	f04f 0100 	mov.w	r1, #0
+200002b2:	f8df f158 	ldr.w	pc, [pc, #344]	; 2000040c <SF2_MDDR_MODE_CR+0x5a>
+
+200002b6 <ExitLoop>:
+200002b6:	e7fe      	b.n	200002b6 <ExitLoop>
+
+200002b8 <block_copy>:
+200002b8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+200002ba:	4288      	cmp	r0, r1
+200002bc:	d00c      	beq.n	200002d8 <block_copy_exit>
+200002be:	1a52      	subs	r2, r2, r1
+200002c0:	1112      	asrs	r2, r2, #4
+200002c2:	f012 0f0f 	tst.w	r2, #15
+200002c6:	d000      	beq.n	200002ca <block_copy_loop>
+200002c8:	3201      	adds	r2, #1
+
+200002ca <block_copy_loop>:
+200002ca:	429a      	cmp	r2, r3
+200002cc:	bf1c      	itt	ne
+200002ce:	c8f0      	ldmiane	r0!, {r4, r5, r6, r7}
+200002d0:	c1f0      	stmiane	r1!, {r4, r5, r6, r7}
+200002d2:	f103 0301 	add.w	r3, r3, #1
+200002d6:	d1f8      	bne.n	200002ca <block_copy_loop>
+
+200002d8 <block_copy_exit>:
+200002d8:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+
+200002da <NMI_Handler>:
+200002da:	e7fe      	b.n	200002da <NMI_Handler>
+
+200002dc <HardFault_Handler>:
+200002dc:	e7fe      	b.n	200002dc <HardFault_Handler>
+
+200002de <MemManage_Handler>:
+200002de:	e7fe      	b.n	200002de <MemManage_Handler>
+
+200002e0 <BusFault_Handler>:
+200002e0:	e7fe      	b.n	200002e0 <BusFault_Handler>
+
+200002e2 <UsageFault_Handler>:
+200002e2:	e7fe      	b.n	200002e2 <UsageFault_Handler>
+
+200002e4 <SVC_Handler>:
+200002e4:	e7fe      	b.n	200002e4 <SVC_Handler>
+
+200002e6 <DebugMon_Handler>:
+200002e6:	e7fe      	b.n	200002e6 <DebugMon_Handler>
+
+200002e8 <PendSV_Handler>:
+200002e8:	e7fe      	b.n	200002e8 <PendSV_Handler>
+
+200002ea <SysTick_Handler>:
+200002ea:	e7fe      	b.n	200002ea <SysTick_Handler>
+
+200002ec <WdogWakeup_IRQHandler>:
+200002ec:	e7fe      	b.n	200002ec <WdogWakeup_IRQHandler>
+
+200002ee <RTC_Wakeup_IRQHandler>:
+200002ee:	e7fe      	b.n	200002ee <RTC_Wakeup_IRQHandler>
+
+200002f0 <SPI0_IRQHandler>:
+200002f0:	e7fe      	b.n	200002f0 <SPI0_IRQHandler>
+
+200002f2 <SPI1_IRQHandler>:
+200002f2:	e7fe      	b.n	200002f2 <SPI1_IRQHandler>
+
+200002f4 <I2C0_IRQHandler>:
+200002f4:	e7fe      	b.n	200002f4 <I2C0_IRQHandler>
+
+200002f6 <I2C0_SMBAlert_IRQHandler>:
+200002f6:	e7fe      	b.n	200002f6 <I2C0_SMBAlert_IRQHandler>
+
+200002f8 <I2C0_SMBus_IRQHandler>:
+200002f8:	e7fe      	b.n	200002f8 <I2C0_SMBus_IRQHandler>
+
+200002fa <I2C1_IRQHandler>:
+200002fa:	e7fe      	b.n	200002fa <I2C1_IRQHandler>
+
+200002fc <I2C1_SMBAlert_IRQHandler>:
+200002fc:	e7fe      	b.n	200002fc <I2C1_SMBAlert_IRQHandler>
+
+200002fe <I2C1_SMBus_IRQHandler>:
+200002fe:	e7fe      	b.n	200002fe <I2C1_SMBus_IRQHandler>
+20000300:	e7fe      	b.n	20000300 <I2C1_SMBus_IRQHandler+0x2>
+20000302:	e7fe      	b.n	20000302 <I2C1_SMBus_IRQHandler+0x4>
+
+20000304 <EthernetMAC_IRQHandler>:
+20000304:	e7fe      	b.n	20000304 <EthernetMAC_IRQHandler>
+
+20000306 <DMA_IRQHandler>:
+20000306:	e7fe      	b.n	20000306 <DMA_IRQHandler>
+
+20000308 <Timer1_IRQHandler>:
+20000308:	e7fe      	b.n	20000308 <Timer1_IRQHandler>
+
+2000030a <Timer2_IRQHandler>:
+2000030a:	e7fe      	b.n	2000030a <Timer2_IRQHandler>
+
+2000030c <CAN_IRQHandler>:
+2000030c:	e7fe      	b.n	2000030c <CAN_IRQHandler>
+
+2000030e <ENVM0_IRQHandler>:
+2000030e:	e7fe      	b.n	2000030e <ENVM0_IRQHandler>
+
+20000310 <ENVM1_IRQHandler>:
+20000310:	e7fe      	b.n	20000310 <ENVM1_IRQHandler>
+
+20000312 <ComBlk_IRQHandler>:
+20000312:	e7fe      	b.n	20000312 <ComBlk_IRQHandler>
+
+20000314 <USB_IRQHandler>:
+20000314:	e7fe      	b.n	20000314 <USB_IRQHandler>
+
+20000316 <USB_DMA_IRQHandler>:
+20000316:	e7fe      	b.n	20000316 <USB_DMA_IRQHandler>
+
+20000318 <PLL_Lock_IRQHandler>:
+20000318:	e7fe      	b.n	20000318 <PLL_Lock_IRQHandler>
+
+2000031a <PLL_LockLost_IRQHandler>:
+2000031a:	e7fe      	b.n	2000031a <PLL_LockLost_IRQHandler>
+
+2000031c <CommSwitchError_IRQHandler>:
+2000031c:	e7fe      	b.n	2000031c <CommSwitchError_IRQHandler>
+
+2000031e <CacheError_IRQHandler>:
+2000031e:	e7fe      	b.n	2000031e <CacheError_IRQHandler>
+
+20000320 <DDR_IRQHandler>:
+20000320:	e7fe      	b.n	20000320 <DDR_IRQHandler>
+
+20000322 <HPDMA_Complete_IRQHandler>:
+20000322:	e7fe      	b.n	20000322 <HPDMA_Complete_IRQHandler>
+
+20000324 <HPDMA_Error_IRQHandler>:
+20000324:	e7fe      	b.n	20000324 <HPDMA_Error_IRQHandler>
+
+20000326 <ECC_Error_IRQHandler>:
+20000326:	e7fe      	b.n	20000326 <ECC_Error_IRQHandler>
+
+20000328 <MDDR_IOCalib_IRQHandler>:
+20000328:	e7fe      	b.n	20000328 <MDDR_IOCalib_IRQHandler>
+
+2000032a <FAB_PLL_Lock_IRQHandler>:
+2000032a:	e7fe      	b.n	2000032a <FAB_PLL_Lock_IRQHandler>
+
+2000032c <FAB_PLL_LockLost_IRQHandler>:
+2000032c:	e7fe      	b.n	2000032c <FAB_PLL_LockLost_IRQHandler>
+
+2000032e <FIC64_IRQHandler>:
+2000032e:	e7fe      	b.n	2000032e <FIC64_IRQHandler>
+
+20000330 <FabricIrq0_IRQHandler>:
+20000330:	e7fe      	b.n	20000330 <FabricIrq0_IRQHandler>
+
+20000332 <FabricIrq1_IRQHandler>:
+20000332:	e7fe      	b.n	20000332 <FabricIrq1_IRQHandler>
+
+20000334 <FabricIrq2_IRQHandler>:
+20000334:	e7fe      	b.n	20000334 <FabricIrq2_IRQHandler>
+
+20000336 <FabricIrq3_IRQHandler>:
+20000336:	e7fe      	b.n	20000336 <FabricIrq3_IRQHandler>
+
+20000338 <FabricIrq4_IRQHandler>:
+20000338:	e7fe      	b.n	20000338 <FabricIrq4_IRQHandler>
+
+2000033a <FabricIrq5_IRQHandler>:
+2000033a:	e7fe      	b.n	2000033a <FabricIrq5_IRQHandler>
+
+2000033c <FabricIrq6_IRQHandler>:
+2000033c:	e7fe      	b.n	2000033c <FabricIrq6_IRQHandler>
+
+2000033e <FabricIrq7_IRQHandler>:
+2000033e:	e7fe      	b.n	2000033e <FabricIrq7_IRQHandler>
+
+20000340 <FabricIrq8_IRQHandler>:
+20000340:	e7fe      	b.n	20000340 <FabricIrq8_IRQHandler>
+
+20000342 <FabricIrq9_IRQHandler>:
+20000342:	e7fe      	b.n	20000342 <FabricIrq9_IRQHandler>
+
+20000344 <FabricIrq10_IRQHandler>:
+20000344:	e7fe      	b.n	20000344 <FabricIrq10_IRQHandler>
+
+20000346 <FabricIrq11_IRQHandler>:
+20000346:	e7fe      	b.n	20000346 <FabricIrq11_IRQHandler>
+
+20000348 <FabricIrq12_IRQHandler>:
+20000348:	e7fe      	b.n	20000348 <FabricIrq12_IRQHandler>
+
+2000034a <FabricIrq13_IRQHandler>:
+2000034a:	e7fe      	b.n	2000034a <FabricIrq13_IRQHandler>
+
+2000034c <FabricIrq14_IRQHandler>:
+2000034c:	e7fe      	b.n	2000034c <FabricIrq14_IRQHandler>
+
+2000034e <FabricIrq15_IRQHandler>:
+2000034e:	e7fe      	b.n	2000034e <FabricIrq15_IRQHandler>
+
+20000350 <GPIO0_IRQHandler>:
+20000350:	e7fe      	b.n	20000350 <GPIO0_IRQHandler>
+
+20000352 <GPIO1_IRQHandler>:
+20000352:	e7fe      	b.n	20000352 <GPIO1_IRQHandler>
+
+20000354 <GPIO2_IRQHandler>:
+20000354:	e7fe      	b.n	20000354 <GPIO2_IRQHandler>
+
+20000356 <GPIO3_IRQHandler>:
+20000356:	e7fe      	b.n	20000356 <GPIO3_IRQHandler>
+
+20000358 <GPIO4_IRQHandler>:
+20000358:	e7fe      	b.n	20000358 <GPIO4_IRQHandler>
+
+2000035a <GPIO5_IRQHandler>:
+2000035a:	e7fe      	b.n	2000035a <GPIO5_IRQHandler>
+
+2000035c <GPIO6_IRQHandler>:
+2000035c:	e7fe      	b.n	2000035c <GPIO6_IRQHandler>
+
+2000035e <GPIO7_IRQHandler>:
+2000035e:	e7fe      	b.n	2000035e <GPIO7_IRQHandler>
+
+20000360 <GPIO8_IRQHandler>:
+20000360:	e7fe      	b.n	20000360 <GPIO8_IRQHandler>
+
+20000362 <GPIO9_IRQHandler>:
+20000362:	e7fe      	b.n	20000362 <GPIO9_IRQHandler>
+
+20000364 <GPIO10_IRQHandler>:
+20000364:	e7fe      	b.n	20000364 <GPIO10_IRQHandler>
+
+20000366 <GPIO11_IRQHandler>:
+20000366:	e7fe      	b.n	20000366 <GPIO11_IRQHandler>
+
+20000368 <GPIO12_IRQHandler>:
+20000368:	e7fe      	b.n	20000368 <GPIO12_IRQHandler>
+
+2000036a <GPIO13_IRQHandler>:
+2000036a:	e7fe      	b.n	2000036a <GPIO13_IRQHandler>
+
+2000036c <GPIO14_IRQHandler>:
+2000036c:	e7fe      	b.n	2000036c <GPIO14_IRQHandler>
+
+2000036e <GPIO15_IRQHandler>:
+2000036e:	e7fe      	b.n	2000036e <GPIO15_IRQHandler>
+
+20000370 <GPIO16_IRQHandler>:
+20000370:	e7fe      	b.n	20000370 <GPIO16_IRQHandler>
+
+20000372 <GPIO17_IRQHandler>:
+20000372:	e7fe      	b.n	20000372 <GPIO17_IRQHandler>
+
+20000374 <GPIO18_IRQHandler>:
+20000374:	e7fe      	b.n	20000374 <GPIO18_IRQHandler>
+
+20000376 <GPIO19_IRQHandler>:
+20000376:	e7fe      	b.n	20000376 <GPIO19_IRQHandler>
+
+20000378 <GPIO20_IRQHandler>:
+20000378:	e7fe      	b.n	20000378 <GPIO20_IRQHandler>
+
+2000037a <GPIO21_IRQHandler>:
+2000037a:	e7fe      	b.n	2000037a <GPIO21_IRQHandler>
+
+2000037c <GPIO22_IRQHandler>:
+2000037c:	e7fe      	b.n	2000037c <GPIO22_IRQHandler>
+
+2000037e <GPIO23_IRQHandler>:
+2000037e:	e7fe      	b.n	2000037e <GPIO23_IRQHandler>
+
+20000380 <GPIO24_IRQHandler>:
+20000380:	e7fe      	b.n	20000380 <GPIO24_IRQHandler>
+
+20000382 <GPIO25_IRQHandler>:
+20000382:	e7fe      	b.n	20000382 <GPIO25_IRQHandler>
+
+20000384 <GPIO26_IRQHandler>:
+20000384:	e7fe      	b.n	20000384 <GPIO26_IRQHandler>
+
+20000386 <GPIO27_IRQHandler>:
+20000386:	e7fe      	b.n	20000386 <GPIO27_IRQHandler>
+
+20000388 <GPIO28_IRQHandler>:
+20000388:	e7fe      	b.n	20000388 <GPIO28_IRQHandler>
+
+2000038a <GPIO29_IRQHandler>:
+2000038a:	e7fe      	b.n	2000038a <GPIO29_IRQHandler>
+
+2000038c <GPIO30_IRQHandler>:
+2000038c:	e7fe      	b.n	2000038c <GPIO30_IRQHandler>
+
+2000038e <GPIO31_IRQHandler>:
+2000038e:	e7fe      	b.n	2000038e <GPIO31_IRQHandler>
+
+20000390 <mscc_post_hw_cfg_init>:
+20000390:	4770      	bx	lr
+
+20000392 <RAM_INIT_PATTERN>:
+20000392:	0000      	.short	0x0000
+	...
+
+20000396 <HEAP_INIT_PATTERN>:
+20000396:	a2a2      	.short	0xa2a2
+20000398:	a2a2      	.short	0xa2a2
+
+2000039a <SF2_ESRAM_CR>:
+2000039a:	8000      	.short	0x8000
+2000039c:	4003      	.short	0x4003
+
+2000039e <SF2_DDR_CR>:
+2000039e:	8008      	.short	0x8008
+200003a0:	4003      	.short	0x4003
+
+200003a2 <SF2_ENVM_REMAP_CR>:
+200003a2:	8010      	.short	0x8010
+200003a4:	4003      	.short	0x4003
+
+200003a6 <SF2_DDRB_NB_SIZE>:
+200003a6:	8030      	.short	0x8030
+200003a8:	4003      	.short	0x4003
+
+200003aa <SF2_DDRB_CR>:
+200003aa:	8034      	.short	0x8034
+200003ac:	4003      	.short	0x4003
+
+200003ae <SF2_EDAC_CR>:
+200003ae:	8038      	.short	0x8038
+200003b0:	4003      	.short	0x4003
+
+200003b2 <SF2_MDDR_MODE_CR>:
+200003b2:	0818      	.short	0x0818
+200003b4:	00004002 	.word	0x00004002
+200003b8:	2000d000 	.word	0x2000d000
+200003bc:	20010000 	.word	0x20010000
+200003c0:	20000411 	.word	0x20000411
+200003c4:	00000001 	.word	0x00000001
+200003c8:	00000000 	.word	0x00000000
+200003cc:	00000001 	.word	0x00000001
+200003d0:	00000000 	.word	0x00000000
+200003d4:	20000000 	.word	0x20000000
+200003d8:	20000000 	.word	0x20000000
+200003dc:	20000190 	.word	0x20000190
+200003e0:	200006f0 	.word	0x200006f0
+200003e4:	200006f0 	.word	0x200006f0
+200003e8:	20001420 	.word	0x20001420
+200003ec:	20001420 	.word	0x20001420
+200003f0:	20001420 	.word	0x20001420
+200003f4:	20001440 	.word	0x20001440
+200003f8:	20001440 	.word	0x20001440
+200003fc:	200014d0 	.word	0x200014d0
+20000400:	200014d0 	.word	0x200014d0
+20000404:	2000d000 	.word	0x2000d000
+20000408:	20001385 	.word	0x20001385
+2000040c:	20000721 	.word	0x20000721
+
+20000410 <SystemInit>:
+
+/***************************************************************************//**
+ * See system_m2sxxx.h for details.
+ */
+void SystemInit(void)
+{
+20000410:	b580      	push	{r7, lr}
+20000412:	af00      	add	r7, sp, #0
+     */
+#if (MSS_SYS_FACC_INIT_BY_CORTEX == 1)
+    complete_clock_config();
+#endif
+
+    silicon_workarounds();
+20000414:	f000 f936 	bl	20000684 <silicon_workarounds>
+    /*--------------------------------------------------------------------------
+     * Set STKALIGN to ensure exception stacking starts on 8 bytes address
+     * boundary. This ensures compliance with the "Procedure Call Standards for
+     * the ARM Architecture" (AAPCS).
+     */
+    SCB->CCR |= SCB_CCR_STKALIGN_Msk;
+20000418:	f64e 5300 	movw	r3, #60672	; 0xed00
+2000041c:	f2ce 0300 	movt	r3, #57344	; 0xe000
+20000420:	f64e 5200 	movw	r2, #60672	; 0xed00
+20000424:	f2ce 0200 	movt	r2, #57344	; 0xe000
+20000428:	6952      	ldr	r2, [r2, #20]
+2000042a:	f442 7200 	orr.w	r2, r2, #512	; 0x200
+2000042e:	615a      	str	r2, [r3, #20]
+#endif
+
+    /*--------------------------------------------------------------------------
+     * Call user defined configuration function.
+     */
+    mscc_post_hw_cfg_init();
+20000430:	f7ff ffae 	bl	20000390 <mscc_post_hw_cfg_init>
+    do
+    {
+        init_done = CORE_SF2_CFG->INIT_DONE & INIT_DONE_MASK;
+    } while (0u == init_done);
+#endif
+}
+20000434:	bd80      	pop	{r7, pc}
+20000436:	bf00      	nop
+
+20000438 <SystemCoreClockUpdate>:
+#define FREQ_1MHZ    1000000u
+#define FREQ_25MHZ   25000000u
+#define FREQ_50MHZ   50000000u
+
+void SystemCoreClockUpdate(void)
+{
+20000438:	b580      	push	{r7, lr}
+2000043a:	b088      	sub	sp, #32
+2000043c:	af00      	add	r7, sp, #0
+    uint32_t controller_pll_init;
+    uint32_t clk_src;
+
+    controller_pll_init = SYSREG->MSSDDR_FACC1_CR & CONTROLLER_PLL_INIT_MASK;
+2000043e:	f248 0300 	movw	r3, #32768	; 0x8000
+20000442:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000446:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
+2000044a:	f003 6380 	and.w	r3, r3, #67108864	; 0x4000000
+2000044e:	60fb      	str	r3, [r7, #12]
+    
+    if(0u == controller_pll_init)
+20000450:	68fb      	ldr	r3, [r7, #12]
+20000452:	2b00      	cmp	r3, #0
+20000454:	f040 808b 	bne.w	2000056e <SystemCoreClockUpdate+0x136>
+    {
+        /* Normal operations. */
+        uint32_t global_mux_sel;
+        
+        global_mux_sel = SYSREG->MSSDDR_FACC1_CR & FACC_GLMUX_SEL_MASK;
+20000458:	f248 0300 	movw	r3, #32768	; 0x8000
+2000045c:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000460:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
+20000464:	f403 5380 	and.w	r3, r3, #4096	; 0x1000
+20000468:	617b      	str	r3, [r7, #20]
+        if(0u == global_mux_sel)
+2000046a:	697b      	ldr	r3, [r7, #20]
+2000046c:	2b00      	cmp	r3, #0
+2000046e:	d13f      	bne.n	200004f0 <SystemCoreClockUpdate+0xb8>
+        {
+            /* MSS clocked from MSS PLL. Use Libero flow defines. */
+            SystemCoreClock = MSS_SYS_M3_CLK_FREQ;
+20000470:	f241 4324 	movw	r3, #5156	; 0x1424
+20000474:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000478:	f24e 1200 	movw	r2, #57600	; 0xe100
+2000047c:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+20000480:	601a      	str	r2, [r3, #0]
+            g_FrequencyPCLK0 = MSS_SYS_APB_0_CLK_FREQ;
+20000482:	f241 4328 	movw	r3, #5160	; 0x1428
+20000486:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000048a:	f24e 1200 	movw	r2, #57600	; 0xe100
+2000048e:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+20000492:	601a      	str	r2, [r3, #0]
+            g_FrequencyPCLK1 = MSS_SYS_APB_1_CLK_FREQ;
+20000494:	f241 432c 	movw	r3, #5164	; 0x142c
+20000498:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000049c:	f24e 1200 	movw	r2, #57600	; 0xe100
+200004a0:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+200004a4:	601a      	str	r2, [r3, #0]
+            g_FrequencyPCLK2 = MSS_SYS_APB_2_CLK_FREQ;
+200004a6:	f241 4330 	movw	r3, #5168	; 0x1430
+200004aa:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200004ae:	f647 0240 	movw	r2, #30784	; 0x7840
+200004b2:	f2c0 127d 	movt	r2, #381	; 0x17d
+200004b6:	601a      	str	r2, [r3, #0]
+            g_FrequencyFIC0 = MSS_SYS_FIC_0_CLK_FREQ;
+200004b8:	f241 4334 	movw	r3, #5172	; 0x1434
+200004bc:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200004c0:	f24e 1200 	movw	r2, #57600	; 0xe100
+200004c4:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+200004c8:	601a      	str	r2, [r3, #0]
+            g_FrequencyFIC1 = MSS_SYS_FIC_1_CLK_FREQ;
+200004ca:	f241 4338 	movw	r3, #5176	; 0x1438
+200004ce:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200004d2:	f24e 1200 	movw	r2, #57600	; 0xe100
+200004d6:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+200004da:	601a      	str	r2, [r3, #0]
+            g_FrequencyFIC64 = MSS_SYS_FIC64_CLK_FREQ;
+200004dc:	f241 433c 	movw	r3, #5180	; 0x143c
+200004e0:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200004e4:	f24e 1200 	movw	r2, #57600	; 0xe100
+200004e8:	f2c0 52f5 	movt	r2, #1525	; 0x5f5
+200004ec:	601a      	str	r2, [r3, #0]
+                break;
+                
+                case CCC2ASCI_CLK_SRC:
+                    /* Fall through. */
+                default:
+                    set_clock_frequency_globals(FREQ_1MHZ);
+200004ee:	e045      	b.n	2000057c <SystemCoreClockUpdate+0x144>
+                                                   RCOSC_25_50MHZ_CLK_SRC,
+                                                   CLK_XTAL_CLK_SRC,
+                                                   RCOSC_1_MHZ_CLK_SRC,
+                                                   RCOSC_1_MHZ_CLK_SRC,
+                                                   CCC2ASCI_CLK_SRC,
+                                                   CCC2ASCI_CLK_SRC };
+200004f0:	f241 33f4 	movw	r3, #5108	; 0x13f4
+200004f4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200004f8:	f107 0204 	add.w	r2, r7, #4
+200004fc:	e893 0003 	ldmia.w	r3, {r0, r1}
+20000500:	e882 0003 	stmia.w	r2, {r0, r1}
+            
+            uint32_t standby_sel;
+            uint8_t clock_source;
+            
+            standby_sel = (SYSREG->MSSDDR_FACC2_CR >> FACC_STANDBY_SHIFT) & FACC_STANDBY_SEL_MASK;
+20000504:	f248 0300 	movw	r3, #32768	; 0x8000
+20000508:	f2c4 0303 	movt	r3, #16387	; 0x4003
+2000050c:	f8d3 309c 	ldr.w	r3, [r3, #156]	; 0x9c
+20000510:	ea4f 1393 	mov.w	r3, r3, lsr #6
+20000514:	f003 0307 	and.w	r3, r3, #7
+20000518:	61bb      	str	r3, [r7, #24]
+            clock_source = standby_clock_lut[standby_sel];
+2000051a:	69bb      	ldr	r3, [r7, #24]
+2000051c:	f107 0220 	add.w	r2, r7, #32
+20000520:	4413      	add	r3, r2
+20000522:	f813 3c1c 	ldrb.w	r3, [r3, #-28]
+20000526:	77fb      	strb	r3, [r7, #31]
+            switch(clock_source)
+20000528:	7ffb      	ldrb	r3, [r7, #31]
+2000052a:	2b01      	cmp	r3, #1
+2000052c:	d00b      	beq.n	20000546 <SystemCoreClockUpdate+0x10e>
+2000052e:	2b02      	cmp	r3, #2
+20000530:	d00e      	beq.n	20000550 <SystemCoreClockUpdate+0x118>
+20000532:	2b00      	cmp	r3, #0
+20000534:	d114      	bne.n	20000560 <SystemCoreClockUpdate+0x128>
+            {
+                case RCOSC_25_50MHZ_CLK_SRC:
+                    clk_src = get_rcosc_25_50mhz_frequency();
+20000536:	f000 f825 	bl	20000584 <get_rcosc_25_50mhz_frequency>
+2000053a:	4603      	mov	r3, r0
+2000053c:	613b      	str	r3, [r7, #16]
+                    set_clock_frequency_globals(clk_src);
+2000053e:	6938      	ldr	r0, [r7, #16]
+20000540:	f000 f842 	bl	200005c8 <set_clock_frequency_globals>
+                break;
+20000544:	e01a      	b.n	2000057c <SystemCoreClockUpdate+0x144>
+                
+                case CLK_XTAL_CLK_SRC:
+                    set_clock_frequency_globals(FREQ_32KHZ);
+20000546:	f44f 4000 	mov.w	r0, #32768	; 0x8000
+2000054a:	f000 f83d 	bl	200005c8 <set_clock_frequency_globals>
+                break;
+2000054e:	e015      	b.n	2000057c <SystemCoreClockUpdate+0x144>
+                
+                case RCOSC_1_MHZ_CLK_SRC:
+                    set_clock_frequency_globals(FREQ_1MHZ);
+20000550:	f244 2040 	movw	r0, #16960	; 0x4240
+20000554:	f2c0 000f 	movt	r0, #15
+20000558:	f000 f836 	bl	200005c8 <set_clock_frequency_globals>
+                break;
+2000055c:	bf00      	nop
+2000055e:	e00d      	b.n	2000057c <SystemCoreClockUpdate+0x144>
+                
+                case CCC2ASCI_CLK_SRC:
+                    /* Fall through. */
+                default:
+                    set_clock_frequency_globals(FREQ_1MHZ);
+20000560:	f244 2040 	movw	r0, #16960	; 0x4240
+20000564:	f2c0 000f 	movt	r0, #15
+20000568:	f000 f82e 	bl	200005c8 <set_clock_frequency_globals>
+2000056c:	e006      	b.n	2000057c <SystemCoreClockUpdate+0x144>
+        }
+    }
+    else
+    {
+        /* PLL initialization mode. Running from 25/50MHZ RC oscillator. */
+        clk_src = get_rcosc_25_50mhz_frequency();
+2000056e:	f000 f809 	bl	20000584 <get_rcosc_25_50mhz_frequency>
+20000572:	4603      	mov	r3, r0
+20000574:	613b      	str	r3, [r7, #16]
+        set_clock_frequency_globals(clk_src);
+20000576:	6938      	ldr	r0, [r7, #16]
+20000578:	f000 f826 	bl	200005c8 <set_clock_frequency_globals>
+    }
+}
+2000057c:	f107 0720 	add.w	r7, r7, #32
+20000580:	46bd      	mov	sp, r7
+20000582:	bd80      	pop	{r7, pc}
+
+20000584 <get_rcosc_25_50mhz_frequency>:
+
+/***************************************************************************//**
+ * Find out frequency generated by the 25_50mhz RC osciallator.
+ */
+static uint32_t get_rcosc_25_50mhz_frequency(void)
+{
+20000584:	b480      	push	{r7}
+20000586:	b083      	sub	sp, #12
+20000588:	af00      	add	r7, sp, #0
+    uint32_t rcosc_div2;
+    uint32_t rcosc_frequency;
+    
+    rcosc_div2 = SYSREG->MSSDDR_PLL_STATUS & RCOSC_DIV2_MASK;
+2000058a:	f248 0300 	movw	r3, #32768	; 0x8000
+2000058e:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000592:	f8d3 3150 	ldr.w	r3, [r3, #336]	; 0x150
+20000596:	f003 0304 	and.w	r3, r3, #4
+2000059a:	603b      	str	r3, [r7, #0]
+    if(0u == rcosc_div2)
+2000059c:	683b      	ldr	r3, [r7, #0]
+2000059e:	2b00      	cmp	r3, #0
+200005a0:	d105      	bne.n	200005ae <get_rcosc_25_50mhz_frequency+0x2a>
+    {
+        /* 25_50mhz oscillator is configured for 25 MHz operations. */
+        rcosc_frequency = FREQ_25MHZ;
+200005a2:	f647 0340 	movw	r3, #30784	; 0x7840
+200005a6:	f2c0 137d 	movt	r3, #381	; 0x17d
+200005aa:	607b      	str	r3, [r7, #4]
+200005ac:	e004      	b.n	200005b8 <get_rcosc_25_50mhz_frequency+0x34>
+    }
+    else
+    {
+        /* 25_50mhz oscillator is configured for 50 MHz operations. */
+        rcosc_frequency = FREQ_50MHZ;
+200005ae:	f24f 0380 	movw	r3, #61568	; 0xf080
+200005b2:	f2c0 23fa 	movt	r3, #762	; 0x2fa
+200005b6:	607b      	str	r3, [r7, #4]
+    }
+    
+    return rcosc_frequency;
+200005b8:	687b      	ldr	r3, [r7, #4]
+}
+200005ba:	4618      	mov	r0, r3
+200005bc:	f107 070c 	add.w	r7, r7, #12
+200005c0:	46bd      	mov	sp, r7
+200005c2:	bc80      	pop	{r7}
+200005c4:	4770      	bx	lr
+200005c6:	bf00      	nop
+
+200005c8 <set_clock_frequency_globals>:
+        - g_FrequencyFIC0
+        - g_FrequencyFIC1
+        - g_FrequencyFIC64
+ */
+static void set_clock_frequency_globals(uint32_t standby_clk)
+{
+200005c8:	b480      	push	{r7}
+200005ca:	b083      	sub	sp, #12
+200005cc:	af00      	add	r7, sp, #0
+200005ce:	6078      	str	r0, [r7, #4]
+    SystemCoreClock = standby_clk;
+200005d0:	f241 4324 	movw	r3, #5156	; 0x1424
+200005d4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200005d8:	687a      	ldr	r2, [r7, #4]
+200005da:	601a      	str	r2, [r3, #0]
+    g_FrequencyPCLK0 = standby_clk;
+200005dc:	f241 4328 	movw	r3, #5160	; 0x1428
+200005e0:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200005e4:	687a      	ldr	r2, [r7, #4]
+200005e6:	601a      	str	r2, [r3, #0]
+    g_FrequencyPCLK1 = standby_clk;
+200005e8:	f241 432c 	movw	r3, #5164	; 0x142c
+200005ec:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200005f0:	687a      	ldr	r2, [r7, #4]
+200005f2:	601a      	str	r2, [r3, #0]
+    g_FrequencyPCLK2 = MSS_SYS_APB_2_CLK_FREQ;
+200005f4:	f241 4330 	movw	r3, #5168	; 0x1430
+200005f8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200005fc:	f647 0240 	movw	r2, #30784	; 0x7840
+20000600:	f2c0 127d 	movt	r2, #381	; 0x17d
+20000604:	601a      	str	r2, [r3, #0]
+    g_FrequencyFIC0 = standby_clk;
+20000606:	f241 4334 	movw	r3, #5172	; 0x1434
+2000060a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000060e:	687a      	ldr	r2, [r7, #4]
+20000610:	601a      	str	r2, [r3, #0]
+    g_FrequencyFIC1 = standby_clk;
+20000612:	f241 4338 	movw	r3, #5176	; 0x1438
+20000616:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000061a:	687a      	ldr	r2, [r7, #4]
+2000061c:	601a      	str	r2, [r3, #0]
+    g_FrequencyFIC64 = standby_clk;
+2000061e:	f241 433c 	movw	r3, #5180	; 0x143c
+20000622:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000626:	687a      	ldr	r2, [r7, #4]
+20000628:	601a      	str	r2, [r3, #0]
+}
+2000062a:	f107 070c 	add.w	r7, r7, #12
+2000062e:	46bd      	mov	sp, r7
+20000630:	bc80      	pop	{r7}
+20000632:	4770      	bx	lr
+
+20000634 <get_silicon_revision>:
+
+/*------------------------------------------------------------------------------
+  Retrieve silicon revision from system registers.
+ */
+static uint32_t get_silicon_revision(void)
+{
+20000634:	b480      	push	{r7}
+20000636:	b083      	sub	sp, #12
+20000638:	af00      	add	r7, sp, #0
+    uint32_t silicon_revision;
+    uint32_t device_version;
+    
+    device_version = SYSREG->DEVICE_VERSION;
+2000063a:	f248 0300 	movw	r3, #32768	; 0x8000
+2000063e:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000642:	f8d3 314c 	ldr.w	r3, [r3, #332]	; 0x14c
+20000646:	607b      	str	r3, [r7, #4]
+    switch(device_version)
+20000648:	687a      	ldr	r2, [r7, #4]
+2000064a:	f64f 0302 	movw	r3, #63490	; 0xf802
+2000064e:	429a      	cmp	r2, r3
+20000650:	d006      	beq.n	20000660 <get_silicon_revision+0x2c>
+20000652:	f64f 0302 	movw	r3, #63490	; 0xf802
+20000656:	f2c0 0301 	movt	r3, #1
+2000065a:	429a      	cmp	r2, r3
+2000065c:	d004      	beq.n	20000668 <get_silicon_revision+0x34>
+2000065e:	e007      	b.n	20000670 <get_silicon_revision+0x3c>
+    {
+        case 0x0000F802:
+            silicon_revision = M2S050_REV_A_SILICON;
+20000660:	f04f 0301 	mov.w	r3, #1
+20000664:	603b      	str	r3, [r7, #0]
+            break;
+20000666:	e006      	b.n	20000676 <get_silicon_revision+0x42>
+            
+        case 0x0001F802:
+            silicon_revision = M2S050_REV_B_SILICON;
+20000668:	f04f 0302 	mov.w	r3, #2
+2000066c:	603b      	str	r3, [r7, #0]
+            break;
+2000066e:	e002      	b.n	20000676 <get_silicon_revision+0x42>
+            
+        default:
+            silicon_revision = UNKNOWN_SILICON_REV;
+20000670:	f04f 0300 	mov.w	r3, #0
+20000674:	603b      	str	r3, [r7, #0]
+            break;
+    }
+    
+    return silicon_revision;
+20000676:	683b      	ldr	r3, [r7, #0]
+}
+20000678:	4618      	mov	r0, r3
+2000067a:	f107 070c 	add.w	r7, r7, #12
+2000067e:	46bd      	mov	sp, r7
+20000680:	bc80      	pop	{r7}
+20000682:	4770      	bx	lr
+
+20000684 <silicon_workarounds>:
+
+/*------------------------------------------------------------------------------
+  Workarounds for various silicon versions.
+ */
+static void silicon_workarounds(void)
+{
+20000684:	b580      	push	{r7, lr}
+20000686:	b082      	sub	sp, #8
+20000688:	af00      	add	r7, sp, #0
+    uint32_t silicon_revision;
+    
+    silicon_revision = get_silicon_revision();
+2000068a:	f7ff ffd3 	bl	20000634 <get_silicon_revision>
+2000068e:	4603      	mov	r3, r0
+20000690:	607b      	str	r3, [r7, #4]
+    
+    switch(silicon_revision)
+20000692:	687b      	ldr	r3, [r7, #4]
+20000694:	2b01      	cmp	r3, #1
+20000696:	d101      	bne.n	2000069c <silicon_workarounds+0x18>
+    {
+        case M2S050_REV_A_SILICON:
+            m2s050_rev_a_workarounds();
+20000698:	f000 f804 	bl	200006a4 <m2s050_rev_a_workarounds>
+        case UNKNOWN_SILICON_REV:
+            /* Fall through. */
+        default:
+            break;
+    }
+}
+2000069c:	f107 0708 	add.w	r7, r7, #8
+200006a0:	46bd      	mov	sp, r7
+200006a2:	bd80      	pop	{r7, pc}
+
+200006a4 <m2s050_rev_a_workarounds>:
+
+/*------------------------------------------------------------------------------
+  Silicon workarounds for M2S050 rev A.
+ */
+static void m2s050_rev_a_workarounds(void)
+{
+200006a4:	b480      	push	{r7}
+200006a6:	af00      	add	r7, sp, #0
+    /*--------------------------------------------------------------------------
+     * Work around a couple of silicon issues:
+     */
+    /* DDR_CLK_EN <- 1 */
+    SYSREG->MSSDDR_FACC1_CR |= (uint32_t)1 << DDR_CLK_EN_SHIFT;
+200006a8:	f248 0300 	movw	r3, #32768	; 0x8000
+200006ac:	f2c4 0303 	movt	r3, #16387	; 0x4003
+200006b0:	f248 0200 	movw	r2, #32768	; 0x8000
+200006b4:	f2c4 0203 	movt	r2, #16387	; 0x4003
+200006b8:	f8d2 2098 	ldr.w	r2, [r2, #152]	; 0x98
+200006bc:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+200006c0:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
+    
+    /* CONTROLLER_PLL_INIT <- 0 */
+    SYSREG->MSSDDR_FACC1_CR = SYSREG->MSSDDR_FACC1_CR & ~CONTROLLER_PLL_INIT_MASK;
+200006c4:	f248 0300 	movw	r3, #32768	; 0x8000
+200006c8:	f2c4 0303 	movt	r3, #16387	; 0x4003
+200006cc:	f248 0200 	movw	r2, #32768	; 0x8000
+200006d0:	f2c4 0203 	movt	r2, #16387	; 0x4003
+200006d4:	f8d2 2098 	ldr.w	r2, [r2, #152]	; 0x98
+200006d8:	f022 6280 	bic.w	r2, r2, #67108864	; 0x4000000
+200006dc:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
+}
+200006e0:	46bd      	mov	sp, r7
+200006e2:	bc80      	pop	{r7}
+200006e4:	4770      	bx	lr
+200006e6:	bf00      	nop
+	...
+
+Disassembly of section .text:
+
+200006f0 <__do_global_dtors_aux>:
+200006f0:	f241 4340 	movw	r3, #5184	; 0x1440
+200006f4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200006f8:	781a      	ldrb	r2, [r3, #0]
+200006fa:	b90a      	cbnz	r2, 20000700 <__do_global_dtors_aux+0x10>
+200006fc:	2001      	movs	r0, #1
+200006fe:	7018      	strb	r0, [r3, #0]
+20000700:	4770      	bx	lr
+20000702:	bf00      	nop
+
+20000704 <frame_dummy>:
+20000704:	f241 4020 	movw	r0, #5152	; 0x1420
+20000708:	f2c2 0000 	movt	r0, #8192	; 0x2000
+2000070c:	b508      	push	{r3, lr}
+2000070e:	6803      	ldr	r3, [r0, #0]
+20000710:	b12b      	cbz	r3, 2000071e <frame_dummy+0x1a>
+20000712:	f240 0300 	movw	r3, #0
+20000716:	f2c0 0300 	movt	r3, #0
+2000071a:	b103      	cbz	r3, 2000071e <frame_dummy+0x1a>
+2000071c:	4798      	blx	r3
+2000071e:	bd08      	pop	{r3, pc}
+
+20000720 <main>:
+#define RAM_REGS 0x30050000u
+#define SRAM     0x30060000u
+#define CoreGPIO 0x300700a0u
+
+  int main(void)
+  {
+20000720:	b580      	push	{r7, lr}
+20000722:	b08c      	sub	sp, #48	; 0x30
+20000724:	af00      	add	r7, sp, #0
+     uint8_t message0[15] = "start";
+20000726:	f241 32d4 	movw	r2, #5076	; 0x13d4
+2000072a:	f2c2 0200 	movt	r2, #8192	; 0x2000
+2000072e:	f107 0314 	add.w	r3, r7, #20
+20000732:	e892 0003 	ldmia.w	r2, {r0, r1}
+20000736:	6018      	str	r0, [r3, #0]
+20000738:	f103 0304 	add.w	r3, r3, #4
+2000073c:	8019      	strh	r1, [r3, #0]
+2000073e:	f107 031a 	add.w	r3, r7, #26
+20000742:	f04f 0200 	mov.w	r2, #0
+20000746:	801a      	strh	r2, [r3, #0]
+20000748:	f103 0302 	add.w	r3, r3, #2
+2000074c:	f04f 0200 	mov.w	r2, #0
+20000750:	801a      	strh	r2, [r3, #0]
+20000752:	f103 0302 	add.w	r3, r3, #2
+20000756:	f04f 0200 	mov.w	r2, #0
+2000075a:	801a      	strh	r2, [r3, #0]
+2000075c:	f103 0302 	add.w	r3, r3, #2
+20000760:	f04f 0200 	mov.w	r2, #0
+20000764:	801a      	strh	r2, [r3, #0]
+20000766:	f103 0302 	add.w	r3, r3, #2
+2000076a:	f04f 0200 	mov.w	r2, #0
+2000076e:	701a      	strb	r2, [r3, #0]
+20000770:	f103 0301 	add.w	r3, r3, #1
+     uint8_t message1[15] = "end ";
+20000774:	f241 32e4 	movw	r2, #5092	; 0x13e4
+20000778:	f2c2 0200 	movt	r2, #8192	; 0x2000
+2000077c:	f107 0304 	add.w	r3, r7, #4
+20000780:	e892 0003 	ldmia.w	r2, {r0, r1}
+20000784:	6018      	str	r0, [r3, #0]
+20000786:	f103 0304 	add.w	r3, r3, #4
+2000078a:	7019      	strb	r1, [r3, #0]
+2000078c:	f107 0309 	add.w	r3, r7, #9
+20000790:	f04f 0200 	mov.w	r2, #0
+20000794:	701a      	strb	r2, [r3, #0]
+20000796:	f103 0301 	add.w	r3, r3, #1
+2000079a:	f04f 0200 	mov.w	r2, #0
+2000079e:	701a      	strb	r2, [r3, #0]
+200007a0:	f103 0301 	add.w	r3, r3, #1
+200007a4:	f04f 0200 	mov.w	r2, #0
+200007a8:	701a      	strb	r2, [r3, #0]
+200007aa:	f103 0301 	add.w	r3, r3, #1
+200007ae:	f04f 0200 	mov.w	r2, #0
+200007b2:	701a      	strb	r2, [r3, #0]
+200007b4:	f103 0301 	add.w	r3, r3, #1
+200007b8:	f04f 0200 	mov.w	r2, #0
+200007bc:	701a      	strb	r2, [r3, #0]
+200007be:	f103 0301 	add.w	r3, r3, #1
+200007c2:	f04f 0200 	mov.w	r2, #0
+200007c6:	701a      	strb	r2, [r3, #0]
+200007c8:	f103 0301 	add.w	r3, r3, #1
+200007cc:	f04f 0200 	mov.w	r2, #0
+200007d0:	701a      	strb	r2, [r3, #0]
+200007d2:	f103 0301 	add.w	r3, r3, #1
+200007d6:	f04f 0200 	mov.w	r2, #0
+200007da:	701a      	strb	r2, [r3, #0]
+200007dc:	f103 0301 	add.w	r3, r3, #1
+200007e0:	f04f 0200 	mov.w	r2, #0
+200007e4:	701a      	strb	r2, [r3, #0]
+200007e6:	f103 0301 	add.w	r3, r3, #1
+200007ea:	f04f 0200 	mov.w	r2, #0
+200007ee:	701a      	strb	r2, [r3, #0]
+200007f0:	f103 0301 	add.w	r3, r3, #1
+	 uint32_t data0 = 0;
+200007f4:	f04f 0300 	mov.w	r3, #0
+200007f8:	627b      	str	r3, [r7, #36]	; 0x24
+	 uint32_t data1 = 0;
+200007fa:	f04f 0300 	mov.w	r3, #0
+200007fe:	62bb      	str	r3, [r7, #40]	; 0x28
+	 uint32_t delay = 600;
+20000800:	f44f 7316 	mov.w	r3, #600	; 0x258
+20000804:	62fb      	str	r3, [r7, #44]	; 0x2c
+
+     MSS_UART_init(&g_mss_uart0,
+20000806:	f241 4084 	movw	r0, #5252	; 0x1484
+2000080a:	f2c2 0000 	movt	r0, #8192	; 0x2000
+2000080e:	f44f 5116 	mov.w	r1, #9600	; 0x2580
+20000812:	f04f 0203 	mov.w	r2, #3
+20000816:	f000 f8d9 	bl	200009cc <MSS_UART_init>
+                   MSS_UART_9600_BAUD,
+                   MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT);
+
+     MSS_UART_polled_tx(&g_mss_uart0, message0, sizeof(message0));
+2000081a:	f107 0314 	add.w	r3, r7, #20
+2000081e:	f241 4084 	movw	r0, #5252	; 0x1484
+20000822:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000826:	4619      	mov	r1, r3
+20000828:	f04f 020f 	mov.w	r2, #15
+2000082c:	f000 f910 	bl	20000a50 <MSS_UART_polled_tx>
+
+     *(uint32_t *)(RAM_REGS + 0x01) =60;
+20000830:	f240 0301 	movw	r3, #1
+20000834:	f2c3 0305 	movt	r3, #12293	; 0x3005
+20000838:	f04f 023c 	mov.w	r2, #60	; 0x3c
+2000083c:	601a      	str	r2, [r3, #0]
+     *(uint32_t *)(SRAM + 0x04)  = 65;
+2000083e:	f240 0304 	movw	r3, #4
+20000842:	f2c3 0306 	movt	r3, #12294	; 0x3006
+20000846:	f04f 0241 	mov.w	r2, #65	; 0x41
+2000084a:	601a      	str	r2, [r3, #0]
+     *(uint32_t *)(CoreGPIO + 0xa0) = 0xff;
+2000084c:	f240 1340 	movw	r3, #320	; 0x140
+20000850:	f2c3 0307 	movt	r3, #12295	; 0x3007
+20000854:	f04f 02ff 	mov.w	r2, #255	; 0xff
+20000858:	601a      	str	r2, [r3, #0]
+
+     while(delay--);
+2000085a:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+2000085c:	2b00      	cmp	r3, #0
+2000085e:	bf0c      	ite	eq
+20000860:	2300      	moveq	r3, #0
+20000862:	2301      	movne	r3, #1
+20000864:	b2db      	uxtb	r3, r3
+20000866:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+20000868:	f102 32ff 	add.w	r2, r2, #4294967295
+2000086c:	62fa      	str	r2, [r7, #44]	; 0x2c
+2000086e:	2b00      	cmp	r3, #0
+20000870:	d1f3      	bne.n	2000085a <main+0x13a>
+
+     data0 = *(uint32_t *)(RAM_REGS+ 0x01);
+20000872:	f240 0301 	movw	r3, #1
+20000876:	f2c3 0305 	movt	r3, #12293	; 0x3005
+2000087a:	681b      	ldr	r3, [r3, #0]
+2000087c:	627b      	str	r3, [r7, #36]	; 0x24
+     data1 = *(uint32_t *)(SRAM + 0x04);
+2000087e:	f240 0304 	movw	r3, #4
+20000882:	f2c3 0306 	movt	r3, #12294	; 0x3006
+20000886:	681b      	ldr	r3, [r3, #0]
+20000888:	62bb      	str	r3, [r7, #40]	; 0x28
+
+
+     MSS_UART_polled_tx_string(&g_mss_uart0,(const uint8_t*)data0);
+2000088a:	6a7b      	ldr	r3, [r7, #36]	; 0x24
+2000088c:	f241 4084 	movw	r0, #5252	; 0x1484
+20000890:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000894:	4619      	mov	r1, r3
+20000896:	f000 f94d 	bl	20000b34 <MSS_UART_polled_tx_string>
+     MSS_UART_polled_tx_string(&g_mss_uart0,(const uint8_t*)data1);
+2000089a:	6abb      	ldr	r3, [r7, #40]	; 0x28
+2000089c:	f241 4084 	movw	r0, #5252	; 0x1484
+200008a0:	f2c2 0000 	movt	r0, #8192	; 0x2000
+200008a4:	4619      	mov	r1, r3
+200008a6:	f000 f945 	bl	20000b34 <MSS_UART_polled_tx_string>
+
+
+     MSS_UART_polled_tx(&g_mss_uart0, message1, sizeof(message1));
+200008aa:	f107 0304 	add.w	r3, r7, #4
+200008ae:	f241 4084 	movw	r0, #5252	; 0x1484
+200008b2:	f2c2 0000 	movt	r0, #8192	; 0x2000
+200008b6:	4619      	mov	r1, r3
+200008b8:	f04f 020f 	mov.w	r2, #15
+200008bc:	f000 f8c8 	bl	20000a50 <MSS_UART_polled_tx>
+
+     return(0);
+200008c0:	f04f 0300 	mov.w	r3, #0
+  }
+200008c4:	4618      	mov	r0, r3
+200008c6:	f107 0730 	add.w	r7, r7, #48	; 0x30
+200008ca:	46bd      	mov	sp, r7
+200008cc:	bd80      	pop	{r7, pc}
+200008ce:	bf00      	nop
+
+200008d0 <NVIC_ClearPendingIRQ>:
+    The function clears the pending bit of an external interrupt.
+
+    \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+__STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+{
+200008d0:	b480      	push	{r7}
+200008d2:	b083      	sub	sp, #12
+200008d4:	af00      	add	r7, sp, #0
+200008d6:	4603      	mov	r3, r0
+200008d8:	71fb      	strb	r3, [r7, #7]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+200008da:	f24e 1300 	movw	r3, #57600	; 0xe100
+200008de:	f2ce 0300 	movt	r3, #57344	; 0xe000
+200008e2:	f997 2007 	ldrsb.w	r2, [r7, #7]
+200008e6:	ea4f 1252 	mov.w	r2, r2, lsr #5
+200008ea:	79f9      	ldrb	r1, [r7, #7]
+200008ec:	f001 011f 	and.w	r1, r1, #31
+200008f0:	f04f 0001 	mov.w	r0, #1
+200008f4:	fa00 f101 	lsl.w	r1, r0, r1
+200008f8:	f102 0260 	add.w	r2, r2, #96	; 0x60
+200008fc:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+}
+20000900:	f107 070c 	add.w	r7, r7, #12
+20000904:	46bd      	mov	sp, r7
+20000906:	bc80      	pop	{r7}
+20000908:	4770      	bx	lr
+2000090a:	bf00      	nop
+
+2000090c <set_bit_reg8>:
+static __INLINE void set_bit_reg16(volatile uint16_t * reg, uint8_t bit)
+{
+    HW_REG_BIT(reg,bit) = 0x1;
+}
+static __INLINE void set_bit_reg8(volatile uint8_t * reg, uint8_t bit)
+{
+2000090c:	b480      	push	{r7}
+2000090e:	b083      	sub	sp, #12
+20000910:	af00      	add	r7, sp, #0
+20000912:	6078      	str	r0, [r7, #4]
+20000914:	460b      	mov	r3, r1
+20000916:	70fb      	strb	r3, [r7, #3]
+    HW_REG_BIT(reg,bit) = 0x1;
+20000918:	687b      	ldr	r3, [r7, #4]
+2000091a:	f003 4270 	and.w	r2, r3, #4026531840	; 0xf0000000
+2000091e:	687b      	ldr	r3, [r7, #4]
+20000920:	f023 437f 	bic.w	r3, r3, #4278190080	; 0xff000000
+20000924:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
+20000928:	ea4f 1343 	mov.w	r3, r3, lsl #5
+2000092c:	441a      	add	r2, r3
+2000092e:	78fb      	ldrb	r3, [r7, #3]
+20000930:	ea4f 0383 	mov.w	r3, r3, lsl #2
+20000934:	4413      	add	r3, r2
+20000936:	f103 7300 	add.w	r3, r3, #33554432	; 0x2000000
+2000093a:	f04f 0201 	mov.w	r2, #1
+2000093e:	601a      	str	r2, [r3, #0]
+}
+20000940:	f107 070c 	add.w	r7, r7, #12
+20000944:	46bd      	mov	sp, r7
+20000946:	bc80      	pop	{r7}
+20000948:	4770      	bx	lr
+2000094a:	bf00      	nop
+
+2000094c <clear_bit_reg8>:
+static __INLINE void clear_bit_reg16(volatile uint16_t * reg, uint8_t bit)
+{
+    HW_REG_BIT(reg,bit) = 0x0;
+}
+static __INLINE void clear_bit_reg8(volatile uint8_t * reg, uint8_t bit)
+{
+2000094c:	b480      	push	{r7}
+2000094e:	b083      	sub	sp, #12
+20000950:	af00      	add	r7, sp, #0
+20000952:	6078      	str	r0, [r7, #4]
+20000954:	460b      	mov	r3, r1
+20000956:	70fb      	strb	r3, [r7, #3]
+    HW_REG_BIT(reg,bit) = 0x0;
+20000958:	687b      	ldr	r3, [r7, #4]
+2000095a:	f003 4270 	and.w	r2, r3, #4026531840	; 0xf0000000
+2000095e:	687b      	ldr	r3, [r7, #4]
+20000960:	f023 437f 	bic.w	r3, r3, #4278190080	; 0xff000000
+20000964:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
+20000968:	ea4f 1343 	mov.w	r3, r3, lsl #5
+2000096c:	441a      	add	r2, r3
+2000096e:	78fb      	ldrb	r3, [r7, #3]
+20000970:	ea4f 0383 	mov.w	r3, r3, lsl #2
+20000974:	4413      	add	r3, r2
+20000976:	f103 7300 	add.w	r3, r3, #33554432	; 0x2000000
+2000097a:	f04f 0200 	mov.w	r2, #0
+2000097e:	601a      	str	r2, [r3, #0]
+}
+20000980:	f107 070c 	add.w	r7, r7, #12
+20000984:	46bd      	mov	sp, r7
+20000986:	bc80      	pop	{r7}
+20000988:	4770      	bx	lr
+2000098a:	bf00      	nop
+
+2000098c <read_bit_reg8>:
+static __INLINE uint8_t read_bit_reg16(volatile uint16_t * reg, uint8_t bit)
+{
+    return (HW_REG_BIT(reg,bit));
+}
+static __INLINE uint8_t read_bit_reg8(volatile uint8_t * reg, uint8_t bit)
+{
+2000098c:	b480      	push	{r7}
+2000098e:	b083      	sub	sp, #12
+20000990:	af00      	add	r7, sp, #0
+20000992:	6078      	str	r0, [r7, #4]
+20000994:	460b      	mov	r3, r1
+20000996:	70fb      	strb	r3, [r7, #3]
+    return (HW_REG_BIT(reg,bit));
+20000998:	687b      	ldr	r3, [r7, #4]
+2000099a:	f003 4270 	and.w	r2, r3, #4026531840	; 0xf0000000
+2000099e:	687b      	ldr	r3, [r7, #4]
+200009a0:	f023 437f 	bic.w	r3, r3, #4278190080	; 0xff000000
+200009a4:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
+200009a8:	ea4f 1343 	mov.w	r3, r3, lsl #5
+200009ac:	441a      	add	r2, r3
+200009ae:	78fb      	ldrb	r3, [r7, #3]
+200009b0:	ea4f 0383 	mov.w	r3, r3, lsl #2
+200009b4:	4413      	add	r3, r2
+200009b6:	f103 7300 	add.w	r3, r3, #33554432	; 0x2000000
+200009ba:	681b      	ldr	r3, [r3, #0]
+200009bc:	b2db      	uxtb	r3, r3
+}
+200009be:	4618      	mov	r0, r3
+200009c0:	f107 070c 	add.w	r7, r7, #12
+200009c4:	46bd      	mov	sp, r7
+200009c6:	bc80      	pop	{r7}
+200009c8:	4770      	bx	lr
+200009ca:	bf00      	nop
+
+200009cc <MSS_UART_init>:
+(
+    mss_uart_instance_t* this_uart, 
+    uint32_t baud_rate,
+    uint8_t line_config
+)
+{
+200009cc:	b580      	push	{r7, lr}
+200009ce:	b084      	sub	sp, #16
+200009d0:	af00      	add	r7, sp, #0
+200009d2:	60f8      	str	r0, [r7, #12]
+200009d4:	60b9      	str	r1, [r7, #8]
+200009d6:	4613      	mov	r3, r2
+200009d8:	71fb      	strb	r3, [r7, #7]
+    /* The driver expects g_mss_uart0 and g_mss_uart1 to be the only
+     * mss_uart_instance_t instances used to identify UART0 and UART1. */
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+200009da:	68fa      	ldr	r2, [r7, #12]
+200009dc:	f241 4384 	movw	r3, #5252	; 0x1484
+200009e0:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200009e4:	429a      	cmp	r2, r3
+200009e6:	d007      	beq.n	200009f8 <MSS_UART_init+0x2c>
+200009e8:	68fa      	ldr	r2, [r7, #12]
+200009ea:	f241 4344 	movw	r3, #5188	; 0x1444
+200009ee:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200009f2:	429a      	cmp	r2, r3
+200009f4:	d000      	beq.n	200009f8 <MSS_UART_init+0x2c>
+200009f6:	be00      	bkpt	0x0000
+
+    /* Perform generic initialization */
+    global_init(this_uart, baud_rate, line_config);
+200009f8:	79fb      	ldrb	r3, [r7, #7]
+200009fa:	68f8      	ldr	r0, [r7, #12]
+200009fc:	68b9      	ldr	r1, [r7, #8]
+200009fe:	461a      	mov	r2, r3
+20000a00:	f000 f9ee 	bl	20000de0 <global_init>
+
+    /* Disable LIN mode */
+    clear_bit_reg8(&this_uart->hw_reg->MM0, ELIN);
+20000a04:	68fb      	ldr	r3, [r7, #12]
+20000a06:	681b      	ldr	r3, [r3, #0]
+20000a08:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000a0c:	4618      	mov	r0, r3
+20000a0e:	f04f 0103 	mov.w	r1, #3
+20000a12:	f7ff ff9b 	bl	2000094c <clear_bit_reg8>
+
+    /* Disable IrDA mode */
+    clear_bit_reg8(&this_uart->hw_reg->MM1, EIRD);
+20000a16:	68fb      	ldr	r3, [r7, #12]
+20000a18:	681b      	ldr	r3, [r3, #0]
+20000a1a:	f103 0334 	add.w	r3, r3, #52	; 0x34
+20000a1e:	4618      	mov	r0, r3
+20000a20:	f04f 0102 	mov.w	r1, #2
+20000a24:	f7ff ff92 	bl	2000094c <clear_bit_reg8>
+
+    /* Disable SmartCard Mode */
+    clear_bit_reg8(&this_uart->hw_reg->MM2, EERR);
+20000a28:	68fb      	ldr	r3, [r7, #12]
+20000a2a:	681b      	ldr	r3, [r3, #0]
+20000a2c:	f103 0338 	add.w	r3, r3, #56	; 0x38
+20000a30:	4618      	mov	r0, r3
+20000a32:	f04f 0100 	mov.w	r1, #0
+20000a36:	f7ff ff89 	bl	2000094c <clear_bit_reg8>
+
+    /* set default tx handler for automated TX using interrupt in USART mode */
+    this_uart->tx_handler = default_tx_handler;
+20000a3a:	68fa      	ldr	r2, [r7, #12]
+20000a3c:	f241 2379 	movw	r3, #4729	; 0x1279
+20000a40:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a44:	6253      	str	r3, [r2, #36]	; 0x24
+}
+20000a46:	f107 0710 	add.w	r7, r7, #16
+20000a4a:	46bd      	mov	sp, r7
+20000a4c:	bd80      	pop	{r7, pc}
+20000a4e:	bf00      	nop
+
+20000a50 <MSS_UART_polled_tx>:
+(
+    mss_uart_instance_t * this_uart,
+    const uint8_t * pbuff,
+    uint32_t tx_size
+)
+{
+20000a50:	b480      	push	{r7}
+20000a52:	b089      	sub	sp, #36	; 0x24
+20000a54:	af00      	add	r7, sp, #0
+20000a56:	60f8      	str	r0, [r7, #12]
+20000a58:	60b9      	str	r1, [r7, #8]
+20000a5a:	607a      	str	r2, [r7, #4]
+    uint32_t char_idx = 0u;
+20000a5c:	f04f 0300 	mov.w	r3, #0
+20000a60:	613b      	str	r3, [r7, #16]
+    uint32_t size_sent;
+    uint8_t status;
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20000a62:	68fa      	ldr	r2, [r7, #12]
+20000a64:	f241 4384 	movw	r3, #5252	; 0x1484
+20000a68:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a6c:	429a      	cmp	r2, r3
+20000a6e:	d007      	beq.n	20000a80 <MSS_UART_polled_tx+0x30>
+20000a70:	68fa      	ldr	r2, [r7, #12]
+20000a72:	f241 4344 	movw	r3, #5188	; 0x1444
+20000a76:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a7a:	429a      	cmp	r2, r3
+20000a7c:	d000      	beq.n	20000a80 <MSS_UART_polled_tx+0x30>
+20000a7e:	be00      	bkpt	0x0000
+    ASSERT(pbuff != ( (uint8_t *)0));
+20000a80:	68bb      	ldr	r3, [r7, #8]
+20000a82:	2b00      	cmp	r3, #0
+20000a84:	d100      	bne.n	20000a88 <MSS_UART_polled_tx+0x38>
+20000a86:	be00      	bkpt	0x0000
+    ASSERT(tx_size > 0u);
+20000a88:	687b      	ldr	r3, [r7, #4]
+20000a8a:	2b00      	cmp	r3, #0
+20000a8c:	d100      	bne.n	20000a90 <MSS_UART_polled_tx+0x40>
+20000a8e:	be00      	bkpt	0x0000
+
+    if(((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1)) &&
+20000a90:	68fa      	ldr	r2, [r7, #12]
+20000a92:	f241 4384 	movw	r3, #5252	; 0x1484
+20000a96:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000a9a:	429a      	cmp	r2, r3
+20000a9c:	d006      	beq.n	20000aac <MSS_UART_polled_tx+0x5c>
+20000a9e:	68fa      	ldr	r2, [r7, #12]
+20000aa0:	f241 4344 	movw	r3, #5188	; 0x1444
+20000aa4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000aa8:	429a      	cmp	r2, r3
+20000aaa:	d13d      	bne.n	20000b28 <MSS_UART_polled_tx+0xd8>
+20000aac:	68bb      	ldr	r3, [r7, #8]
+20000aae:	2b00      	cmp	r3, #0
+20000ab0:	d03a      	beq.n	20000b28 <MSS_UART_polled_tx+0xd8>
+20000ab2:	687b      	ldr	r3, [r7, #4]
+20000ab4:	2b00      	cmp	r3, #0
+20000ab6:	d037      	beq.n	20000b28 <MSS_UART_polled_tx+0xd8>
+         /* Remain in this loop until the entire input buffer
+          * has been transferred to the UART.
+          */
+        do {
+            /* Read the Line Status Register and update the sticky record */
+            status = this_uart->hw_reg->LSR;
+20000ab8:	68fb      	ldr	r3, [r7, #12]
+20000aba:	681b      	ldr	r3, [r3, #0]
+20000abc:	7d1b      	ldrb	r3, [r3, #20]
+20000abe:	76fb      	strb	r3, [r7, #27]
+            this_uart->status |= status;
+20000ac0:	68fb      	ldr	r3, [r7, #12]
+20000ac2:	7b5a      	ldrb	r2, [r3, #13]
+20000ac4:	7efb      	ldrb	r3, [r7, #27]
+20000ac6:	ea42 0303 	orr.w	r3, r2, r3
+20000aca:	b2da      	uxtb	r2, r3
+20000acc:	68fb      	ldr	r3, [r7, #12]
+20000ace:	735a      	strb	r2, [r3, #13]
+
+            /* Check if TX FIFO is empty. */
+            if(status & MSS_UART_THRE)
+20000ad0:	7efb      	ldrb	r3, [r7, #27]
+20000ad2:	f003 0320 	and.w	r3, r3, #32
+20000ad6:	2b00      	cmp	r3, #0
+20000ad8:	d023      	beq.n	20000b22 <MSS_UART_polled_tx+0xd2>
+            {
+                uint32_t fill_size = TX_FIFO_SIZE;
+20000ada:	f04f 0310 	mov.w	r3, #16
+20000ade:	61fb      	str	r3, [r7, #28]
+
+                /* Calculate the number of bytes to transmit. */
+                if(tx_size < TX_FIFO_SIZE)
+20000ae0:	687b      	ldr	r3, [r7, #4]
+20000ae2:	2b0f      	cmp	r3, #15
+20000ae4:	d801      	bhi.n	20000aea <MSS_UART_polled_tx+0x9a>
+                {
+                    fill_size = tx_size;
+20000ae6:	687b      	ldr	r3, [r7, #4]
+20000ae8:	61fb      	str	r3, [r7, #28]
+                }
+
+                /* Fill the TX FIFO with the calculated the number of bytes. */
+                for(size_sent = 0u; size_sent < fill_size; ++size_sent)
+20000aea:	f04f 0300 	mov.w	r3, #0
+20000aee:	617b      	str	r3, [r7, #20]
+20000af0:	e00e      	b.n	20000b10 <MSS_UART_polled_tx+0xc0>
+                {
+                    /* Send next character in the buffer. */
+                    this_uart->hw_reg->THR = pbuff[char_idx];
+20000af2:	68fb      	ldr	r3, [r7, #12]
+20000af4:	681b      	ldr	r3, [r3, #0]
+20000af6:	68b9      	ldr	r1, [r7, #8]
+20000af8:	693a      	ldr	r2, [r7, #16]
+20000afa:	440a      	add	r2, r1
+20000afc:	7812      	ldrb	r2, [r2, #0]
+20000afe:	701a      	strb	r2, [r3, #0]
+                    char_idx++;
+20000b00:	693b      	ldr	r3, [r7, #16]
+20000b02:	f103 0301 	add.w	r3, r3, #1
+20000b06:	613b      	str	r3, [r7, #16]
+                {
+                    fill_size = tx_size;
+                }
+
+                /* Fill the TX FIFO with the calculated the number of bytes. */
+                for(size_sent = 0u; size_sent < fill_size; ++size_sent)
+20000b08:	697b      	ldr	r3, [r7, #20]
+20000b0a:	f103 0301 	add.w	r3, r3, #1
+20000b0e:	617b      	str	r3, [r7, #20]
+20000b10:	697a      	ldr	r2, [r7, #20]
+20000b12:	69fb      	ldr	r3, [r7, #28]
+20000b14:	429a      	cmp	r2, r3
+20000b16:	d3ec      	bcc.n	20000af2 <MSS_UART_polled_tx+0xa2>
+                    this_uart->hw_reg->THR = pbuff[char_idx];
+                    char_idx++;
+                }
+
+                /* Calculate the number of untransmitted bytes remaining. */
+                tx_size -= size_sent;
+20000b18:	687a      	ldr	r2, [r7, #4]
+20000b1a:	697b      	ldr	r3, [r7, #20]
+20000b1c:	ebc3 0302 	rsb	r3, r3, r2
+20000b20:	607b      	str	r3, [r7, #4]
+            }
+        } while(tx_size);
+20000b22:	687b      	ldr	r3, [r7, #4]
+20000b24:	2b00      	cmp	r3, #0
+20000b26:	d1c7      	bne.n	20000ab8 <MSS_UART_polled_tx+0x68>
+    }
+}
+20000b28:	f107 0724 	add.w	r7, r7, #36	; 0x24
+20000b2c:	46bd      	mov	sp, r7
+20000b2e:	bc80      	pop	{r7}
+20000b30:	4770      	bx	lr
+20000b32:	bf00      	nop
+
+20000b34 <MSS_UART_polled_tx_string>:
+MSS_UART_polled_tx_string
+(
+    mss_uart_instance_t * this_uart,
+    const uint8_t * p_sz_string
+)
+{
+20000b34:	b480      	push	{r7}
+20000b36:	b087      	sub	sp, #28
+20000b38:	af00      	add	r7, sp, #0
+20000b3a:	6078      	str	r0, [r7, #4]
+20000b3c:	6039      	str	r1, [r7, #0]
+    uint32_t char_idx = 0u;
+20000b3e:	f04f 0300 	mov.w	r3, #0
+20000b42:	60fb      	str	r3, [r7, #12]
+    uint32_t fill_size;
+    uint8_t data_byte;
+    uint8_t status;
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20000b44:	687a      	ldr	r2, [r7, #4]
+20000b46:	f241 4384 	movw	r3, #5252	; 0x1484
+20000b4a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000b4e:	429a      	cmp	r2, r3
+20000b50:	d007      	beq.n	20000b62 <MSS_UART_polled_tx_string+0x2e>
+20000b52:	687a      	ldr	r2, [r7, #4]
+20000b54:	f241 4344 	movw	r3, #5188	; 0x1444
+20000b58:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000b5c:	429a      	cmp	r2, r3
+20000b5e:	d000      	beq.n	20000b62 <MSS_UART_polled_tx_string+0x2e>
+20000b60:	be00      	bkpt	0x0000
+    ASSERT(p_sz_string != ((uint8_t *)0));
+20000b62:	683b      	ldr	r3, [r7, #0]
+20000b64:	2b00      	cmp	r3, #0
+20000b66:	d100      	bne.n	20000b6a <MSS_UART_polled_tx_string+0x36>
+20000b68:	be00      	bkpt	0x0000
+
+    if(((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1)) &&
+20000b6a:	687a      	ldr	r2, [r7, #4]
+20000b6c:	f241 4384 	movw	r3, #5252	; 0x1484
+20000b70:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000b74:	429a      	cmp	r2, r3
+20000b76:	d006      	beq.n	20000b86 <MSS_UART_polled_tx_string+0x52>
+20000b78:	687a      	ldr	r2, [r7, #4]
+20000b7a:	f241 4344 	movw	r3, #5188	; 0x1444
+20000b7e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000b82:	429a      	cmp	r2, r3
+20000b84:	d137      	bne.n	20000bf6 <MSS_UART_polled_tx_string+0xc2>
+20000b86:	683b      	ldr	r3, [r7, #0]
+20000b88:	2b00      	cmp	r3, #0
+20000b8a:	d034      	beq.n	20000bf6 <MSS_UART_polled_tx_string+0xc2>
+       (p_sz_string != ((uint8_t *)0)))
+    {
+        /* Get the first data byte from the input buffer */
+        data_byte = p_sz_string[char_idx];
+20000b8c:	683a      	ldr	r2, [r7, #0]
+20000b8e:	68fb      	ldr	r3, [r7, #12]
+20000b90:	4413      	add	r3, r2
+20000b92:	781b      	ldrb	r3, [r3, #0]
+20000b94:	75bb      	strb	r3, [r7, #22]
+
+        /* First check for the NULL terminator byte.
+         * Then remain in this loop until the entire string in the input buffer
+         * has been transferred to the UART.
+         */
+        while(0u != data_byte)
+20000b96:	e02b      	b.n	20000bf0 <MSS_UART_polled_tx_string+0xbc>
+        {
+            /* Wait until TX FIFO is empty. */
+            do {
+                status = this_uart->hw_reg->LSR;
+20000b98:	687b      	ldr	r3, [r7, #4]
+20000b9a:	681b      	ldr	r3, [r3, #0]
+20000b9c:	7d1b      	ldrb	r3, [r3, #20]
+20000b9e:	75fb      	strb	r3, [r7, #23]
+                this_uart->status |= status;
+20000ba0:	687b      	ldr	r3, [r7, #4]
+20000ba2:	7b5a      	ldrb	r2, [r3, #13]
+20000ba4:	7dfb      	ldrb	r3, [r7, #23]
+20000ba6:	ea42 0303 	orr.w	r3, r2, r3
+20000baa:	b2da      	uxtb	r2, r3
+20000bac:	687b      	ldr	r3, [r7, #4]
+20000bae:	735a      	strb	r2, [r3, #13]
+            } while (0u == (status & MSS_UART_THRE));
+20000bb0:	7dfb      	ldrb	r3, [r7, #23]
+20000bb2:	f003 0320 	and.w	r3, r3, #32
+20000bb6:	2b00      	cmp	r3, #0
+20000bb8:	d0ee      	beq.n	20000b98 <MSS_UART_polled_tx_string+0x64>
+
+            /* Send bytes from the input buffer until the TX FIFO is full
+             * or we reach the NULL terminator byte.
+             */
+            fill_size = 0u;
+20000bba:	f04f 0300 	mov.w	r3, #0
+20000bbe:	613b      	str	r3, [r7, #16]
+            while((0u != data_byte) && (fill_size < TX_FIFO_SIZE))
+20000bc0:	e010      	b.n	20000be4 <MSS_UART_polled_tx_string+0xb0>
+            {
+                /* Send the data byte */
+                this_uart->hw_reg->THR = data_byte;
+20000bc2:	687b      	ldr	r3, [r7, #4]
+20000bc4:	681b      	ldr	r3, [r3, #0]
+20000bc6:	7dba      	ldrb	r2, [r7, #22]
+20000bc8:	701a      	strb	r2, [r3, #0]
+                ++fill_size;
+20000bca:	693b      	ldr	r3, [r7, #16]
+20000bcc:	f103 0301 	add.w	r3, r3, #1
+20000bd0:	613b      	str	r3, [r7, #16]
+                char_idx++;
+20000bd2:	68fb      	ldr	r3, [r7, #12]
+20000bd4:	f103 0301 	add.w	r3, r3, #1
+20000bd8:	60fb      	str	r3, [r7, #12]
+                /* Get the next data byte from the input buffer */
+                data_byte = p_sz_string[char_idx];
+20000bda:	683a      	ldr	r2, [r7, #0]
+20000bdc:	68fb      	ldr	r3, [r7, #12]
+20000bde:	4413      	add	r3, r2
+20000be0:	781b      	ldrb	r3, [r3, #0]
+20000be2:	75bb      	strb	r3, [r7, #22]
+
+            /* Send bytes from the input buffer until the TX FIFO is full
+             * or we reach the NULL terminator byte.
+             */
+            fill_size = 0u;
+            while((0u != data_byte) && (fill_size < TX_FIFO_SIZE))
+20000be4:	7dbb      	ldrb	r3, [r7, #22]
+20000be6:	2b00      	cmp	r3, #0
+20000be8:	d002      	beq.n	20000bf0 <MSS_UART_polled_tx_string+0xbc>
+20000bea:	693b      	ldr	r3, [r7, #16]
+20000bec:	2b0f      	cmp	r3, #15
+20000bee:	d9e8      	bls.n	20000bc2 <MSS_UART_polled_tx_string+0x8e>
+
+        /* First check for the NULL terminator byte.
+         * Then remain in this loop until the entire string in the input buffer
+         * has been transferred to the UART.
+         */
+        while(0u != data_byte)
+20000bf0:	7dbb      	ldrb	r3, [r7, #22]
+20000bf2:	2b00      	cmp	r3, #0
+20000bf4:	d1d0      	bne.n	20000b98 <MSS_UART_polled_tx_string+0x64>
+                /* Get the next data byte from the input buffer */
+                data_byte = p_sz_string[char_idx];
+            }
+        }
+    }
+}
+20000bf6:	f107 071c 	add.w	r7, r7, #28
+20000bfa:	46bd      	mov	sp, r7
+20000bfc:	bc80      	pop	{r7}
+20000bfe:	4770      	bx	lr
+
+20000c00 <UART0_IRQHandler>:
+#if defined(__GNUC__)
+__attribute__((__interrupt__)) void UART0_IRQHandler(void)
+#else
+void UART0_IRQHandler(void)
+#endif
+{
+20000c00:	4668      	mov	r0, sp
+20000c02:	f020 0107 	bic.w	r1, r0, #7
+20000c06:	468d      	mov	sp, r1
+20000c08:	b589      	push	{r0, r3, r7, lr}
+20000c0a:	af00      	add	r7, sp, #0
+    MSS_UART_isr(&g_mss_uart0);
+20000c0c:	f241 4084 	movw	r0, #5252	; 0x1484
+20000c10:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000c14:	f000 fa1a 	bl	2000104c <MSS_UART_isr>
+}
+20000c18:	46bd      	mov	sp, r7
+20000c1a:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
+20000c1e:	4685      	mov	sp, r0
+20000c20:	4770      	bx	lr
+20000c22:	bf00      	nop
+
+20000c24 <UART1_IRQHandler>:
+#if defined(__GNUC__)
+__attribute__((__interrupt__)) void UART1_IRQHandler(void)
+#else
+void UART1_IRQHandler(void)
+#endif
+{
+20000c24:	4668      	mov	r0, sp
+20000c26:	f020 0107 	bic.w	r1, r0, #7
+20000c2a:	468d      	mov	sp, r1
+20000c2c:	b589      	push	{r0, r3, r7, lr}
+20000c2e:	af00      	add	r7, sp, #0
+    MSS_UART_isr(&g_mss_uart1);
+20000c30:	f241 4044 	movw	r0, #5188	; 0x1444
+20000c34:	f2c2 0000 	movt	r0, #8192	; 0x2000
+20000c38:	f000 fa08 	bl	2000104c <MSS_UART_isr>
+}
+20000c3c:	46bd      	mov	sp, r7
+20000c3e:	e8bd 4089 	ldmia.w	sp!, {r0, r3, r7, lr}
+20000c42:	4685      	mov	sp, r0
+20000c44:	4770      	bx	lr
+20000c46:	bf00      	nop
+
+20000c48 <config_baud_divisors>:
+config_baud_divisors
+(
+    mss_uart_instance_t * this_uart,
+    uint32_t baudrate    
+)
+{
+20000c48:	b580      	push	{r7, lr}
+20000c4a:	b088      	sub	sp, #32
+20000c4c:	af00      	add	r7, sp, #0
+20000c4e:	6078      	str	r0, [r7, #4]
+20000c50:	6039      	str	r1, [r7, #0]
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20000c52:	687a      	ldr	r2, [r7, #4]
+20000c54:	f241 4384 	movw	r3, #5252	; 0x1484
+20000c58:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c5c:	429a      	cmp	r2, r3
+20000c5e:	d007      	beq.n	20000c70 <config_baud_divisors+0x28>
+20000c60:	687a      	ldr	r2, [r7, #4]
+20000c62:	f241 4344 	movw	r3, #5188	; 0x1444
+20000c66:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c6a:	429a      	cmp	r2, r3
+20000c6c:	d000      	beq.n	20000c70 <config_baud_divisors+0x28>
+20000c6e:	be00      	bkpt	0x0000
+    
+    if((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1))
+20000c70:	687a      	ldr	r2, [r7, #4]
+20000c72:	f241 4384 	movw	r3, #5252	; 0x1484
+20000c76:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c7a:	429a      	cmp	r2, r3
+20000c7c:	d007      	beq.n	20000c8e <config_baud_divisors+0x46>
+20000c7e:	687a      	ldr	r2, [r7, #4]
+20000c80:	f241 4344 	movw	r3, #5188	; 0x1444
+20000c84:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000c88:	429a      	cmp	r2, r3
+20000c8a:	f040 80a4 	bne.w	20000dd6 <config_baud_divisors+0x18e>
+        uint32_t baud_value_by_64;
+        uint32_t baud_value_by_128;
+        uint32_t fractional_baud_value;
+        uint32_t pclk_freq;
+
+        this_uart->baudrate = baudrate;
+20000c8e:	687b      	ldr	r3, [r7, #4]
+20000c90:	683a      	ldr	r2, [r7, #0]
+20000c92:	609a      	str	r2, [r3, #8]
+
+        /* Force the value of the CMSIS global variables holding the various system
+          * clock frequencies to be updated. */
+        SystemCoreClockUpdate();
+20000c94:	f7ff fbd0 	bl	20000438 <SystemCoreClockUpdate>
+        if(this_uart == &g_mss_uart0)
+20000c98:	687a      	ldr	r2, [r7, #4]
+20000c9a:	f241 4384 	movw	r3, #5252	; 0x1484
+20000c9e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000ca2:	429a      	cmp	r2, r3
+20000ca4:	d106      	bne.n	20000cb4 <config_baud_divisors+0x6c>
+        {
+            pclk_freq = g_FrequencyPCLK0;
+20000ca6:	f241 4328 	movw	r3, #5160	; 0x1428
+20000caa:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000cae:	681b      	ldr	r3, [r3, #0]
+20000cb0:	61fb      	str	r3, [r7, #28]
+20000cb2:	e005      	b.n	20000cc0 <config_baud_divisors+0x78>
+        }
+        else
+        {
+            pclk_freq = g_FrequencyPCLK1;
+20000cb4:	f241 432c 	movw	r3, #5164	; 0x142c
+20000cb8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000cbc:	681b      	ldr	r3, [r3, #0]
+20000cbe:	61fb      	str	r3, [r7, #28]
+        /*
+         * Compute baud value based on requested baud rate and PCLK frequency.
+         * The baud value is computed using the following equation:
+         *      baud_value = PCLK_Frequency / (baud_rate * 16)
+         */
+        baud_value_by_128 = (8u * pclk_freq) / baudrate;
+20000cc0:	69fb      	ldr	r3, [r7, #28]
+20000cc2:	ea4f 02c3 	mov.w	r2, r3, lsl #3
+20000cc6:	683b      	ldr	r3, [r7, #0]
+20000cc8:	fbb2 f3f3 	udiv	r3, r2, r3
+20000ccc:	617b      	str	r3, [r7, #20]
+        baud_value_by_64 = baud_value_by_128 / 2u;
+20000cce:	697b      	ldr	r3, [r7, #20]
+20000cd0:	ea4f 0353 	mov.w	r3, r3, lsr #1
+20000cd4:	613b      	str	r3, [r7, #16]
+        baud_value = baud_value_by_64 / 64u;
+20000cd6:	693b      	ldr	r3, [r7, #16]
+20000cd8:	ea4f 1393 	mov.w	r3, r3, lsr #6
+20000cdc:	60fb      	str	r3, [r7, #12]
+        fractional_baud_value = baud_value_by_64 - (baud_value * 64u);
+20000cde:	68fb      	ldr	r3, [r7, #12]
+20000ce0:	ea4f 1383 	mov.w	r3, r3, lsl #6
+20000ce4:	693a      	ldr	r2, [r7, #16]
+20000ce6:	ebc3 0302 	rsb	r3, r3, r2
+20000cea:	61bb      	str	r3, [r7, #24]
+        fractional_baud_value += (baud_value_by_128 - (baud_value * 128u)) - (fractional_baud_value * 2u);
+20000cec:	68fb      	ldr	r3, [r7, #12]
+20000cee:	ea4f 13c3 	mov.w	r3, r3, lsl #7
+20000cf2:	697a      	ldr	r2, [r7, #20]
+20000cf4:	ebc3 0202 	rsb	r2, r3, r2
+20000cf8:	69bb      	ldr	r3, [r7, #24]
+20000cfa:	ea4f 0343 	mov.w	r3, r3, lsl #1
+20000cfe:	ebc3 0302 	rsb	r3, r3, r2
+20000d02:	69ba      	ldr	r2, [r7, #24]
+20000d04:	4413      	add	r3, r2
+20000d06:	61bb      	str	r3, [r7, #24]
+        
+        /* Assert if integer baud value fits in 16-bit. */
+        ASSERT(baud_value <= UINT16_MAX);
+20000d08:	68fa      	ldr	r2, [r7, #12]
+20000d0a:	f64f 73ff 	movw	r3, #65535	; 0xffff
+20000d0e:	429a      	cmp	r2, r3
+20000d10:	d900      	bls.n	20000d14 <config_baud_divisors+0xcc>
+20000d12:	be00      	bkpt	0x0000
+    
+        if(baud_value <= (uint32_t)UINT16_MAX)
+20000d14:	68fa      	ldr	r2, [r7, #12]
+20000d16:	f64f 73ff 	movw	r3, #65535	; 0xffff
+20000d1a:	429a      	cmp	r2, r3
+20000d1c:	d85b      	bhi.n	20000dd6 <config_baud_divisors+0x18e>
+        {
+            if(baud_value > 1u)
+20000d1e:	68fb      	ldr	r3, [r7, #12]
+20000d20:	2b01      	cmp	r3, #1
+20000d22:	d931      	bls.n	20000d88 <config_baud_divisors+0x140>
+            {
+                /* 
+                 * Use Frational baud rate divisors
+                 */
+                /* set divisor latch */
+                set_bit_reg8(&this_uart->hw_reg->LCR,DLAB);
+20000d24:	687b      	ldr	r3, [r7, #4]
+20000d26:	681b      	ldr	r3, [r3, #0]
+20000d28:	f103 030c 	add.w	r3, r3, #12
+20000d2c:	4618      	mov	r0, r3
+20000d2e:	f04f 0107 	mov.w	r1, #7
+20000d32:	f7ff fdeb 	bl	2000090c <set_bit_reg8>
+            
+                /* msb of baud value */
+                this_uart->hw_reg->DMR = (uint8_t)(baud_value >> 8);
+20000d36:	687b      	ldr	r3, [r7, #4]
+20000d38:	681b      	ldr	r3, [r3, #0]
+20000d3a:	68fa      	ldr	r2, [r7, #12]
+20000d3c:	ea4f 2212 	mov.w	r2, r2, lsr #8
+20000d40:	b2d2      	uxtb	r2, r2
+20000d42:	711a      	strb	r2, [r3, #4]
+                /* lsb of baud value */
+                this_uart->hw_reg->DLR = (uint8_t)baud_value;
+20000d44:	687b      	ldr	r3, [r7, #4]
+20000d46:	681b      	ldr	r3, [r3, #0]
+20000d48:	68fa      	ldr	r2, [r7, #12]
+20000d4a:	b2d2      	uxtb	r2, r2
+20000d4c:	701a      	strb	r2, [r3, #0]
+            
+                /* reset divisor latch */
+                clear_bit_reg8(&this_uart->hw_reg->LCR,DLAB);
+20000d4e:	687b      	ldr	r3, [r7, #4]
+20000d50:	681b      	ldr	r3, [r3, #0]
+20000d52:	f103 030c 	add.w	r3, r3, #12
+20000d56:	4618      	mov	r0, r3
+20000d58:	f04f 0107 	mov.w	r1, #7
+20000d5c:	f7ff fdf6 	bl	2000094c <clear_bit_reg8>
+        
+                /* Enable Fractional baud rate */
+                set_bit_reg8(&this_uart->hw_reg->MM0,EFBR);
+20000d60:	687b      	ldr	r3, [r7, #4]
+20000d62:	681b      	ldr	r3, [r3, #0]
+20000d64:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000d68:	4618      	mov	r0, r3
+20000d6a:	f04f 0107 	mov.w	r1, #7
+20000d6e:	f7ff fdcd 	bl	2000090c <set_bit_reg8>
+        
+                /* Load the fractional baud rate register */
+                ASSERT(fractional_baud_value <= (uint32_t)UINT8_MAX);
+20000d72:	69bb      	ldr	r3, [r7, #24]
+20000d74:	2bff      	cmp	r3, #255	; 0xff
+20000d76:	d900      	bls.n	20000d7a <config_baud_divisors+0x132>
+20000d78:	be00      	bkpt	0x0000
+                this_uart->hw_reg->DFR = (uint8_t)fractional_baud_value;
+20000d7a:	687b      	ldr	r3, [r7, #4]
+20000d7c:	681b      	ldr	r3, [r3, #0]
+20000d7e:	69ba      	ldr	r2, [r7, #24]
+20000d80:	b2d2      	uxtb	r2, r2
+20000d82:	f883 203c 	strb.w	r2, [r3, #60]	; 0x3c
+20000d86:	e026      	b.n	20000dd6 <config_baud_divisors+0x18e>
+            {
+                /*
+                 * Do NOT use Frational baud rate divisors.
+                 */
+                /* set divisor latch */
+                set_bit_reg8(&this_uart->hw_reg->LCR,DLAB);
+20000d88:	687b      	ldr	r3, [r7, #4]
+20000d8a:	681b      	ldr	r3, [r3, #0]
+20000d8c:	f103 030c 	add.w	r3, r3, #12
+20000d90:	4618      	mov	r0, r3
+20000d92:	f04f 0107 	mov.w	r1, #7
+20000d96:	f7ff fdb9 	bl	2000090c <set_bit_reg8>
+            
+                /* msb of baud value */
+                this_uart->hw_reg->DMR = (uint8_t)(baud_value >> 8u);
+20000d9a:	687b      	ldr	r3, [r7, #4]
+20000d9c:	681b      	ldr	r3, [r3, #0]
+20000d9e:	68fa      	ldr	r2, [r7, #12]
+20000da0:	ea4f 2212 	mov.w	r2, r2, lsr #8
+20000da4:	b2d2      	uxtb	r2, r2
+20000da6:	711a      	strb	r2, [r3, #4]
+                /* lsb of baud value */
+                this_uart->hw_reg->DLR = (uint8_t)baud_value;
+20000da8:	687b      	ldr	r3, [r7, #4]
+20000daa:	681b      	ldr	r3, [r3, #0]
+20000dac:	68fa      	ldr	r2, [r7, #12]
+20000dae:	b2d2      	uxtb	r2, r2
+20000db0:	701a      	strb	r2, [r3, #0]
+            
+                /* reset divisor latch */
+                clear_bit_reg8(&this_uart->hw_reg->LCR,DLAB);
+20000db2:	687b      	ldr	r3, [r7, #4]
+20000db4:	681b      	ldr	r3, [r3, #0]
+20000db6:	f103 030c 	add.w	r3, r3, #12
+20000dba:	4618      	mov	r0, r3
+20000dbc:	f04f 0107 	mov.w	r1, #7
+20000dc0:	f7ff fdc4 	bl	2000094c <clear_bit_reg8>
+                
+                /* Disable Fractional baud rate */
+                clear_bit_reg8(&this_uart->hw_reg->MM0,EFBR);
+20000dc4:	687b      	ldr	r3, [r7, #4]
+20000dc6:	681b      	ldr	r3, [r3, #0]
+20000dc8:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000dcc:	4618      	mov	r0, r3
+20000dce:	f04f 0107 	mov.w	r1, #7
+20000dd2:	f7ff fdbb 	bl	2000094c <clear_bit_reg8>
+            }
+        }
+    }
+}
+20000dd6:	f107 0720 	add.w	r7, r7, #32
+20000dda:	46bd      	mov	sp, r7
+20000ddc:	bd80      	pop	{r7, pc}
+20000dde:	bf00      	nop
+
+20000de0 <global_init>:
+(
+    mss_uart_instance_t * this_uart,
+    uint32_t baud_rate,
+    uint8_t line_config
+)
+{
+20000de0:	b580      	push	{r7, lr}
+20000de2:	b084      	sub	sp, #16
+20000de4:	af00      	add	r7, sp, #0
+20000de6:	60f8      	str	r0, [r7, #12]
+20000de8:	60b9      	str	r1, [r7, #8]
+20000dea:	4613      	mov	r3, r2
+20000dec:	71fb      	strb	r3, [r7, #7]
+    /* The driver expects g_mss_uart0 and g_mss_uart1 to be the only
+     * mss_uart_instance_t instances used to identify UART0 and UART1. */
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20000dee:	68fa      	ldr	r2, [r7, #12]
+20000df0:	f241 4384 	movw	r3, #5252	; 0x1484
+20000df4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000df8:	429a      	cmp	r2, r3
+20000dfa:	d007      	beq.n	20000e0c <global_init+0x2c>
+20000dfc:	68fa      	ldr	r2, [r7, #12]
+20000dfe:	f241 4344 	movw	r3, #5188	; 0x1444
+20000e02:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e06:	429a      	cmp	r2, r3
+20000e08:	d000      	beq.n	20000e0c <global_init+0x2c>
+20000e0a:	be00      	bkpt	0x0000
+
+    if(this_uart == &g_mss_uart0)
+20000e0c:	68fa      	ldr	r2, [r7, #12]
+20000e0e:	f241 4384 	movw	r3, #5252	; 0x1484
+20000e12:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20000e16:	429a      	cmp	r2, r3
+20000e18:	d124      	bne.n	20000e64 <global_init+0x84>
+    {
+        this_uart->hw_reg = UART0;
+20000e1a:	68fb      	ldr	r3, [r7, #12]
+20000e1c:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
+20000e20:	601a      	str	r2, [r3, #0]
+        this_uart->irqn = UART0_IRQn;
+20000e22:	68fb      	ldr	r3, [r7, #12]
+20000e24:	f04f 020a 	mov.w	r2, #10
+20000e28:	711a      	strb	r2, [r3, #4]
+        /* reset UART0 */
+        SYSREG->SOFT_RST_CR |= SYSREG_MMUART0_SOFTRESET_MASK;
+20000e2a:	f248 0300 	movw	r3, #32768	; 0x8000
+20000e2e:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000e32:	f248 0200 	movw	r2, #32768	; 0x8000
+20000e36:	f2c4 0203 	movt	r2, #16387	; 0x4003
+20000e3a:	6c92      	ldr	r2, [r2, #72]	; 0x48
+20000e3c:	f042 0280 	orr.w	r2, r2, #128	; 0x80
+20000e40:	649a      	str	r2, [r3, #72]	; 0x48
+        /* Clear any previously pended UART0 interrupt */
+        NVIC_ClearPendingIRQ(UART0_IRQn);
+20000e42:	f04f 000a 	mov.w	r0, #10
+20000e46:	f7ff fd43 	bl	200008d0 <NVIC_ClearPendingIRQ>
+        /* Take UART0 out of reset. */
+        SYSREG->SOFT_RST_CR &= ~SYSREG_MMUART0_SOFTRESET_MASK;
+20000e4a:	f248 0300 	movw	r3, #32768	; 0x8000
+20000e4e:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000e52:	f248 0200 	movw	r2, #32768	; 0x8000
+20000e56:	f2c4 0203 	movt	r2, #16387	; 0x4003
+20000e5a:	6c92      	ldr	r2, [r2, #72]	; 0x48
+20000e5c:	f022 0280 	bic.w	r2, r2, #128	; 0x80
+20000e60:	649a      	str	r2, [r3, #72]	; 0x48
+20000e62:	e025      	b.n	20000eb0 <global_init+0xd0>
+    }
+    else
+    {
+        this_uart->hw_reg = UART1;
+20000e64:	68fa      	ldr	r2, [r7, #12]
+20000e66:	f240 0300 	movw	r3, #0
+20000e6a:	f2c4 0301 	movt	r3, #16385	; 0x4001
+20000e6e:	6013      	str	r3, [r2, #0]
+        this_uart->irqn = UART1_IRQn;
+20000e70:	68fb      	ldr	r3, [r7, #12]
+20000e72:	f04f 020b 	mov.w	r2, #11
+20000e76:	711a      	strb	r2, [r3, #4]
+        /* Reset UART1 */
+        SYSREG->SOFT_RST_CR |= SYSREG_MMUART1_SOFTRESET_MASK;
+20000e78:	f248 0300 	movw	r3, #32768	; 0x8000
+20000e7c:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000e80:	f248 0200 	movw	r2, #32768	; 0x8000
+20000e84:	f2c4 0203 	movt	r2, #16387	; 0x4003
+20000e88:	6c92      	ldr	r2, [r2, #72]	; 0x48
+20000e8a:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+20000e8e:	649a      	str	r2, [r3, #72]	; 0x48
+        /* Clear any previously pended UART1 interrupt */
+        NVIC_ClearPendingIRQ(UART1_IRQn);
+20000e90:	f04f 000b 	mov.w	r0, #11
+20000e94:	f7ff fd1c 	bl	200008d0 <NVIC_ClearPendingIRQ>
+        /* Take UART1 out of reset. */
+        SYSREG->SOFT_RST_CR &= ~SYSREG_MMUART1_SOFTRESET_MASK;
+20000e98:	f248 0300 	movw	r3, #32768	; 0x8000
+20000e9c:	f2c4 0303 	movt	r3, #16387	; 0x4003
+20000ea0:	f248 0200 	movw	r2, #32768	; 0x8000
+20000ea4:	f2c4 0203 	movt	r2, #16387	; 0x4003
+20000ea8:	6c92      	ldr	r2, [r2, #72]	; 0x48
+20000eaa:	f422 7280 	bic.w	r2, r2, #256	; 0x100
+20000eae:	649a      	str	r2, [r3, #72]	; 0x48
+    }
+
+    /* disable interrupts */
+    this_uart->hw_reg->IER = 0u;
+20000eb0:	68fb      	ldr	r3, [r7, #12]
+20000eb2:	681b      	ldr	r3, [r3, #0]
+20000eb4:	f04f 0200 	mov.w	r2, #0
+20000eb8:	711a      	strb	r2, [r3, #4]
+
+    /* FIFO configuration */
+    this_uart->hw_reg->FCR = (uint8_t)MSS_UART_FIFO_SINGLE_BYTE;
+20000eba:	68fb      	ldr	r3, [r7, #12]
+20000ebc:	681b      	ldr	r3, [r3, #0]
+20000ebe:	f04f 0200 	mov.w	r2, #0
+20000ec2:	721a      	strb	r2, [r3, #8]
+    /* clear receiver FIFO */
+    set_bit_reg8(&this_uart->hw_reg->FCR,CLEAR_RX_FIFO);
+20000ec4:	68fb      	ldr	r3, [r7, #12]
+20000ec6:	681b      	ldr	r3, [r3, #0]
+20000ec8:	f103 0308 	add.w	r3, r3, #8
+20000ecc:	4618      	mov	r0, r3
+20000ece:	f04f 0101 	mov.w	r1, #1
+20000ed2:	f7ff fd1b 	bl	2000090c <set_bit_reg8>
+    /* clear transmitter FIFO */
+    set_bit_reg8(&this_uart->hw_reg->FCR,CLEAR_TX_FIFO);
+20000ed6:	68fb      	ldr	r3, [r7, #12]
+20000ed8:	681b      	ldr	r3, [r3, #0]
+20000eda:	f103 0308 	add.w	r3, r3, #8
+20000ede:	4618      	mov	r0, r3
+20000ee0:	f04f 0102 	mov.w	r1, #2
+20000ee4:	f7ff fd12 	bl	2000090c <set_bit_reg8>
+
+    /* set default READY mode : Mode 0*/
+    /* enable RXRDYN and TXRDYN pins. The earlier FCR write to set the TX FIFO
+     * trigger level inadvertently disabled the FCR_RXRDY_TXRDYN_EN bit. */
+    set_bit_reg8(&this_uart->hw_reg->FCR,RXRDY_TXRDYN_EN);
+20000ee8:	68fb      	ldr	r3, [r7, #12]
+20000eea:	681b      	ldr	r3, [r3, #0]
+20000eec:	f103 0308 	add.w	r3, r3, #8
+20000ef0:	4618      	mov	r0, r3
+20000ef2:	f04f 0100 	mov.w	r1, #0
+20000ef6:	f7ff fd09 	bl	2000090c <set_bit_reg8>
+
+    /* disable loopback : local * remote */
+    clear_bit_reg8(&this_uart->hw_reg->MCR,LOOP);
+20000efa:	68fb      	ldr	r3, [r7, #12]
+20000efc:	681b      	ldr	r3, [r3, #0]
+20000efe:	f103 0310 	add.w	r3, r3, #16
+20000f02:	4618      	mov	r0, r3
+20000f04:	f04f 0104 	mov.w	r1, #4
+20000f08:	f7ff fd20 	bl	2000094c <clear_bit_reg8>
+    clear_bit_reg8(&this_uart->hw_reg->MCR,RLOOP);
+20000f0c:	68fb      	ldr	r3, [r7, #12]
+20000f0e:	681b      	ldr	r3, [r3, #0]
+20000f10:	f103 0310 	add.w	r3, r3, #16
+20000f14:	4618      	mov	r0, r3
+20000f16:	f04f 0105 	mov.w	r1, #5
+20000f1a:	f7ff fd17 	bl	2000094c <clear_bit_reg8>
+
+    /* set default TX endian */
+    clear_bit_reg8(&this_uart->hw_reg->MM1,E_MSB_TX);
+20000f1e:	68fb      	ldr	r3, [r7, #12]
+20000f20:	681b      	ldr	r3, [r3, #0]
+20000f22:	f103 0334 	add.w	r3, r3, #52	; 0x34
+20000f26:	4618      	mov	r0, r3
+20000f28:	f04f 0101 	mov.w	r1, #1
+20000f2c:	f7ff fd0e 	bl	2000094c <clear_bit_reg8>
+    /* set default RX endian */
+    clear_bit_reg8(&this_uart->hw_reg->MM1,E_MSB_RX);
+20000f30:	68fb      	ldr	r3, [r7, #12]
+20000f32:	681b      	ldr	r3, [r3, #0]
+20000f34:	f103 0334 	add.w	r3, r3, #52	; 0x34
+20000f38:	4618      	mov	r0, r3
+20000f3a:	f04f 0100 	mov.w	r1, #0
+20000f3e:	f7ff fd05 	bl	2000094c <clear_bit_reg8>
+
+    /* default AFM : disabled */
+    clear_bit_reg8(&this_uart->hw_reg->MM2,EAFM);
+20000f42:	68fb      	ldr	r3, [r7, #12]
+20000f44:	681b      	ldr	r3, [r3, #0]
+20000f46:	f103 0338 	add.w	r3, r3, #56	; 0x38
+20000f4a:	4618      	mov	r0, r3
+20000f4c:	f04f 0101 	mov.w	r1, #1
+20000f50:	f7ff fcfc 	bl	2000094c <clear_bit_reg8>
+
+    /* disable TX time gaurd */
+    clear_bit_reg8(&this_uart->hw_reg->MM0,ETTG); 
+20000f54:	68fb      	ldr	r3, [r7, #12]
+20000f56:	681b      	ldr	r3, [r3, #0]
+20000f58:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000f5c:	4618      	mov	r0, r3
+20000f5e:	f04f 0105 	mov.w	r1, #5
+20000f62:	f7ff fcf3 	bl	2000094c <clear_bit_reg8>
+
+    /* set default RX timeout */
+    clear_bit_reg8(&this_uart->hw_reg->MM0,ERTO); 
+20000f66:	68fb      	ldr	r3, [r7, #12]
+20000f68:	681b      	ldr	r3, [r3, #0]
+20000f6a:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000f6e:	4618      	mov	r0, r3
+20000f70:	f04f 0106 	mov.w	r1, #6
+20000f74:	f7ff fcea 	bl	2000094c <clear_bit_reg8>
+
+    /* disable fractional baud-rate */
+    clear_bit_reg8(&this_uart->hw_reg->MM0,EFBR); 
+20000f78:	68fb      	ldr	r3, [r7, #12]
+20000f7a:	681b      	ldr	r3, [r3, #0]
+20000f7c:	f103 0330 	add.w	r3, r3, #48	; 0x30
+20000f80:	4618      	mov	r0, r3
+20000f82:	f04f 0107 	mov.w	r1, #7
+20000f86:	f7ff fce1 	bl	2000094c <clear_bit_reg8>
+
+    /* disable single wire mode */
+    clear_bit_reg8(&this_uart->hw_reg->MM2,ESWM);
+20000f8a:	68fb      	ldr	r3, [r7, #12]
+20000f8c:	681b      	ldr	r3, [r3, #0]
+20000f8e:	f103 0338 	add.w	r3, r3, #56	; 0x38
+20000f92:	4618      	mov	r0, r3
+20000f94:	f04f 0103 	mov.w	r1, #3
+20000f98:	f7ff fcd8 	bl	2000094c <clear_bit_reg8>
+
+    /* set filter to minimum value */
+    this_uart->hw_reg->GFR = 0u;
+20000f9c:	68fb      	ldr	r3, [r7, #12]
+20000f9e:	681b      	ldr	r3, [r3, #0]
+20000fa0:	f04f 0200 	mov.w	r2, #0
+20000fa4:	f883 2044 	strb.w	r2, [r3, #68]	; 0x44
+    /* set default TX time gaurd */
+    this_uart->hw_reg->TTG = 0u;
+20000fa8:	68fb      	ldr	r3, [r7, #12]
+20000faa:	681b      	ldr	r3, [r3, #0]
+20000fac:	f04f 0200 	mov.w	r2, #0
+20000fb0:	f883 2048 	strb.w	r2, [r3, #72]	; 0x48
+    /* set default RX timeout */
+    this_uart->hw_reg->RTO = 0u;
+20000fb4:	68fb      	ldr	r3, [r7, #12]
+20000fb6:	681b      	ldr	r3, [r3, #0]
+20000fb8:	f04f 0200 	mov.w	r2, #0
+20000fbc:	f883 204c 	strb.w	r2, [r3, #76]	; 0x4c
+    
+    /* 
+     * Configure baud rate divisors. This uses the frational baud rate divisor
+     * where possible to provide the most accurate baud rat possible.
+     */
+    config_baud_divisors(this_uart, baud_rate);
+20000fc0:	68f8      	ldr	r0, [r7, #12]
+20000fc2:	68b9      	ldr	r1, [r7, #8]
+20000fc4:	f7ff fe40 	bl	20000c48 <config_baud_divisors>
+
+    /* set the line control register (bit length, stop bits, parity) */
+    this_uart->hw_reg->LCR = line_config;
+20000fc8:	68fb      	ldr	r3, [r7, #12]
+20000fca:	681b      	ldr	r3, [r3, #0]
+20000fcc:	79fa      	ldrb	r2, [r7, #7]
+20000fce:	731a      	strb	r2, [r3, #12]
+
+    /* Instance setup */
+    this_uart->baudrate = baud_rate;
+20000fd0:	68fb      	ldr	r3, [r7, #12]
+20000fd2:	68ba      	ldr	r2, [r7, #8]
+20000fd4:	609a      	str	r2, [r3, #8]
+    this_uart->lineconfig = line_config;
+20000fd6:	68fb      	ldr	r3, [r7, #12]
+20000fd8:	79fa      	ldrb	r2, [r7, #7]
+20000fda:	731a      	strb	r2, [r3, #12]
+    this_uart->tx_buff_size = TX_COMPLETE;
+20000fdc:	68fb      	ldr	r3, [r7, #12]
+20000fde:	f04f 0200 	mov.w	r2, #0
+20000fe2:	615a      	str	r2, [r3, #20]
+    this_uart->tx_buffer = (const uint8_t *)0;
+20000fe4:	68fb      	ldr	r3, [r7, #12]
+20000fe6:	f04f 0200 	mov.w	r2, #0
+20000fea:	611a      	str	r2, [r3, #16]
+    this_uart->tx_idx = 0u;
+20000fec:	68fb      	ldr	r3, [r7, #12]
+20000fee:	f04f 0200 	mov.w	r2, #0
+20000ff2:	619a      	str	r2, [r3, #24]
+
+    /* Default handlers for MSS UART interrupts */
+    this_uart->rx_handler       = NULL_HANDLER;
+20000ff4:	68fb      	ldr	r3, [r7, #12]
+20000ff6:	f04f 0200 	mov.w	r2, #0
+20000ffa:	621a      	str	r2, [r3, #32]
+    this_uart->tx_handler       = NULL_HANDLER;
+20000ffc:	68fb      	ldr	r3, [r7, #12]
+20000ffe:	f04f 0200 	mov.w	r2, #0
+20001002:	625a      	str	r2, [r3, #36]	; 0x24
+    this_uart->linests_handler  = NULL_HANDLER;
+20001004:	68fb      	ldr	r3, [r7, #12]
+20001006:	f04f 0200 	mov.w	r2, #0
+2000100a:	61da      	str	r2, [r3, #28]
+    this_uart->modemsts_handler = NULL_HANDLER;
+2000100c:	68fb      	ldr	r3, [r7, #12]
+2000100e:	f04f 0200 	mov.w	r2, #0
+20001012:	629a      	str	r2, [r3, #40]	; 0x28
+    this_uart->rto_handler      = NULL_HANDLER;    
+20001014:	68fb      	ldr	r3, [r7, #12]
+20001016:	f04f 0200 	mov.w	r2, #0
+2000101a:	62da      	str	r2, [r3, #44]	; 0x2c
+    this_uart->nack_handler     = NULL_HANDLER;   
+2000101c:	68fb      	ldr	r3, [r7, #12]
+2000101e:	f04f 0200 	mov.w	r2, #0
+20001022:	631a      	str	r2, [r3, #48]	; 0x30
+    this_uart->pid_pei_handler  = NULL_HANDLER;
+20001024:	68fb      	ldr	r3, [r7, #12]
+20001026:	f04f 0200 	mov.w	r2, #0
+2000102a:	635a      	str	r2, [r3, #52]	; 0x34
+    this_uart->break_handler    = NULL_HANDLER;    
+2000102c:	68fb      	ldr	r3, [r7, #12]
+2000102e:	f04f 0200 	mov.w	r2, #0
+20001032:	639a      	str	r2, [r3, #56]	; 0x38
+    this_uart->sync_handler     = NULL_HANDLER;   
+20001034:	68fb      	ldr	r3, [r7, #12]
+20001036:	f04f 0200 	mov.w	r2, #0
+2000103a:	63da      	str	r2, [r3, #60]	; 0x3c
+
+    /* Initialize the sticky status */
+    this_uart->status = 0u;
+2000103c:	68fb      	ldr	r3, [r7, #12]
+2000103e:	f04f 0200 	mov.w	r2, #0
+20001042:	735a      	strb	r2, [r3, #13]
+}
+20001044:	f107 0710 	add.w	r7, r7, #16
+20001048:	46bd      	mov	sp, r7
+2000104a:	bd80      	pop	{r7, pc}
+
+2000104c <MSS_UART_isr>:
+static void
+MSS_UART_isr
+(
+    mss_uart_instance_t * this_uart
+)
+{
+2000104c:	b580      	push	{r7, lr}
+2000104e:	b084      	sub	sp, #16
+20001050:	af00      	add	r7, sp, #0
+20001052:	6078      	str	r0, [r7, #4]
+    uint8_t iirf;
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20001054:	687a      	ldr	r2, [r7, #4]
+20001056:	f241 4384 	movw	r3, #5252	; 0x1484
+2000105a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000105e:	429a      	cmp	r2, r3
+20001060:	d007      	beq.n	20001072 <MSS_UART_isr+0x26>
+20001062:	687a      	ldr	r2, [r7, #4]
+20001064:	f241 4344 	movw	r3, #5188	; 0x1444
+20001068:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000106c:	429a      	cmp	r2, r3
+2000106e:	d000      	beq.n	20001072 <MSS_UART_isr+0x26>
+20001070:	be00      	bkpt	0x0000
+
+    if((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1))
+20001072:	687a      	ldr	r2, [r7, #4]
+20001074:	f241 4384 	movw	r3, #5252	; 0x1484
+20001078:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000107c:	429a      	cmp	r2, r3
+2000107e:	d007      	beq.n	20001090 <MSS_UART_isr+0x44>
+20001080:	687a      	ldr	r2, [r7, #4]
+20001082:	f241 4344 	movw	r3, #5188	; 0x1444
+20001086:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000108a:	429a      	cmp	r2, r3
+2000108c:	f040 80ef 	bne.w	2000126e <MSS_UART_isr+0x222>
+    {
+        iirf = this_uart->hw_reg->IIR & IIRF_MASK;
+20001090:	687b      	ldr	r3, [r7, #4]
+20001092:	681b      	ldr	r3, [r3, #0]
+20001094:	7a1b      	ldrb	r3, [r3, #8]
+20001096:	b2db      	uxtb	r3, r3
+20001098:	f003 030f 	and.w	r3, r3, #15
+2000109c:	73fb      	strb	r3, [r7, #15]
+
+        switch (iirf)
+2000109e:	7bfb      	ldrb	r3, [r7, #15]
+200010a0:	2b0c      	cmp	r3, #12
+200010a2:	f200 80d7 	bhi.w	20001254 <MSS_UART_isr+0x208>
+200010a6:	a201      	add	r2, pc, #4	; (adr r2, 200010ac <MSS_UART_isr+0x60>)
+200010a8:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+200010ac:	200010e1 	.word	0x200010e1
+200010b0:	20001255 	.word	0x20001255
+200010b4:	200010ff 	.word	0x200010ff
+200010b8:	20001159 	.word	0x20001159
+200010bc:	2000111d 	.word	0x2000111d
+200010c0:	20001255 	.word	0x20001255
+200010c4:	2000113b 	.word	0x2000113b
+200010c8:	20001255 	.word	0x20001255
+200010cc:	20001255 	.word	0x20001255
+200010d0:	20001255 	.word	0x20001255
+200010d4:	20001255 	.word	0x20001255
+200010d8:	20001255 	.word	0x20001255
+200010dc:	2000111d 	.word	0x2000111d
+        {
+            case IIRF_MODEM_STATUS:  /* Modem status interrupt */
+            {
+                ASSERT(NULL_HANDLER != this_uart->modemsts_handler);
+200010e0:	687b      	ldr	r3, [r7, #4]
+200010e2:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+200010e4:	2b00      	cmp	r3, #0
+200010e6:	d100      	bne.n	200010ea <MSS_UART_isr+0x9e>
+200010e8:	be00      	bkpt	0x0000
+                if(NULL_HANDLER != this_uart->modemsts_handler)
+200010ea:	687b      	ldr	r3, [r7, #4]
+200010ec:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+200010ee:	2b00      	cmp	r3, #0
+200010f0:	f000 80b2 	beq.w	20001258 <MSS_UART_isr+0x20c>
+                {
+                   (*(this_uart->modemsts_handler))(this_uart);
+200010f4:	687b      	ldr	r3, [r7, #4]
+200010f6:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+200010f8:	6878      	ldr	r0, [r7, #4]
+200010fa:	4798      	blx	r3
+                }
+            }
+            break;
+200010fc:	e0b7      	b.n	2000126e <MSS_UART_isr+0x222>
+
+            case IIRF_THRE: /* Transmitter Holding Register Empty */
+            {
+                ASSERT(NULL_HANDLER != this_uart->tx_handler);
+200010fe:	687b      	ldr	r3, [r7, #4]
+20001100:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+20001102:	2b00      	cmp	r3, #0
+20001104:	d100      	bne.n	20001108 <MSS_UART_isr+0xbc>
+20001106:	be00      	bkpt	0x0000
+                if(NULL_HANDLER != this_uart->tx_handler)
+20001108:	687b      	ldr	r3, [r7, #4]
+2000110a:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+2000110c:	2b00      	cmp	r3, #0
+2000110e:	f000 80a5 	beq.w	2000125c <MSS_UART_isr+0x210>
+                {
+                    (*(this_uart->tx_handler))(this_uart);
+20001112:	687b      	ldr	r3, [r7, #4]
+20001114:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+20001116:	6878      	ldr	r0, [r7, #4]
+20001118:	4798      	blx	r3
+                }
+            }
+            break;
+2000111a:	e0a8      	b.n	2000126e <MSS_UART_isr+0x222>
+
+            case IIRF_RX_DATA:      /* Received Data Available */
+            case IIRF_DATA_TIMEOUT: /* Received Data Timed-out */
+            {
+                ASSERT(NULL_HANDLER != this_uart->rx_handler);
+2000111c:	687b      	ldr	r3, [r7, #4]
+2000111e:	6a1b      	ldr	r3, [r3, #32]
+20001120:	2b00      	cmp	r3, #0
+20001122:	d100      	bne.n	20001126 <MSS_UART_isr+0xda>
+20001124:	be00      	bkpt	0x0000
+                if(NULL_HANDLER != this_uart->rx_handler)
+20001126:	687b      	ldr	r3, [r7, #4]
+20001128:	6a1b      	ldr	r3, [r3, #32]
+2000112a:	2b00      	cmp	r3, #0
+2000112c:	f000 8098 	beq.w	20001260 <MSS_UART_isr+0x214>
+                {
+                    (*(this_uart->rx_handler))(this_uart);
+20001130:	687b      	ldr	r3, [r7, #4]
+20001132:	6a1b      	ldr	r3, [r3, #32]
+20001134:	6878      	ldr	r0, [r7, #4]
+20001136:	4798      	blx	r3
+                }
+            }
+            break;
+20001138:	e099      	b.n	2000126e <MSS_UART_isr+0x222>
+
+            case IIRF_RX_LINE_STATUS:  /* Line Status Interrupt */
+            {
+                ASSERT(NULL_HANDLER != this_uart->linests_handler);
+2000113a:	687b      	ldr	r3, [r7, #4]
+2000113c:	69db      	ldr	r3, [r3, #28]
+2000113e:	2b00      	cmp	r3, #0
+20001140:	d100      	bne.n	20001144 <MSS_UART_isr+0xf8>
+20001142:	be00      	bkpt	0x0000
+                if(NULL_HANDLER != this_uart->linests_handler)
+20001144:	687b      	ldr	r3, [r7, #4]
+20001146:	69db      	ldr	r3, [r3, #28]
+20001148:	2b00      	cmp	r3, #0
+2000114a:	f000 808b 	beq.w	20001264 <MSS_UART_isr+0x218>
+                {
+                   (*(this_uart->linests_handler))(this_uart);
+2000114e:	687b      	ldr	r3, [r7, #4]
+20001150:	69db      	ldr	r3, [r3, #28]
+20001152:	6878      	ldr	r0, [r7, #4]
+20001154:	4798      	blx	r3
+                }
+            }
+            break;
+20001156:	e08a      	b.n	2000126e <MSS_UART_isr+0x222>
+            case IIRF_MMI:
+            {
+                /* Identify multimode interrupts and handle */
+
+                /* Receiver time-out interrupt */
+                if(read_bit_reg8(&this_uart->hw_reg->IIM,ERTOI))
+20001158:	687b      	ldr	r3, [r7, #4]
+2000115a:	681b      	ldr	r3, [r3, #0]
+2000115c:	f103 0328 	add.w	r3, r3, #40	; 0x28
+20001160:	4618      	mov	r0, r3
+20001162:	f04f 0100 	mov.w	r1, #0
+20001166:	f7ff fc11 	bl	2000098c <read_bit_reg8>
+2000116a:	4603      	mov	r3, r0
+2000116c:	2b00      	cmp	r3, #0
+2000116e:	d00c      	beq.n	2000118a <MSS_UART_isr+0x13e>
+                {
+                    ASSERT(NULL_HANDLER != this_uart->rto_handler);
+20001170:	687b      	ldr	r3, [r7, #4]
+20001172:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+20001174:	2b00      	cmp	r3, #0
+20001176:	d100      	bne.n	2000117a <MSS_UART_isr+0x12e>
+20001178:	be00      	bkpt	0x0000
+                    if(NULL_HANDLER != this_uart->rto_handler)
+2000117a:	687b      	ldr	r3, [r7, #4]
+2000117c:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+2000117e:	2b00      	cmp	r3, #0
+20001180:	d003      	beq.n	2000118a <MSS_UART_isr+0x13e>
+                    {
+                        (*(this_uart->rto_handler))(this_uart);
+20001182:	687b      	ldr	r3, [r7, #4]
+20001184:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+20001186:	6878      	ldr	r0, [r7, #4]
+20001188:	4798      	blx	r3
+                    }
+                }
+                /* NACK interrupt */
+                if(read_bit_reg8(&this_uart->hw_reg->IIM,ENACKI))
+2000118a:	687b      	ldr	r3, [r7, #4]
+2000118c:	681b      	ldr	r3, [r3, #0]
+2000118e:	f103 0328 	add.w	r3, r3, #40	; 0x28
+20001192:	4618      	mov	r0, r3
+20001194:	f04f 0101 	mov.w	r1, #1
+20001198:	f7ff fbf8 	bl	2000098c <read_bit_reg8>
+2000119c:	4603      	mov	r3, r0
+2000119e:	2b00      	cmp	r3, #0
+200011a0:	d00c      	beq.n	200011bc <MSS_UART_isr+0x170>
+                {
+                    ASSERT(NULL_HANDLER != this_uart->nack_handler);
+200011a2:	687b      	ldr	r3, [r7, #4]
+200011a4:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+200011a6:	2b00      	cmp	r3, #0
+200011a8:	d100      	bne.n	200011ac <MSS_UART_isr+0x160>
+200011aa:	be00      	bkpt	0x0000
+                    if(NULL_HANDLER != this_uart->nack_handler)
+200011ac:	687b      	ldr	r3, [r7, #4]
+200011ae:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+200011b0:	2b00      	cmp	r3, #0
+200011b2:	d003      	beq.n	200011bc <MSS_UART_isr+0x170>
+                    {
+                        (*(this_uart->nack_handler))(this_uart);
+200011b4:	687b      	ldr	r3, [r7, #4]
+200011b6:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+200011b8:	6878      	ldr	r0, [r7, #4]
+200011ba:	4798      	blx	r3
+                    }
+                }
+
+                /* PID parity error interrupt */
+                if(read_bit_reg8(&this_uart->hw_reg->IIM,EPID_PEI))
+200011bc:	687b      	ldr	r3, [r7, #4]
+200011be:	681b      	ldr	r3, [r3, #0]
+200011c0:	f103 0328 	add.w	r3, r3, #40	; 0x28
+200011c4:	4618      	mov	r0, r3
+200011c6:	f04f 0102 	mov.w	r1, #2
+200011ca:	f7ff fbdf 	bl	2000098c <read_bit_reg8>
+200011ce:	4603      	mov	r3, r0
+200011d0:	2b00      	cmp	r3, #0
+200011d2:	d00c      	beq.n	200011ee <MSS_UART_isr+0x1a2>
+                {
+                    ASSERT(NULL_HANDLER != this_uart->pid_pei_handler);
+200011d4:	687b      	ldr	r3, [r7, #4]
+200011d6:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+200011d8:	2b00      	cmp	r3, #0
+200011da:	d100      	bne.n	200011de <MSS_UART_isr+0x192>
+200011dc:	be00      	bkpt	0x0000
+                    if(NULL_HANDLER != this_uart->pid_pei_handler)
+200011de:	687b      	ldr	r3, [r7, #4]
+200011e0:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+200011e2:	2b00      	cmp	r3, #0
+200011e4:	d003      	beq.n	200011ee <MSS_UART_isr+0x1a2>
+                    {
+                        (*(this_uart->pid_pei_handler))(this_uart);
+200011e6:	687b      	ldr	r3, [r7, #4]
+200011e8:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+200011ea:	6878      	ldr	r0, [r7, #4]
+200011ec:	4798      	blx	r3
+                    }
+                }
+
+                /* LIN break detection interrupt */
+                if(read_bit_reg8(&this_uart->hw_reg->IIM,ELINBI))
+200011ee:	687b      	ldr	r3, [r7, #4]
+200011f0:	681b      	ldr	r3, [r3, #0]
+200011f2:	f103 0328 	add.w	r3, r3, #40	; 0x28
+200011f6:	4618      	mov	r0, r3
+200011f8:	f04f 0103 	mov.w	r1, #3
+200011fc:	f7ff fbc6 	bl	2000098c <read_bit_reg8>
+20001200:	4603      	mov	r3, r0
+20001202:	2b00      	cmp	r3, #0
+20001204:	d00c      	beq.n	20001220 <MSS_UART_isr+0x1d4>
+                {
+                    ASSERT(NULL_HANDLER != this_uart->break_handler);
+20001206:	687b      	ldr	r3, [r7, #4]
+20001208:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+2000120a:	2b00      	cmp	r3, #0
+2000120c:	d100      	bne.n	20001210 <MSS_UART_isr+0x1c4>
+2000120e:	be00      	bkpt	0x0000
+                    if(NULL_HANDLER != this_uart->break_handler)
+20001210:	687b      	ldr	r3, [r7, #4]
+20001212:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+20001214:	2b00      	cmp	r3, #0
+20001216:	d003      	beq.n	20001220 <MSS_UART_isr+0x1d4>
+                    {
+                        (*(this_uart->break_handler))(this_uart);
+20001218:	687b      	ldr	r3, [r7, #4]
+2000121a:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+2000121c:	6878      	ldr	r0, [r7, #4]
+2000121e:	4798      	blx	r3
+                    }
+                }
+
+                /* LIN Sync detection interrupt */
+                if(read_bit_reg8(&this_uart->hw_reg->IIM,ELINSI))
+20001220:	687b      	ldr	r3, [r7, #4]
+20001222:	681b      	ldr	r3, [r3, #0]
+20001224:	f103 0328 	add.w	r3, r3, #40	; 0x28
+20001228:	4618      	mov	r0, r3
+2000122a:	f04f 0104 	mov.w	r1, #4
+2000122e:	f7ff fbad 	bl	2000098c <read_bit_reg8>
+20001232:	4603      	mov	r3, r0
+20001234:	2b00      	cmp	r3, #0
+20001236:	d017      	beq.n	20001268 <MSS_UART_isr+0x21c>
+                {
+                    ASSERT(NULL_HANDLER != this_uart->sync_handler);
+20001238:	687b      	ldr	r3, [r7, #4]
+2000123a:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+2000123c:	2b00      	cmp	r3, #0
+2000123e:	d100      	bne.n	20001242 <MSS_UART_isr+0x1f6>
+20001240:	be00      	bkpt	0x0000
+                    if(NULL_HANDLER != this_uart->sync_handler)
+20001242:	687b      	ldr	r3, [r7, #4]
+20001244:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+20001246:	2b00      	cmp	r3, #0
+20001248:	d010      	beq.n	2000126c <MSS_UART_isr+0x220>
+                    {
+                        (*(this_uart->sync_handler))(this_uart);
+2000124a:	687b      	ldr	r3, [r7, #4]
+2000124c:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+2000124e:	6878      	ldr	r0, [r7, #4]
+20001250:	4798      	blx	r3
+                    }
+                }
+                break;
+20001252:	e00c      	b.n	2000126e <MSS_UART_isr+0x222>
+            }
+
+            default:
+            {
+                ASSERT(INVALID_INTERRUPT);
+20001254:	be00      	bkpt	0x0000
+20001256:	e00a      	b.n	2000126e <MSS_UART_isr+0x222>
+                if(NULL_HANDLER != this_uart->modemsts_handler)
+                {
+                   (*(this_uart->modemsts_handler))(this_uart);
+                }
+            }
+            break;
+20001258:	bf00      	nop
+2000125a:	e008      	b.n	2000126e <MSS_UART_isr+0x222>
+                if(NULL_HANDLER != this_uart->tx_handler)
+                {
+                    (*(this_uart->tx_handler))(this_uart);
+                }
+            }
+            break;
+2000125c:	bf00      	nop
+2000125e:	e006      	b.n	2000126e <MSS_UART_isr+0x222>
+                if(NULL_HANDLER != this_uart->rx_handler)
+                {
+                    (*(this_uart->rx_handler))(this_uart);
+                }
+            }
+            break;
+20001260:	bf00      	nop
+20001262:	e004      	b.n	2000126e <MSS_UART_isr+0x222>
+                if(NULL_HANDLER != this_uart->linests_handler)
+                {
+                   (*(this_uart->linests_handler))(this_uart);
+                }
+            }
+            break;
+20001264:	bf00      	nop
+20001266:	e002      	b.n	2000126e <MSS_UART_isr+0x222>
+                    if(NULL_HANDLER != this_uart->sync_handler)
+                    {
+                        (*(this_uart->sync_handler))(this_uart);
+                    }
+                }
+                break;
+20001268:	bf00      	nop
+2000126a:	e000      	b.n	2000126e <MSS_UART_isr+0x222>
+2000126c:	bf00      	nop
+                ASSERT(INVALID_INTERRUPT);
+            }
+            break;
+        }
+    }
+}
+2000126e:	f107 0710 	add.w	r7, r7, #16
+20001272:	46bd      	mov	sp, r7
+20001274:	bd80      	pop	{r7, pc}
+20001276:	bf00      	nop
+
+20001278 <default_tx_handler>:
+static void
+default_tx_handler
+(
+    mss_uart_instance_t * this_uart
+)
+{
+20001278:	b580      	push	{r7, lr}
+2000127a:	b086      	sub	sp, #24
+2000127c:	af00      	add	r7, sp, #0
+2000127e:	6078      	str	r0, [r7, #4]
+    uint8_t status;
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+20001280:	687a      	ldr	r2, [r7, #4]
+20001282:	f241 4384 	movw	r3, #5252	; 0x1484
+20001286:	f2c2 0300 	movt	r3, #8192	; 0x2000
+2000128a:	429a      	cmp	r2, r3
+2000128c:	d007      	beq.n	2000129e <default_tx_handler+0x26>
+2000128e:	687a      	ldr	r2, [r7, #4]
+20001290:	f241 4344 	movw	r3, #5188	; 0x1444
+20001294:	f2c2 0300 	movt	r3, #8192	; 0x2000
+20001298:	429a      	cmp	r2, r3
+2000129a:	d000      	beq.n	2000129e <default_tx_handler+0x26>
+2000129c:	be00      	bkpt	0x0000
+    ASSERT(( (uint8_t *)0 ) != this_uart->tx_buffer);
+2000129e:	687b      	ldr	r3, [r7, #4]
+200012a0:	691b      	ldr	r3, [r3, #16]
+200012a2:	2b00      	cmp	r3, #0
+200012a4:	d100      	bne.n	200012a8 <default_tx_handler+0x30>
+200012a6:	be00      	bkpt	0x0000
+    ASSERT(0u < this_uart->tx_buff_size);
+200012a8:	687b      	ldr	r3, [r7, #4]
+200012aa:	695b      	ldr	r3, [r3, #20]
+200012ac:	2b00      	cmp	r3, #0
+200012ae:	d100      	bne.n	200012b2 <default_tx_handler+0x3a>
+200012b0:	be00      	bkpt	0x0000
+
+    if(((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1)) &&
+200012b2:	687a      	ldr	r2, [r7, #4]
+200012b4:	f241 4384 	movw	r3, #5252	; 0x1484
+200012b8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200012bc:	429a      	cmp	r2, r3
+200012be:	d006      	beq.n	200012ce <default_tx_handler+0x56>
+200012c0:	687a      	ldr	r2, [r7, #4]
+200012c2:	f241 4344 	movw	r3, #5188	; 0x1444
+200012c6:	f2c2 0300 	movt	r3, #8192	; 0x2000
+200012ca:	429a      	cmp	r2, r3
+200012cc:	d155      	bne.n	2000137a <default_tx_handler+0x102>
+       (((uint8_t *)0 ) != this_uart->tx_buffer) &&
+200012ce:	687b      	ldr	r3, [r7, #4]
+200012d0:	691b      	ldr	r3, [r3, #16]
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+    ASSERT(( (uint8_t *)0 ) != this_uart->tx_buffer);
+    ASSERT(0u < this_uart->tx_buff_size);
+
+    if(((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1)) &&
+200012d2:	2b00      	cmp	r3, #0
+200012d4:	d051      	beq.n	2000137a <default_tx_handler+0x102>
+       (((uint8_t *)0 ) != this_uart->tx_buffer) &&
+       (0u < this_uart->tx_buff_size))
+200012d6:	687b      	ldr	r3, [r7, #4]
+200012d8:	695b      	ldr	r3, [r3, #20]
+
+    ASSERT((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1));
+    ASSERT(( (uint8_t *)0 ) != this_uart->tx_buffer);
+    ASSERT(0u < this_uart->tx_buff_size);
+
+    if(((this_uart == &g_mss_uart0) || (this_uart == &g_mss_uart1)) &&
+200012da:	2b00      	cmp	r3, #0
+200012dc:	d04d      	beq.n	2000137a <default_tx_handler+0x102>
+       (((uint8_t *)0 ) != this_uart->tx_buffer) &&
+       (0u < this_uart->tx_buff_size))
+    {
+        /* Read the Line Status Register and update the sticky record. */
+        status = this_uart->hw_reg->LSR;
+200012de:	687b      	ldr	r3, [r7, #4]
+200012e0:	681b      	ldr	r3, [r3, #0]
+200012e2:	7d1b      	ldrb	r3, [r3, #20]
+200012e4:	72fb      	strb	r3, [r7, #11]
+        this_uart->status |= status;
+200012e6:	687b      	ldr	r3, [r7, #4]
+200012e8:	7b5a      	ldrb	r2, [r3, #13]
+200012ea:	7afb      	ldrb	r3, [r7, #11]
+200012ec:	ea42 0303 	orr.w	r3, r2, r3
+200012f0:	b2da      	uxtb	r2, r3
+200012f2:	687b      	ldr	r3, [r7, #4]
+200012f4:	735a      	strb	r2, [r3, #13]
+
+        /*
+         * This function should only be called as a result of a THRE interrupt.
+         * Verify that this is true before proceeding to transmit data.
+         */
+        if(status & MSS_UART_THRE)
+200012f6:	7afb      	ldrb	r3, [r7, #11]
+200012f8:	f003 0320 	and.w	r3, r3, #32
+200012fc:	2b00      	cmp	r3, #0
+200012fe:	d029      	beq.n	20001354 <default_tx_handler+0xdc>
+        {
+            uint32_t i;
+            uint32_t fill_size = TX_FIFO_SIZE;
+20001300:	f04f 0310 	mov.w	r3, #16
+20001304:	613b      	str	r3, [r7, #16]
+            uint32_t tx_remain = this_uart->tx_buff_size - this_uart->tx_idx;
+20001306:	687b      	ldr	r3, [r7, #4]
+20001308:	695a      	ldr	r2, [r3, #20]
+2000130a:	687b      	ldr	r3, [r7, #4]
+2000130c:	699b      	ldr	r3, [r3, #24]
+2000130e:	ebc3 0302 	rsb	r3, r3, r2
+20001312:	617b      	str	r3, [r7, #20]
+
+            /* Calculate the number of bytes to transmit. */
+            if(tx_remain < TX_FIFO_SIZE)
+20001314:	697b      	ldr	r3, [r7, #20]
+20001316:	2b0f      	cmp	r3, #15
+20001318:	d801      	bhi.n	2000131e <default_tx_handler+0xa6>
+            {
+                fill_size = tx_remain;
+2000131a:	697b      	ldr	r3, [r7, #20]
+2000131c:	613b      	str	r3, [r7, #16]
+            }
+
+            /* Fill the TX FIFO with the calculated the number of bytes. */
+            for(i = 0u; i < fill_size; ++i)
+2000131e:	f04f 0300 	mov.w	r3, #0
+20001322:	60fb      	str	r3, [r7, #12]
+20001324:	e012      	b.n	2000134c <default_tx_handler+0xd4>
+            {
+                /* Send next character in the buffer. */
+                this_uart->hw_reg->THR = this_uart->tx_buffer[this_uart->tx_idx];
+20001326:	687b      	ldr	r3, [r7, #4]
+20001328:	681b      	ldr	r3, [r3, #0]
+2000132a:	687a      	ldr	r2, [r7, #4]
+2000132c:	6911      	ldr	r1, [r2, #16]
+2000132e:	687a      	ldr	r2, [r7, #4]
+20001330:	6992      	ldr	r2, [r2, #24]
+20001332:	440a      	add	r2, r1
+20001334:	7812      	ldrb	r2, [r2, #0]
+20001336:	701a      	strb	r2, [r3, #0]
+                ++this_uart->tx_idx;
+20001338:	687b      	ldr	r3, [r7, #4]
+2000133a:	699b      	ldr	r3, [r3, #24]
+2000133c:	f103 0201 	add.w	r2, r3, #1
+20001340:	687b      	ldr	r3, [r7, #4]
+20001342:	619a      	str	r2, [r3, #24]
+            {
+                fill_size = tx_remain;
+            }
+
+            /* Fill the TX FIFO with the calculated the number of bytes. */
+            for(i = 0u; i < fill_size; ++i)
+20001344:	68fb      	ldr	r3, [r7, #12]
+20001346:	f103 0301 	add.w	r3, r3, #1
+2000134a:	60fb      	str	r3, [r7, #12]
+2000134c:	68fa      	ldr	r2, [r7, #12]
+2000134e:	693b      	ldr	r3, [r7, #16]
+20001350:	429a      	cmp	r2, r3
+20001352:	d3e8      	bcc.n	20001326 <default_tx_handler+0xae>
+                ++this_uart->tx_idx;
+            }
+        }
+
+        /* Flag Tx as complete if all data has been pushed into the Tx FIFO. */
+        if(this_uart->tx_idx == this_uart->tx_buff_size)
+20001354:	687b      	ldr	r3, [r7, #4]
+20001356:	699a      	ldr	r2, [r3, #24]
+20001358:	687b      	ldr	r3, [r7, #4]
+2000135a:	695b      	ldr	r3, [r3, #20]
+2000135c:	429a      	cmp	r2, r3
+2000135e:	d10c      	bne.n	2000137a <default_tx_handler+0x102>
+        {
+            this_uart->tx_buff_size = TX_COMPLETE;
+20001360:	687b      	ldr	r3, [r7, #4]
+20001362:	f04f 0200 	mov.w	r2, #0
+20001366:	615a      	str	r2, [r3, #20]
+            /* disables TX interrupt */
+            clear_bit_reg8(&this_uart->hw_reg->IER,ETBEI);
+20001368:	687b      	ldr	r3, [r7, #4]
+2000136a:	681b      	ldr	r3, [r3, #0]
+2000136c:	f103 0304 	add.w	r3, r3, #4
+20001370:	4618      	mov	r0, r3
+20001372:	f04f 0101 	mov.w	r1, #1
+20001376:	f7ff fae9 	bl	2000094c <clear_bit_reg8>
+        }
+    }
+}
+2000137a:	f107 0718 	add.w	r7, r7, #24
+2000137e:	46bd      	mov	sp, r7
+20001380:	bd80      	pop	{r7, pc}
+20001382:	bf00      	nop
+
+20001384 <__libc_init_array>:
+20001384:	b570      	push	{r4, r5, r6, lr}
+20001386:	f241 4614 	movw	r6, #5140	; 0x1414
+2000138a:	f241 4514 	movw	r5, #5140	; 0x1414
+2000138e:	f2c2 0600 	movt	r6, #8192	; 0x2000
+20001392:	f2c2 0500 	movt	r5, #8192	; 0x2000
+20001396:	1b76      	subs	r6, r6, r5
+20001398:	10b6      	asrs	r6, r6, #2
+2000139a:	d006      	beq.n	200013aa <__libc_init_array+0x26>
+2000139c:	2400      	movs	r4, #0
+2000139e:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+200013a2:	3401      	adds	r4, #1
+200013a4:	4798      	blx	r3
+200013a6:	42a6      	cmp	r6, r4
+200013a8:	d8f9      	bhi.n	2000139e <__libc_init_array+0x1a>
+200013aa:	f241 4514 	movw	r5, #5140	; 0x1414
+200013ae:	f241 4618 	movw	r6, #5144	; 0x1418
+200013b2:	f2c2 0500 	movt	r5, #8192	; 0x2000
+200013b6:	f2c2 0600 	movt	r6, #8192	; 0x2000
+200013ba:	1b76      	subs	r6, r6, r5
+200013bc:	f000 f81e 	bl	200013fc <_init>
+200013c0:	10b6      	asrs	r6, r6, #2
+200013c2:	d006      	beq.n	200013d2 <__libc_init_array+0x4e>
+200013c4:	2400      	movs	r4, #0
+200013c6:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+200013ca:	3401      	adds	r4, #1
+200013cc:	4798      	blx	r3
+200013ce:	42a6      	cmp	r6, r4
+200013d0:	d8f9      	bhi.n	200013c6 <__libc_init_array+0x42>
+200013d2:	bd70      	pop	{r4, r5, r6, pc}
+200013d4:	72617473 	.word	0x72617473
+200013d8:	00000074 	.word	0x00000074
+	...
+200013e4:	20646e65 	.word	0x20646e65
+	...
+
+200013f4 <C.18.3527>:
+200013f4:	01000100 03030202                       ........
+
+200013fc <_init>:
+200013fc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+200013fe:	bf00      	nop
+20001400:	bcf8      	pop	{r3, r4, r5, r6, r7}
+20001402:	bc08      	pop	{r3}
+20001404:	469e      	mov	lr, r3
+20001406:	4770      	bx	lr
+
+20001408 <_fini>:
+20001408:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+2000140a:	bf00      	nop
+2000140c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+2000140e:	bc08      	pop	{r3}
+20001410:	469e      	mov	lr, r3
+20001412:	4770      	bx	lr
+
+20001414 <__frame_dummy_init_array_entry>:
+20001414:	0705 2000                                   ... 
+
+20001418 <__do_global_dtors_aux_fini_array_entry>:
+20001418:	06f1 2000 0000 0000                         ... ....

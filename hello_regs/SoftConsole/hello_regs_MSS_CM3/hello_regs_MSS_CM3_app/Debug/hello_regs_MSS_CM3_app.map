@@ -1,0 +1,659 @@
+Archive member included because of file (symbol)
+
+E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                              ./main.o (g_mss_uart0)
+E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                              E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o) (g_FrequencyPCLK0)
+e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+                              E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o (__errno)
+e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                              e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o) (_impure_ptr)
+e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                              E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o (__libc_init_array)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_mss_uart1         0x40              E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+g_mss_uart0         0x40              E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text          0x00000000        0x0 ./main.o
+ .data          0x00000000        0x0 ./main.o
+ .bss           0x00000000        0x0 ./main.o
+ .text          0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .data          0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .bss           0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .text          0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data          0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss           0x00000000        0x0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.__env     0x00000000        0x4 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data.environ  0x00000000        0x4 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._close   0x00000000       0x18 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._execve  0x00000000       0x28 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._exit    0x00000000        0xc E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fork    0x00000000       0x18 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fstat   0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._getpid  0x00000000       0x10 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._isatty  0x00000000       0x18 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._kill    0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._link    0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._lseek   0x00000000       0x1c E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._open    0x00000000       0x1c E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._read    0x00000000       0x1c E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._write_r
+                0x00000000       0x20 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .rodata        0x00000000       0x30 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._sbrk    0x00000000       0xe4 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._stat    0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._times   0x00000000       0x18 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._unlink  0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._wait    0x00000000       0x24 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.heap_end.2220
+                0x00000000        0x4 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text          0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .data          0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .bss           0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_lin_init
+                0x00000000       0x78 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irda_init
+                0x00000000       0xfc E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_smartcard_init
+                0x00000000       0x94 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_irq_tx
+                0x00000000       0xb4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_tx_complete
+                0x00000000       0x90 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx
+                0x00000000       0xdc E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_irq
+                0x00000000       0xbc E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_irq
+                0x00000000       0xb8 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_handler
+                0x00000000       0xc0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_loopback
+                0x00000000       0xec E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rxstatus_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_handler
+                0x00000000       0x9c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_modemstatus_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_fill_tx_fifo
+                0x00000000       0xd4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_rx_status
+                0x00000000       0x80 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_modem_status
+                0x00000000       0x60 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_get_tx_status
+                0x00000000       0x78 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_break
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_clear_break
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_pidpei_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linbreak_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_linsync_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_nack_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_timeout_handler
+                0x00000000       0x8c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_half_duplex
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_half_duplex
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_rx_endian
+                0x00000000       0x88 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_tx_endian
+                0x00000000       0x88 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_filter_length
+                0x00000000       0x68 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afm
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afm
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_afclear
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_afclear
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_rx_timeout
+                0x00000000       0x6c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_rx_timeout
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_enable_tx_time_guard
+                0x00000000       0x6c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_disable_tx_time_guard
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_address
+                0x00000000       0x5c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_ready_mode
+                0x00000000       0x88 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_set_usart_mode
+                0x00000000       0x90 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text          0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data          0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .bss           0x00000000        0x0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text          0x00000000        0xc e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .data          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000       0xf4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata        0x00000000        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata.str1.4
+                0x00000000        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .text          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .data          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .text          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .bss           0x00000000        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+LOAD ./main.o
+LOAD E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+LOAD E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+LOAD E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a
+START GROUP
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+START GROUP
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000000                __DYNAMIC = 0x0
+                0x20000000                RAM_START_ADDRESS = 0x20000000
+                0x00010000                RAM_SIZE = 0x10000
+                0x00002000                MAIN_STACK_SIZE = 0x2000
+                0x00001000                PROCESS_STACK_SIZE = 0x1000
+                0x20010000                PROVIDE (__main_stack_start, (RAM_START_ADDRESS + RAM_SIZE))
+                0x2000e000                PROVIDE (__process_stack_start, (__main_stack_start - MAIN_STACK_SIZE))
+                0x20010000                PROVIDE (_estack, __main_stack_start)
+                0x00000000                PROVIDE (__mirrored_nvm, 0x0)
+                0x00000001                PROVIDE (__smartfusion2_memory_remap, 0x1)
+
+.vector_table   0x20000000      0x190
+                0x20000000                __vector_table_load = LOADADDR (.vector_table)
+                0x20000000                __vector_table_start = .
+                0x20000000                __vector_table_vma_base_address = .
+ *(.isr_vector)
+ .isr_vector    0x20000000      0x190 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x20000000                g_pfnVectors
+                0x20000190                . = ALIGN (0x10)
+                0x20000190                _evector_table = .
+
+.init           0x20000190      0x560
+ *(.boot_code)
+ .boot_code     0x20000190      0x280 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x20000190                Reset_Handler
+                0x200002da                NMI_Handler
+                0x200002dc                HardFault_Handler
+                0x200002de                MemManage_Handler
+                0x200002e0                BusFault_Handler
+                0x200002e2                UsageFault_Handler
+                0x200002e4                SVC_Handler
+                0x200002e6                DebugMon_Handler
+                0x200002e8                PendSV_Handler
+                0x200002ea                SysTick_Handler
+                0x200002ec                WdogWakeup_IRQHandler
+                0x200002ee                RTC_Wakeup_IRQHandler
+                0x200002f0                SPI0_IRQHandler
+                0x200002f2                SPI1_IRQHandler
+                0x200002f4                I2C0_IRQHandler
+                0x200002f6                I2C0_SMBAlert_IRQHandler
+                0x200002f8                I2C0_SMBus_IRQHandler
+                0x200002fa                I2C1_IRQHandler
+                0x200002fc                I2C1_SMBAlert_IRQHandler
+                0x200002fe                I2C1_SMBus_IRQHandler
+                0x20000304                EthernetMAC_IRQHandler
+                0x20000306                DMA_IRQHandler
+                0x20000308                Timer1_IRQHandler
+                0x2000030a                Timer2_IRQHandler
+                0x2000030c                CAN_IRQHandler
+                0x2000030e                ENVM0_IRQHandler
+                0x20000310                ENVM1_IRQHandler
+                0x20000312                ComBlk_IRQHandler
+                0x20000314                USB_IRQHandler
+                0x20000316                USB_DMA_IRQHandler
+                0x20000318                PLL_Lock_IRQHandler
+                0x2000031a                PLL_LockLost_IRQHandler
+                0x2000031c                CommSwitchError_IRQHandler
+                0x2000031e                CacheError_IRQHandler
+                0x20000320                DDR_IRQHandler
+                0x20000322                HPDMA_Complete_IRQHandler
+                0x20000324                HPDMA_Error_IRQHandler
+                0x20000326                ECC_Error_IRQHandler
+                0x20000328                MDDR_IOCalib_IRQHandler
+                0x2000032a                FAB_PLL_Lock_IRQHandler
+                0x2000032c                FAB_PLL_LockLost_IRQHandler
+                0x2000032e                FIC64_IRQHandler
+                0x20000330                FabricIrq0_IRQHandler
+                0x20000332                FabricIrq1_IRQHandler
+                0x20000334                FabricIrq2_IRQHandler
+                0x20000336                FabricIrq3_IRQHandler
+                0x20000338                FabricIrq4_IRQHandler
+                0x2000033a                FabricIrq5_IRQHandler
+                0x2000033c                FabricIrq6_IRQHandler
+                0x2000033e                FabricIrq7_IRQHandler
+                0x20000340                FabricIrq8_IRQHandler
+                0x20000342                FabricIrq9_IRQHandler
+                0x20000344                FabricIrq10_IRQHandler
+                0x20000346                FabricIrq11_IRQHandler
+                0x20000348                FabricIrq12_IRQHandler
+                0x2000034a                FabricIrq13_IRQHandler
+                0x2000034c                FabricIrq14_IRQHandler
+                0x2000034e                FabricIrq15_IRQHandler
+                0x20000350                GPIO0_IRQHandler
+                0x20000352                GPIO1_IRQHandler
+                0x20000354                GPIO2_IRQHandler
+                0x20000356                GPIO3_IRQHandler
+                0x20000358                GPIO4_IRQHandler
+                0x2000035a                GPIO5_IRQHandler
+                0x2000035c                GPIO6_IRQHandler
+                0x2000035e                GPIO7_IRQHandler
+                0x20000360                GPIO8_IRQHandler
+                0x20000362                GPIO9_IRQHandler
+                0x20000364                GPIO10_IRQHandler
+                0x20000366                GPIO11_IRQHandler
+                0x20000368                GPIO12_IRQHandler
+                0x2000036a                GPIO13_IRQHandler
+                0x2000036c                GPIO14_IRQHandler
+                0x2000036e                GPIO15_IRQHandler
+                0x20000370                GPIO16_IRQHandler
+                0x20000372                GPIO17_IRQHandler
+                0x20000374                GPIO18_IRQHandler
+                0x20000376                GPIO19_IRQHandler
+                0x20000378                GPIO20_IRQHandler
+                0x2000037a                GPIO21_IRQHandler
+                0x2000037c                GPIO22_IRQHandler
+                0x2000037e                GPIO23_IRQHandler
+                0x20000380                GPIO24_IRQHandler
+                0x20000382                GPIO25_IRQHandler
+                0x20000384                GPIO26_IRQHandler
+                0x20000386                GPIO27_IRQHandler
+                0x20000388                GPIO28_IRQHandler
+                0x2000038a                GPIO29_IRQHandler
+                0x2000038c                GPIO30_IRQHandler
+                0x2000038e                GPIO31_IRQHandler
+                0x20000390                mscc_post_hw_cfg_init
+ *system_m2sxxx.o(.text*)
+ .text.SystemInit
+                0x20000410       0x28 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000410                SystemInit
+ .text.SystemCoreClockUpdate
+                0x20000438      0x14c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20000438                SystemCoreClockUpdate
+ .text.get_rcosc_25_50mhz_frequency
+                0x20000584       0x44 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.set_clock_frequency_globals
+                0x200005c8       0x6c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.get_silicon_revision
+                0x20000634       0x50 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.silicon_workarounds
+                0x20000684       0x20 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.m2s050_rev_a_workarounds
+                0x200006a4       0x44 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ *sys_config.o(.rodata*)
+                0x200006f0                . = ALIGN (0x10)
+ *fill*         0x200006e8        0x8 00
+
+.text           0x200006f0      0xd30
+ CREATE_OBJECT_SYMBOLS
+                0x200006f0                __text_load = LOADADDR (.text)
+                0x200006f0                __text_start = .
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x200006f0       0x30 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text.main     0x20000720      0x1b0 ./main.o
+                0x20000720                main
+ .text.NVIC_ClearPendingIRQ
+                0x200008d0       0x3c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.set_bit_reg8
+                0x2000090c       0x40 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.clear_bit_reg8
+                0x2000094c       0x40 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.read_bit_reg8
+                0x2000098c       0x40 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_init
+                0x200009cc       0x84 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x200009cc                MSS_UART_init
+ .text.MSS_UART_polled_tx
+                0x20000a50       0xe4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20000a50                MSS_UART_polled_tx
+ .text.MSS_UART_polled_tx_string
+                0x20000b34       0xcc E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20000b34                MSS_UART_polled_tx_string
+ .text.UART0_IRQHandler
+                0x20000c00       0x24 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20000c00                UART0_IRQHandler
+ .text.UART1_IRQHandler
+                0x20000c24       0x24 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20000c24                UART1_IRQHandler
+ .text.config_baud_divisors
+                0x20000c48      0x198 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.global_init
+                0x20000de0      0x26c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.MSS_UART_isr
+                0x2000104c      0x22c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text.default_tx_handler
+                0x20001278      0x10c E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .text          0x20001384       0x50 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x20001384                __libc_init_array
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+                0x200013d4                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x200013d4       0x20 ./main.o
+ .rodata.C.18.3527
+                0x200013f4        0x8 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.vector_table)
+ *(.init)
+ .init          0x200013fc        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x200013fc                _init
+ .init          0x20001400        0x8 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ *(.fini)
+ .fini          0x20001408        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x20001408                _fini
+ .fini          0x2000140c        0x8 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x20001414                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x20001414                PROVIDE (__preinit_array_end, .)
+                0x20001414                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x20001414        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x20001418                PROVIDE (__init_array_end, .)
+                0x20001418                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x20001418        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x2000141c                PROVIDE (__fini_array_end, .)
+                0x20001420                . = ALIGN (0x10)
+ *fill*         0x2000141c        0x4 00
+                0x20001420                __exidx_start = .
+
+.v4_bx          0x20001420        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x20001420                __exidx_end = .
+                0x20001420                _etext = .
+                0x20001420                PROVIDE (__text_end, .)
+
+.data           0x20001420       0x20
+                0x20001420                __data_load = LOADADDR (.data)
+                0x20001420                _sidata = LOADADDR (.data)
+                0x20001420                __data_start = .
+                0x20001420                _sdata = .
+ *(.jcr)
+ .jcr           0x20001420        0x0 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x20001420        0x4 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.SystemCoreClock
+                0x20001424        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20001424                SystemCoreClock
+ .data.g_FrequencyPCLK0
+                0x20001428        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20001428                g_FrequencyPCLK0
+ .data.g_FrequencyPCLK1
+                0x2000142c        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000142c                g_FrequencyPCLK1
+ .data.g_FrequencyPCLK2
+                0x20001430        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20001430                g_FrequencyPCLK2
+ .data.g_FrequencyFIC0
+                0x20001434        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20001434                g_FrequencyFIC0
+ .data.g_FrequencyFIC1
+                0x20001438        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x20001438                g_FrequencyFIC1
+ .data.g_FrequencyFIC64
+                0x2000143c        0x4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x2000143c                g_FrequencyFIC64
+                0x20001440                . = ALIGN (0x10)
+                0x20001440                _edata = .
+
+.bss            0x20001440       0x90
+                0x20001440                __bss_start__ = .
+                0x20001440                _sbss = .
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x20001440        0x1 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(COMMON)
+ *fill*         0x20001441        0x3 00
+ COMMON         0x20001444       0x80 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                0x20001444                g_mss_uart1
+                0x20001484                g_mss_uart0
+                0x200014d0                . = ALIGN (0x10)
+ *fill*         0x200014c4        0xc 00
+                0x200014d0                __bss_end__ = .
+                0x200014d0                _end = .
+                0x200014d0                __end = _end
+                0x200014d0                _ebss = .
+                0x200014d0                PROVIDE (end, .)
+
+.heap           0x200014d0     0xbb30
+                0x200014d0                __heap_start__ = .
+                0x2000d000                . = (. + ((((RAM_START_ADDRESS + RAM_SIZE) - PROCESS_STACK_SIZE) - MAIN_STACK_SIZE) - _end))
+ *fill*         0x200014d0     0xbb30 00
+                0x2000d000                . = ALIGN (0x10)
+                0x2000d000                _eheap = .
+
+.stack          0x2000d000     0x3000
+                0x2000d000                __stack_start__ = .
+                0x2000e000                . = (. + PROCESS_STACK_SIZE)
+ *fill*         0x2000d000     0x1000 00
+                0x2000e000                . = ALIGN (0x4)
+                0x20010000                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x2000e000     0x2000 00
+                0x20010000                . = ALIGN (0x10)
+                0x20010000                _estack = .
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000       0xac
+ .comment       0x00000000       0x2b ./main.o
+ .comment       0x0000002b       0x2b E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .comment       0x00000056       0x2b E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .comment       0x00000081       0x2b E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_aranges  0x00000000      0x2e8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 ./main.o
+ .debug_aranges
+                0x00000020       0xa8 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_aranges
+                0x000000c8      0x1d0 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_aranges
+                0x00000298       0x50 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_pubnames
+                0x00000000      0x6e0
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1b ./main.o
+ .debug_pubnames
+                0x0000001b       0xeb E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_pubnames
+                0x00000106      0x50f E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_pubnames
+                0x00000615       0xcb E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_info     0x00000000     0x38c9
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x749 ./main.o
+ .debug_info    0x00000749      0x6ed E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_info    0x00000e36     0x1ed4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_info    0x00002d0a      0xbbf E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_abbrev   0x00000000      0x694
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x154 ./main.o
+ .debug_abbrev  0x00000154      0x170 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_abbrev  0x000002c4      0x280 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_abbrev  0x00000544      0x150 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_line     0x00000000     0x126a
+ *(.debug_line)
+ .debug_line    0x00000000      0x2f7 ./main.o
+ .debug_line    0x000002f7      0x48a E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_line    0x00000781      0x8cc E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_line    0x0000104d      0x21d E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_frame    0x00000000      0xa24
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 ./main.o
+ .debug_frame   0x00000030      0x21c E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_frame   0x0000024c      0x6b4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_frame   0x00000900       0xd8 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_frame   0x000009d8       0x20 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .debug_frame   0x000009f8       0x2c e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+
+.debug_str      0x00000000     0x1ced
+ *(.debug_str)
+ .debug_str     0x00000000      0x74f ./main.o
+                                0x803 (size before relaxing)
+ .debug_str     0x0000074f      0x25b E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                                0x32e (size before relaxing)
+ .debug_str     0x000009aa     0x1165 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+                               0x1994 (size before relaxing)
+ .debug_str     0x00001b0f      0x1de E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                                0xa0e (size before relaxing)
+
+.debug_loc      0x00000000     0x111f
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x37 ./main.o
+ .debug_loc     0x00000037      0x3c6 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_loc     0x000003fd      0xbb9 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_loc     0x00000fb6      0x169 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_macinfo  0x00000000    0x1bafb
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000     0x79b3 ./main.o
+ .debug_macinfo
+                0x000079b3     0x4bf0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_macinfo
+                0x0000c5a3     0x8184 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_macinfo
+                0x00014727     0x73d4 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 ./main.o
+ .ARM.attributes
+                0x00000073       0x21 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .ARM.attributes
+                0x00000094       0x31 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .ARM.attributes
+                0x000000c5       0x31 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .ARM.attributes
+                0x000000f6       0x31 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .ARM.attributes
+                0x00000127       0x29 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000150       0x29 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000179       0x29 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x000001a2       0x29 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .ARM.attributes
+                0x000001cb       0x19 e:/microsemi/libero_v11.5/softconsole1/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.isr_vector)
+OUTPUT(hello_regs_MSS_CM3_app elf32-littlearm)
+
+.debug_ranges   0x00000000      0x2c8
+ .debug_ranges  0x00000000       0x18 ./main.o
+ .debug_ranges  0x00000018       0xa0 E:/Practice/hello_regs/SoftConsole/hello_regs_MSS_CM3/hello_regs_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_ranges  0x000000b8      0x1c8 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(mss_uart.o)
+ .debug_ranges  0x00000280       0x48 E:\Practice\hello_regs\SoftConsole\hello_regs_MSS_CM3\hello_regs_MSS_CM3_hw_platform\Debug\libhello_regs_MSS_CM3_hw_platform.a(system_m2sxxx.o)

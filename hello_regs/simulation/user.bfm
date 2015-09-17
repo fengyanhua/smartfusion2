@@ -1,0 +1,44 @@
+#===========================================================
+# Enter your BFM commands in this file. 
+#
+# Syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#int i;
+#int j;
+
+#include "subsystem.bfm"
+
+procedure user_main;
+
+# perform subsystem initialization routine
+ # call subsystem_init; 
+
+# add your BFM commands below:
+//Base address of FIC0 slave
+memmap FIC0_APBSRAM_BASE 0x00000000;
+
+
+header "***************smartfusion2 FIC tutorial*****************"
+
+//Accessing the LSRAM memory
+//Data Write to 0x00 location of LSARAM
+write w FIC0_APBSRAM_BASE 0x0 0x78;
+//Data Write to 0x4 location of LSRAM
+write w FIC0_APBSRAM_BASE 0x4 0xaa;
+wait 5
+//READBACK at 0x00 location of LSRAM
+readcheck w FIC0_APBSRAM_BASE 0x0 0x78;
+//Readback at 0x4 location of Lsram
+readcheck w FIC0_APBSRAM_BASE 0x4 0xaa;
+
+
+return

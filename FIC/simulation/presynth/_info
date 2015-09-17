@@ -1,0 +1,162 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Practice/FIC/simulation
+vCoreGPIO
+!s110 1440745688
+!i10b 1
+!s100 QT7cAnD>SSmKl8U[k?hR40
+IAcco6_de:PLozP`UMEhB70
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1436958366
+8D:/Practice/FIC/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vlog/core/coregpio.v
+FD:/Practice/FIC/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vlog/core/coregpio.v
+L0 23
+Z2 OW;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1440745688.254000
+!s107 D:/Practice/FIC/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vlog/core/coregpio.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vlog/core/coregpio.v|
+!s101 -O0
+!i113 1
+Z3 o-work presynth -O0
+n@core@g@p@i@o
+vFIC
+!s110 1440745690
+!i10b 1
+!s100 ;U5a8NFz3mbVMRMGP0OM61
+I211Yc4RA62hRml]9cKTd`0
+R1
+R0
+Z4 w1440493260
+8D:/Practice/FIC/component/work/FIC/FIC.v
+FD:/Practice/FIC/component/work/FIC/FIC.v
+L0 9
+R2
+r1
+!s85 0
+31
+!s108 1440745690.625000
+!s107 D:/Practice/FIC/component/work/FIC/FIC.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/component/work/FIC/FIC.v|
+!s101 -O0
+!i113 1
+R3
+n@f@i@c
+vFIC_FCCC_0_FCCC
+Z5 !s110 1440745689
+!i10b 1
+!s100 X4DEKhkYcioCXE5=iNfiM0
+IA=ejKIkA5TVCLiW@effI22
+R1
+R0
+w1440493255
+8D:/Practice/FIC/component/work/FIC/FCCC_0/FIC_FCCC_0_FCCC.v
+FD:/Practice/FIC/component/work/FIC/FCCC_0/FIC_FCCC_0_FCCC.v
+L0 5
+R2
+r1
+!s85 0
+31
+!s108 1440745688.878000
+!s107 D:/Practice/FIC/component/work/FIC/FCCC_0/FIC_FCCC_0_FCCC.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/component/work/FIC/FCCC_0/FIC_FCCC_0_FCCC.v|
+!s101 -O0
+!i113 1
+R3
+n@f@i@c_@f@c@c@c_0_@f@c@c@c
+vFIC_MSS
+R5
+!i10b 1
+!s100 hgkElKj[NMV0L2^jY;h:G0
+Im^EMK[Qo:lC?WYLndR5U20
+R1
+R0
+w1440488906
+8D:/Practice/FIC/component/work/FIC_MSS/FIC_MSS.v
+FD:/Practice/FIC/component/work/FIC_MSS/FIC_MSS.v
+L0 9
+R2
+r1
+!s85 0
+31
+!s108 1440745689.190000
+!s107 D:/Practice/FIC/component/work/FIC_MSS/FIC_MSS.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/component/work/FIC_MSS/FIC_MSS.v|
+!s101 -O0
+!i113 1
+R3
+n@f@i@c_@m@s@s
+vFIC_OSC_0_OSC
+R5
+!i10b 1
+!s100 9d6m4iU35gLMHz6dF`0jz2
+Il@LQ^KaE:PdHISCf[^O?m2
+R1
+R0
+R4
+8D:/Practice/FIC/component/work/FIC/OSC_0/FIC_OSC_0_OSC.v
+FD:/Practice/FIC/component/work/FIC/OSC_0/FIC_OSC_0_OSC.v
+L0 5
+R2
+r1
+!s85 0
+31
+!s108 1440745689.424000
+!s107 D:/Practice/FIC/component/work/FIC/OSC_0/FIC_OSC_0_OSC.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/component/work/FIC/OSC_0/FIC_OSC_0_OSC.v|
+!s101 -O0
+!i113 1
+R3
+n@f@i@c_@o@s@c_0_@o@s@c
+vreg16x8
+R5
+!i10b 1
+!s100 8Yanj@<__T6VPgU`U>E[;0
+INIL:cg[6o>hX]jzYITXXM2
+R1
+R0
+Z6 w1440486907
+8D:/Practice/FIC/hdl/reg16x8.v
+FD:/Practice/FIC/hdl/reg16x8.v
+L0 4
+R2
+r1
+!s85 0
+31
+!s108 1440745689.596000
+!s107 D:/Practice/FIC/hdl/reg16x8.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/hdl/reg16x8.v|
+!s101 -O0
+!i113 1
+R3
+vreg_apb_wrp
+R5
+!i10b 1
+!s100 EEDiSPJ0^Eb@cOQ77W3c=0
+IibU_VIH0HdTVDk8<_]O6i3
+R1
+R0
+R6
+8D:/Practice/FIC/hdl/reg_apb_wrp.v
+FD:/Practice/FIC/hdl/reg_apb_wrp.v
+L0 20
+R2
+r1
+!s85 0
+31
+!s108 1440745689.767000
+!s107 D:/Practice/FIC/hdl/reg_apb_wrp.v|
+!s90 -reportprogress|300|-work|presynth|D:/Practice/FIC/hdl/reg_apb_wrp.v|
+!s101 -O0
+!i113 1
+R3

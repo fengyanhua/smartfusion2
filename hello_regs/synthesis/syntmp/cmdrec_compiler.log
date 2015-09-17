@@ -1,0 +1,24 @@
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\c_ver.exe  -osyn  E:\Practice\hello_regs\synthesis\synwork\hello_regs_comp.srs  -top  hello_regs  -prodtype  synplify_pro  -primux -dspmac -pqdpadd -fixsmult -divnmod -nram   -I E:\Practice\hello_regs\synthesis\  -I E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib   -v2001  -devicelib  E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v  -encrypt  -pro  -dmgen  E:\Practice\hello_regs\synthesis\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v -lib work E:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v -lib work E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v -lib work E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v -lib work E:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v -lib work E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v -lib work E:\Practice\hello_regs\hdl\reg32x8.v -lib work E:\Practice\hello_regs\hdl\reg_apb_wrp.v -lib COREAPB3_LIB E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v -lib COREAPB3_LIB E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v -lib COREAPB3_LIB E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v -lib COREAPBLSRAM_LIB E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v -lib COREAPBLSRAM_LIB E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v -lib COREAPBLSRAM_LIB E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v -lib COREAPBLSRAM_LIB E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v -lib COREAPBLSRAM_LIB E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v -lib work E:\Practice\hello_regs\component\work\hello_regs\hello_regs.v  -log  E:\Practice\hello_regs\synthesis\synlog\hello_regs_compiler.srr 
+rc:1 success:1
+E:\Practice\hello_regs\synthesis\synwork\hello_regs_comp.srs|o|1442313772|121158
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v|i|1412910306|16424
+E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v|i|1442313552|28350
+E:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v|i|1442313561|1727
+E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v|i|1442307164|53987
+E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v|i|1442307165|43069
+E:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v|i|1442285355|924
+E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v|i|1442313568|538
+E:\Practice\hello_regs\hdl\reg32x8.v|i|1436840458|1201
+E:\Practice\hello_regs\hdl\reg_apb_wrp.v|i|1436840458|1705
+E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v|i|1442285344|5708
+E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v|i|1442285344|4465
+E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v|i|1442285344|29701
+E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v|i|1442313526|1371154
+E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v|i|1442313526|1498841
+E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v|i|1442313525|2048014
+E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v|i|1442313526|1968674
+E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v|i|1442313525|16846
+E:\Practice\hello_regs\component\work\hello_regs\hello_regs.v|i|1442313568|22828
+E:\Practice\hello_regs\synthesis\synlog\hello_regs_compiler.srr|o|1442313772|38307
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin\c_ver.exe|i|1412863976|2306560
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\c_ver.exe|i|1412864178|5845504

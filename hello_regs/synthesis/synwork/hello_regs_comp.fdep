@@ -1,0 +1,102 @@
+#OPTIONS:"|-top|hello_regs|-prodtype|synplify_pro|-primux|-dspmac|-pqdpadd|-fixsmult|-divnmod|-nram|-I|E:\\Practice\\hello_regs\\synthesis\\|-I|E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib|-v2001|-devicelib|E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|work"
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\bin64\\c_ver.exe":1412864178
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v":1412910306
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\umr_capim.v":1412864098
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_objects.v":1412863844
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_pipes.svh":1412863844
+#CUR:"E:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\hypermods.v":1412863844
+#CUR:"E:\\Practice\\hello_regs\\component\\Actel\\DirectCore\\CoreGPIO\\3.1.101\\rtl\\vlog\\core\\coregpio.v":1442313552
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\FCCC_0\\hello_regs_FCCC_0_FCCC.v":1442313561
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs_MSS\\hello_regs_MSS_syn.v":1442307164
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs_MSS\\hello_regs_MSS.v":1442307165
+#CUR:"E:\\Practice\\hello_regs\\component\\Actel\\SgCore\\OSC\\1.0.103\\osc_comps.v":1442285355
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\OSC_0\\hello_regs_OSC_0_OSC.v":1442313568
+#CUR:"E:\\Practice\\hello_regs\\hdl\\reg32x8.v":1436840458
+#CUR:"E:\\Practice\\hello_regs\\hdl\\reg_apb_wrp.v":1436840458
+#CUR:"E:\\Practice\\hello_regs\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_muxptob3.v":1442285344
+#CUR:"E:\\Practice\\hello_regs\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_iaddr_reg.v":1442285344
+#CUR:"E:\\Practice\\hello_regs\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3.v":1442285344
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_512to35328x32.v":1442313526
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_512to46kx24.v":1442313526
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_1024to70656x16.v":1442313525
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_2048to141312x8.v":1442313526
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\COREAPBLSRAM_0\\rtl\\vlog\\core\\CoreAPBLSRAM.v":1442313525
+#CUR:"E:\\Practice\\hello_regs\\component\\work\\hello_regs\\hello_regs.v":1442313568
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v" verilog
+1			"E:\Practice\hello_regs\component\work\hello_regs\FCCC_0\hello_regs_FCCC_0_FCCC.v" verilog
+2			"E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS_syn.v" verilog
+3			"E:\Practice\hello_regs\component\work\hello_regs_MSS\hello_regs_MSS.v" verilog
+4			"E:\Practice\hello_regs\component\Actel\SgCore\OSC\1.0.103\osc_comps.v" verilog
+5			"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v" verilog
+6			"E:\Practice\hello_regs\hdl\reg32x8.v" verilog
+7			"E:\Practice\hello_regs\hdl\reg_apb_wrp.v" verilog
+8			"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v" verilog
+9			"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v" verilog
+10			"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v" verilog
+11			"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v" verilog
+12			"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to46kx24.v" verilog
+13			"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v" verilog
+14			"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v" verilog
+15			"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v" verilog
+16			"E:\Practice\hello_regs\component\work\hello_regs\hello_regs.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 -1
+4 -1
+5 -1
+6 -1
+7 6
+8 -1
+9 -1
+10 8 9
+11 -1
+12 -1
+13 -1
+14 -1
+15 11 12 13 14
+16 10 15 0 1 3 5 7
+#Dependency Lists(Users Of)
+0 16
+1 16
+2 -1
+3 16
+4 -1
+5 16
+6 7
+7 16
+8 10
+9 10
+10 16
+11 15
+12 15
+13 15
+14 15
+15 16
+16 -1
+#Design Unit to File Association
+module work CoreGPIO 0
+module work hello_regs_FCCC_0_FCCC 1
+module work MSS_010 2
+module work hello_regs_MSS 3
+module work RCOSC_1MHZ 4
+module work RCOSC_25_50MHZ 4
+module work XTLOSC 4
+module work RCOSC_1MHZ_FAB 4
+module work RCOSC_25_50MHZ_FAB 4
+module work XTLOSC_FAB 4
+module work hello_regs_OSC_0_OSC 5
+module work reg16x8 6
+module work reg_apb_wrp 7
+module work hello_regs 16
+module COREAPB3_LIB COREAPB3_MUXPTOB3 8
+module COREAPB3_LIB coreapb3_iaddr_reg 9
+module COREAPB3_LIB CoreAPB3 10
+module COREAPBLSRAM_LIB hello_regs_COREAPBLSRAM_0_lsram_512to35328x32 11
+module COREAPBLSRAM_LIB hello_regs_COREAPBLSRAM_0_lsram_512to46kx24 12
+module COREAPBLSRAM_LIB hello_regs_COREAPBLSRAM_0_lsram_1024to70656x16 13
+module COREAPBLSRAM_LIB hello_regs_COREAPBLSRAM_0_lsram_2048to141312x8 14
+module COREAPBLSRAM_LIB hello_regs_COREAPBLSRAM_0_COREAPBLSRAM 15

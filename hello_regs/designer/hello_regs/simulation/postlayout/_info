@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Practice/hello_regs/simulation
+vhello_regs
+Z1 !s110 1436949927
+!i10b 1
+!s100 e<[M?64hP[O0h_6U6z`ik1
+IWND5e^=miPko7>iGLVgSk2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1436948908
+Z4 8D:/Practice/hello_regs/designer/hello_regs/hello_regs_ba.v
+Z5 FD:/Practice/hello_regs/designer/hello_regs/hello_regs_ba.v
+L0 45
+Z6 OW;L;10.3c;59
+r1
+!s85 0
+31
+Z7 !s108 1436949927.580000
+Z8 !s107 D:/Practice/hello_regs/designer/hello_regs/hello_regs_ba.v|
+Z9 !s90 -reportprogress|300|-work|postlayout|D:/Practice/hello_regs/designer/hello_regs/hello_regs_ba.v|
+!s101 -O0
+!i113 1
+Z10 o-work postlayout -O0
+vsdf_IOPAD_IN
+R1
+!i10b 1
+!s100 =9Fc0;cn;6dEP3RFemTQn3
+Io5j?JP3aWiHG4gB@Pen`V2
+R2
+R0
+R3
+R4
+R5
+L0 25
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nsdf_@i@o@p@a@d_@i@n
+vsdf_IOPAD_TRI
+R1
+!i10b 1
+!s100 H<OW9mQ8ViVa0WVYlGC?>0
+IM<n8k@cSkNd:k=?1[fZ`@2
+R2
+R0
+R3
+R4
+R5
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nsdf_@i@o@p@a@d_@t@r@i
+vtest_regs
+!s110 1436949928
+!i10b 1
+!s100 B5^0DDDLanIeVOecPjaD10
+I<6_CWdWTL`6fZ`XLglMdU0
+R2
+R0
+w1436949340
+8D:/Practice/hello_regs/stimulus/test_regs.v
+FD:/Practice/hello_regs/stimulus/test_regs.v
+L0 21
+R6
+r1
+!s85 0
+31
+!s108 1436949928.081000
+!s107 D:/Practice/hello_regs/stimulus/test_regs.v|
+!s90 -reportprogress|300|+incdir+D:/Practice/hello_regs/stimulus|-work|postlayout|D:/Practice/hello_regs/stimulus/test_regs.v|
+!s101 -O0
+!i113 1
+R10
+!s92 +incdir+D:/Practice/hello_regs/stimulus -work postlayout -O0

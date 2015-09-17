@@ -1,0 +1,37 @@
+
+  #include "mss_uart.h"
+  #include "../../CMSIS/hw_reg_io.h"
+  #include "../../CMSIS/system_m2sxxx.h"
+
+//#define SLAVE0	0x10000000u
+//#define SLAVE1	0x11000000u
+//#define RAM_REGS 0x50000000u
+#define RAM_REGS 0x10000000u
+//#define SLAVE_0	0x51000000u
+
+
+  int main(void)
+  {
+     uint8_t message0[15] = "start";
+     uint8_t message1[15] = "end ";
+	 uint8_t data0 = 0;
+	 uint8_t delay = 600;
+
+
+     MSS_UART_init(&g_mss_uart0,
+                   MSS_UART_9600_BAUD,
+                   MSS_UART_DATA_8_BITS | MSS_UART_NO_PARITY | MSS_UART_ONE_STOP_BIT);
+
+     MSS_UART_polled_tx(&g_mss_uart0, message0, sizeof(message0));
+
+     *(uint32_t *)(RAM_REGS) =60;
+
+     while(delay--);
+
+     data0 = *(uint32_t *)(RAM_REGS);
+	 MSS_UART_polled_tx(&g_mss_uart0, data0, sizeof(data0));
+
+     MSS_UART_polled_tx(&g_mss_uart0, message1, sizeof(message1));
+
+     return(0);
+  }

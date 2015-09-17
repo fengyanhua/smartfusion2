@@ -1,0 +1,13 @@
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  E:\Practice\hello_regs\synthesis   -part M2S010  -package FBGA484  -grade -1    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -opcond COMWC -report_path 0 -RWCheckOnRam 0 -summaryfile E:\Practice\hello_regs\synthesis\synlog\report\hello_regs_premap.xml  -top_level_module  hello_regs  -oedif  E:\Practice\hello_regs\synthesis\hello_regs.edn  -conchk_prepass  E:\Practice\hello_regs\synthesis\hello_regs_cck_prepass.rpt   -freq 100.000   E:\Practice\hello_regs\synthesis\synwork\hello_regs_mult.srs  -flow prepass  -gcc_prepass  -osrd  E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd  -qsap  E:\Practice\hello_regs\synthesis\hello_regs.sap  -devicelib  E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v  -ologparam  E:\Practice\hello_regs\synthesis\syntmp\hello_regs.plg  -osyn  E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd  -prjdir  E:\Practice\hello_regs\synthesis\  -prjname  hello_regs_syn  -log  E:\Practice\hello_regs\synthesis\synlog\hello_regs_premap.srr 
+rc:1 success:1
+E:\Practice\hello_regs\synthesis\hello_regs.edn|o|1441886413|928886
+E:\Practice\hello_regs\synthesis\hello_regs_cck_prepass.rpt|o|0|0
+E:\Practice\hello_regs\synthesis\synwork\hello_regs_mult.srs|i|1442313775|18336
+E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd|o|1442313780|128068
+E:\Practice\hello_regs\synthesis\hello_regs.sap|o|1442313780|49741
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v|i|1412910306|16424
+E:\Practice\hello_regs\synthesis\syntmp\hello_regs.plg|o|1442313776|0
+E:\Practice\hello_regs\synthesis\synwork\hello_regs_prem.srd|o|1442313780|128068
+E:\Practice\hello_regs\synthesis\synlog\hello_regs_premap.srr|o|1442313780|26278
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin\m_generic.exe|i|1413423026|22941184
+E:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\bin64\m_generic.exe|i|1413425106|34740736

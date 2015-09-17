@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Global Net Report</title>
+<text>Microsemi Corporation - Microsemi Libero Software Release v11.5 SP3 (Version 11.5.3.10)</text>
+<text>Date: Thu Sep 10 12:12:54 2015
+</text>
+<section>
+<name>Global Nets Information</name>
+<table>
+<header>
+ <cell/>
+ <cell> From </cell>
+ <cell> GB Location </cell>
+ <cell> Net Name </cell>
+ <cell> Fanout </cell>
+</header>
+<row>
+ <cell>1</cell>
+ <cell>GB[6] </cell>
+ <cell>(224, 54)</cell>
+ <cell>FCCC_0/GL1_INST/U0_YNn</cell>
+ <cell>700</cell>
+</row>
+<row>
+ <cell>2</cell>
+ <cell>GB[2] </cell>
+ <cell>(220, 54)</cell>
+ <cell>MSS_RESET_N_F2M_ibuf_RNIBBDD/U0_YNn</cell>
+ <cell>435</cell>
+</row>
+</table>
+<text></text>
+</section>
+<section>
+<name>I/O to GB Connections</name>
+<table>
+<header>
+ <cell/>
+ <cell> Port Name </cell>
+ <cell> Pin Number </cell>
+ <cell> I/O Function </cell>
+ <cell> From </cell>
+ <cell> From Location </cell>
+ <cell> To </cell>
+ <cell> Net Name </cell>
+ <cell> Net Type </cell>
+ <cell> Fanout </cell>
+</header>
+<row>
+ <cell>1</cell>
+ <cell>MSS_RESET_N_F2M</cell>
+ <cell>H1</cell>
+ <cell>MSIO78PB7/GB2</cell>
+ <cell>MSS_RESET_N_F2M_ibuf/U0/U_IOPAD:Y</cell>
+ <cell>West IO #3 (6, 64)</cell>
+ <cell>GB[2] </cell>
+ <cell>MSS_RESET_N_F2M_ibuf/U0/YIN1</cell>
+ <cell>HARDWIRED</cell>
+ <cell>1</cell>
+</row>
+</table>
+<text></text>
+</section>
+<section>
+<name>Fabric to GB Connections</name>
+<text>(none)</text>
+</section>
+<section>
+<name>CCC to GB Connections</name>
+<table>
+<header>
+ <cell/>
+ <cell> From </cell>
+ <cell> From Location </cell>
+ <cell> To </cell>
+ <cell> Net Name </cell>
+ <cell> Net Type </cell>
+ <cell> Fanout </cell>
+</header>
+<row>
+ <cell>1</cell>
+ <cell>FCCC_0/CCC_INST/INST_CCC_IP:GL1</cell>
+ <cell>CCC-NE0 (372, 92)</cell>
+ <cell>GB[6] </cell>
+ <cell>FCCC_0/GL1_net</cell>
+ <cell>HARDWIRED</cell>
+ <cell>1</cell>
+</row>
+</table>
+<text></text>
+</section>
+<section>
+<name>CCC Input Connections</name>
+<text>(none)</text>
+</section>
+<section>
+<name>Local Clock Nets to RGB Connections</name>
+<text>(none)</text>
+</section>
+</doc>

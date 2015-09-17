@@ -1,0 +1,142 @@
+@W: CG775 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@W: CG775 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:44|Found Component hello_regs_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB
+@W: CG775 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@W: CG775 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:44|Found Component hello_regs_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB
+@W: CG775 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@W: CG775 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:44|Found Component hello_regs_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB
+@W: CG134 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":80:40:80:47|No assignment to bit 7 of ckRdAddr
+@W: CG134 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":80:40:80:47|No assignment to bit 8 of ckRdAddr
+@W: CL169 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":650:4:650:9|Pruning register ckRdAddr[15:9] 
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":93:32:93:54|No assignment to wire lsram_512to46k_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":94:32:94:48|No assignment to wire lsram_1k_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":95:32:95:48|No assignment to wire lsram_2k_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":98:32:98:48|No assignment to wire usram_2K_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":99:32:99:48|No assignment to wire usram_3K_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":100:32:100:48|No assignment to wire usram_4K_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":101:32:101:48|No assignment to wire usram_9K_BUSY_all
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":106:32:106:51|No assignment to wire lsram_width24_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":107:32:107:51|No assignment to wire lsram_width16_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":108:32:108:51|No assignment to wire lsram_width08_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":110:32:110:51|No assignment to wire usram_width32_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":111:32:111:51|No assignment to wire usram_width24_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":112:32:112:51|No assignment to wire usram_width16_PRDATA
+@W: CG360 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":113:32:113:51|No assignment to wire usram_width08_PRDATA
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[7].APB_8.edge_both[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[7].APB_8.edge_neg[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[7].APB_8.edge_pos[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[7].gpin3[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[7].gpin1[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[7].gpin2[7] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[6].APB_8.edge_both[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[6].APB_8.edge_neg[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[6].APB_8.edge_pos[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[6].gpin3[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[6].gpin1[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[6].gpin2[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[5].APB_8.edge_both[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[5].APB_8.edge_neg[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[5].APB_8.edge_pos[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[5].gpin3[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[5].gpin1[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[5].gpin2[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[4].APB_8.edge_both[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[4].APB_8.edge_neg[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[4].APB_8.edge_pos[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[4].gpin3[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[4].gpin1[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[4].gpin2[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[3].APB_8.edge_both[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[3].APB_8.edge_neg[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[3].APB_8.edge_pos[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[3].gpin3[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[3].gpin1[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[3].gpin2[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[2].APB_8.edge_both[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[2].APB_8.edge_neg[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[2].APB_8.edge_pos[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[2].gpin3[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[2].gpin1[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[2].gpin2[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[1].APB_8.edge_both[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[1].APB_8.edge_neg[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[1].APB_8.edge_pos[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[1].gpin3[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[1].gpin1[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[1].gpin2[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":680:0:680:5|Pruning register xhdl1.GEN_BITS[0].APB_8.edge_both[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":654:0:654:5|Pruning register xhdl1.GEN_BITS[0].APB_8.edge_neg[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":628:0:628:5|Pruning register xhdl1.GEN_BITS[0].APB_8.edge_pos[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":317:12:317:17|Pruning register xhdl1.GEN_BITS[0].gpin3[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[0].gpin1[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":304:12:304:17|Pruning register xhdl1.GEN_BITS[0].gpin2[0] 
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[0].APB_8.INTR_reg[0] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[1].APB_8.INTR_reg[1] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[2].APB_8.INTR_reg[2] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[3].APB_8.INTR_reg[3] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[4].APB_8.INTR_reg[4] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[5].APB_8.INTR_reg[5] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[6].APB_8.INTR_reg[6] to a constant 0
+@W: CL190 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Optimizing register bit xhdl1.GEN_BITS[7].APB_8.INTR_reg[7] to a constant 0
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[0].APB_8.INTR_reg[0] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[1].APB_8.INTR_reg[1] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[2].APB_8.INTR_reg[2] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[3].APB_8.INTR_reg[3] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[4].APB_8.INTR_reg[4] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[5].APB_8.INTR_reg[5] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[6].APB_8.INTR_reg[6] 
+@W: CL169 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":706:0:706:5|Pruning register xhdl1.GEN_BITS[7].APB_8.INTR_reg[7] 
+@W: CL246 :"E:\Practice\hello_regs\hdl\reg_apb_wrp.v":35:21:35:25|Input port bits 7 to 6 of PADDR[7:0] are unused
+@W: CL246 :"E:\Practice\hello_regs\hdl\reg_apb_wrp.v":35:21:35:25|Input port bits 1 to 0 of PADDR[7:0] are unused
+@W: CL157 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":16:7:16:24|*Output RCOSC_25_50MHZ_O2F has undriven bits -- simulation mismatch possible.
+@W: CL157 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
+@W: CL157 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
+@W: CL157 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.
+@W: CL157 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits -- simulation mismatch possible.
+@W: CL159 :"E:\Practice\hello_regs\component\work\hello_regs\OSC_0\hello_regs_OSC_0_OSC.v":14:7:14:9|Input XTL is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vlog\core\coregpio.v":186:26:186:32|Input GPIO_IN is unused
+@W: CL246 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":60:26:60:34|Input port bits 17 to 9 of writeAddr[17:0] are unused
+@W: CL159 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":59:26:59:28|Input ren is unused
+@W: CL159 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v":61:26:61:33|Input readAddr is unused
+@W: CL246 :"E:\Practice\hello_regs\component\work\hello_regs\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":75:32:75:36|Input port bits 19 to 18 of PADDR[19:0] are unused
+@W: CL246 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v":39:28:39:32|Input port bits 31 to 24 of PADDR[31:0] are unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":104:18:104:25|Input PRDATAS0 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":105:18:105:25|Input PRDATAS1 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":106:18:106:25|Input PRDATAS2 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":107:18:107:25|Input PRDATAS3 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":111:18:111:25|Input PRDATAS7 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":112:18:112:25|Input PRDATAS8 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":113:18:113:25|Input PRDATAS9 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":114:18:114:26|Input PRDATAS10 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":115:18:115:26|Input PRDATAS11 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":116:18:116:26|Input PRDATAS12 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":117:18:117:26|Input PRDATAS13 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":118:18:118:26|Input PRDATAS14 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":119:18:119:26|Input PRDATAS15 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":121:13:121:20|Input PREADYS0 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":122:13:122:20|Input PREADYS1 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":123:13:123:20|Input PREADYS2 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":124:13:124:20|Input PREADYS3 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":128:13:128:20|Input PREADYS7 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":129:13:129:20|Input PREADYS8 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":130:13:130:20|Input PREADYS9 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":131:13:131:21|Input PREADYS10 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":132:13:132:21|Input PREADYS11 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":133:13:133:21|Input PREADYS12 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":134:13:134:21|Input PREADYS13 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":135:13:135:21|Input PREADYS14 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":136:13:136:21|Input PREADYS15 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":138:13:138:21|Input PSLVERRS0 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":139:13:139:21|Input PSLVERRS1 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":140:13:140:21|Input PSLVERRS2 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":141:13:141:21|Input PSLVERRS3 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":145:13:145:21|Input PSLVERRS7 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":146:13:146:21|Input PSLVERRS8 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":147:13:147:21|Input PSLVERRS9 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":148:13:148:22|Input PSLVERRS10 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":149:13:149:22|Input PSLVERRS11 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":150:13:150:22|Input PSLVERRS12 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused
+@W: CL159 :"E:\Practice\hello_regs\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused
+
